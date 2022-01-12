@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndWalking",
-  "duration": 0.0,
+  "soundFile": "sndWalking.wav",
+  "duration": 16.509388,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
