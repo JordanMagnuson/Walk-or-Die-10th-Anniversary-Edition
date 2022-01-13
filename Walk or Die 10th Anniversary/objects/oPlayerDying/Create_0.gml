@@ -3,7 +3,7 @@ fade = false;
 //graphic
 sprite_index = sprPlayerDying;
 image_index = 0;
-image_speed = 1;
+image_speed = 2;
 
 //hit box
 sprite_set_offset(sprite_index, 0,sprite_height);
@@ -14,6 +14,7 @@ alarm[0] = FADE_OUT_DURATION*room_speed;
 
 function fadeOut(){
 	playerDying = instance_create_depth(0, 0, 0, oGravestone);
+	
 }
 
 

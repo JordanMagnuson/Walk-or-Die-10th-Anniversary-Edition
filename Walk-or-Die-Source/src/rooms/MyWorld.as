@@ -20,16 +20,17 @@ package rooms
 		 * How often to consider changing locations, also determined by
 		 * how long we've been in a location.
 		 */
-		public const CHANGE_LOCATION_TIME:Number = 4;
+		public const CHANGE_LOCATION_TIME:Number = 4;	//DONE
 		
 		/**
 		 * Used to move objects slower than one pixel per frame
 		 */
-		public static var oddFrame:int = 1;
-		public static var thirdFrame:int = 1;
-		public static var fourthFrame:int = 1;
-		public static var forceClouds:Boolean = false;
+		public static var oddFrame:int = 1;	//DONE
+		public static var thirdFrame:int = 1;	//DONE
+		public static var fourthFrame:int = 1;	//DONE
+		public static var forceClouds:Boolean = false;	//DONE
 		
+		//VARIABLES DON'T NEED TO BE DEFINED LIKE THIS IN GAMEMAKER, SKIPPING
 		/**
 		 * Location
 		 */
@@ -61,12 +62,13 @@ package rooms
 		 */
 		public var width:uint;
 		public var height:uint;
+		//DONE SKIPPING 
 		
 		public function MyWorld()      
 		{
 			// World size
-			width = 300;
-			height = 200;		
+			width = 300;	//DONE
+			height = 200;	//DONE
 		
 			// Set location
 			location = FP.choose(new Desert, new Forest, new Snow, new Plains, new Beach);	

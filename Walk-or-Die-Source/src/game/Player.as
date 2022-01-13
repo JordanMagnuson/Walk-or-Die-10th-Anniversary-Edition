@@ -60,7 +60,7 @@ package game
 		override public function update():void 
 		{
 			super.update();
-			if (Player.walking && !sndWalking.playing)//THIS SECTION IS ADDED, BUT SOUND IS IN SWF SO SOUND IS EMPTY
+			if (Player.walking && !sndWalking.playing)//THIS SECTION IS ADDED, BUT SOUND IS IN SWF SO SOUND IS EMPTY	 UPDATE: SOUND IS ADDED BUT ONLY WORKS LOCALLY???
 			{
 				sndWalking.loop(0.5);
 			}

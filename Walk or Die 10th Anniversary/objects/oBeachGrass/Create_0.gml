@@ -1,0 +1,1 @@
+image_index = choose(sprBeachGrass1, sprBeachGrass2);
