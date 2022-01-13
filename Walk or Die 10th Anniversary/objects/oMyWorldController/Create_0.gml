@@ -1,3 +1,5 @@
+//TEMPORARY TIME
+time = "DAY";
 /**
 * How often to consider changing locations, also determined by
 * how long we've been in a location.

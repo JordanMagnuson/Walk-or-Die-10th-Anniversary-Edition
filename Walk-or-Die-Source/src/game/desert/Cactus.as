@@ -1,3 +1,4 @@
+//FILE DONE
 package game.desert
 {
 	import game.Item;
@@ -20,7 +21,7 @@ package game.desert
 		public function Cactus() 
 		{
 			// Random image
-			rawSprite = chooseSprite(mySpriteCollection);			
+			rawSprite = chooseSprite(mySpriteCollection);	//DONE
 			super(rawSprite, 'mid', false);
 			type = 'cactus';
 		}

@@ -14,7 +14,6 @@ alarm[0] = FADE_OUT_DURATION*room_speed;
 
 function fadeOut(){
 	playerDying = instance_create_depth(0, 0, 0, oGravestone);
-	
 }
 
 

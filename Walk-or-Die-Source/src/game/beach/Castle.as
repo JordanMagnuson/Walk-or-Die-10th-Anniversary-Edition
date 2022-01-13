@@ -8,7 +8,7 @@ package game.beach
 	
 	public class Castle extends Item
 	{	
-		public static var seen:Boolean = false;
+		public static var seen:Boolean = false;	//DONE
 		
 		/**
 		 * Graphics
@@ -17,10 +17,10 @@ package game.beach
 		
 		public function Castle() 
 		{	
-			super(SPRITE01, 'far', false);
+			super(SPRITE01, 'far', false);	//DONE
 			type = 'sand_castle';	
 		
-			layer = 99;			
+			layer = 99;			//DONE
 		}
 		
 		override public function update():void 
