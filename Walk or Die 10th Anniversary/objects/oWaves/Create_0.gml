@@ -12,7 +12,7 @@ fadeOutCalled = false;
 */
 waveDirection= 1; //direction changed to wave direction, direction means something in GML
 
-image = sprWaves;
+image_index = sprWaves;
 image_alpha = 0;
 
 //Hit box to bottom left
@@ -30,5 +30,5 @@ function fadeIn(){
 	fadeInCalled = true;
 }
 function fadeOut(){
-	fadeoutCalled = true;	
+	fadeOutCalled = true;	
 }

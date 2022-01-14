@@ -18,31 +18,31 @@ package game.beach
 		/**
 		 * Sound
 		 */
-		[Embed(source='../../../assets/sounds.swf', symbol='waves_ambient.wav')] private const DAY_SOUND:Class;
-		[Embed(source='../../../assets/sounds.swf', symbol='waves_ambient.wav')] private const NIGHT_SOUND:Class;
+		[Embed(source='../../../assets/sounds.swf', symbol='waves_ambient.wav')] private const DAY_SOUND:Class;	//NOT USED
+		[Embed(source='../../../assets/sounds.swf', symbol='waves_ambient.wav')] private const NIGHT_SOUND:Class;	//NOT USED
 		
-		[Embed(source='../../../assets/sounds.swf', symbol='wind_burst.wav')] private const SND_WIND:Class;
+		[Embed(source='../../../assets/sounds.swf', symbol='wind_burst.wav')] private const SND_WIND:Class;		//DONE
 		public var sndWind:Sfx = new Sfx(SND_WIND);				
 		
-		[Embed(source='../../../assets/sounds.swf', symbol='gulls_01.wav')] private const SND_GULLS01:Class;
+		[Embed(source='../../../assets/sounds.swf', symbol='gulls_01.wav')] private const SND_GULLS01:Class;	//DONE
 		public var sndGulls01:Sfx = new Sfx(SND_GULLS01);	
-		[Embed(source='../../../assets/sounds.swf', symbol='gulls_02.wav')] private const SND_GULLS02:Class;
+		[Embed(source='../../../assets/sounds.swf', symbol='gulls_02.wav')] private const SND_GULLS02:Class;	//DONE
 		public var sndGulls02:Sfx = new Sfx(SND_GULLS02);	
-		[Embed(source='../../../assets/sounds.swf', symbol='gulls_03.wav')] private const SND_GULLS03:Class;
+		[Embed(source='../../../assets/sounds.swf', symbol='gulls_03.wav')] private const SND_GULLS03:Class;	//DONE
 		public var sndGulls03:Sfx = new Sfx(SND_GULLS03);		
-		public var sndGullsRandom:Sfx = FP.choose(new Sfx(SND_GULLS01), new Sfx(SND_GULLS02), new Sfx(SND_GULLS03));
+		public var sndGullsRandom:Sfx = FP.choose(new Sfx(SND_GULLS01), new Sfx(SND_GULLS02), new Sfx(SND_GULLS03));	//DONE
 				
 		
 		public function Beach() 
 		{
 			super(DAY_SOUND, NIGHT_SOUND);
 			type = 'beach';
-			waves = new Waves;
+			waves = new Waves;	
 		}
 		
 		override public function added():void
 		{
-			FP.world.add(waves);
+			FP.world.add(waves);	//DONE
 		}
 		
 		override public function update():void
@@ -55,12 +55,12 @@ package game.beach
 		 */		
 		override public function createItem():void
 		{
-			super.createItem();
+			super.createItem();	//DONE
 			
-			creationNumber = FP.random;	
+			creationNumber = FP.random;	//DONE
 			
 			// Mid Distance
-			if (FP.random > 0.25)
+			if (FP.random > 0.25)	//SECTION DONE
 			{		
 				if (creationNumber < 0.005 && Castle.seen == false)
 				{
@@ -116,7 +116,7 @@ package game.beach
 			
 		}	
 		
-		override public function removed():void
+		override public function removed():void	//SECTION DONE
 		{
 			waves.fadeOut();		
 		}
@@ -127,7 +127,7 @@ package game.beach
 		 */
 		override public function gameStart(world:World):void
 		{
-			super.gameStartItem(world, new SandDune);	
+			super.gameStartItem(world, new SandDune);	//DONE
 		}
 		
 	}
