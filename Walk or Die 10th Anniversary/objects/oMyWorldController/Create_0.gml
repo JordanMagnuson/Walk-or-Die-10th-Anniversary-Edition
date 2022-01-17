@@ -1,24 +1,15 @@
-//TEMPORARY TIME
-time = "DAY";
-/**
-* How often to consider changing locations, also determined by
-* how long we've been in a location.
-*/
-CHANGE_LOCATION_TIME = 4;
-/**
-* Used to move objects slower than one pixel per frame
-*/
-oddFrame = 1;	//this was static
-thirdFrame = 1;	//this was static
-fourthFrame = 1;	//this was static
-forceClouds = false;	//this was static
+randomise();
 
-room_width = 300;
-room_height = 200;
+oddFrame = 1;
+thirdFrame = 1;
+fourthFrame = 1;
+forceClouds = false;
 
-//set location
-location = choose("Desert", "Forest", "Snow", "Plains", "Beach");
 player = instance_create_depth(0, 0, 0, oPlayer);
-
 player.x = 50;
 player.y = 100; //should be Ground.y but ground is not made yet
+
+cloud = instance_create_depth(0, 0, 0, oCloud);
+cloud.x = 350;
+cloud.y = oCloud.MIN_HEIGHT + random(1) * (oCloud.MAX_HEIGHT - oCloud.MIN_HEIGHT); //need to correct MIN and MAX height
+//show_debug_message(cloud.y);

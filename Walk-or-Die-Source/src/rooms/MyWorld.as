@@ -72,7 +72,6 @@ package rooms
 		
 			// Set location
 			location = FP.choose(new Desert, new Forest, new Snow, new Plains, new Beach);	
-			//location = new Desert;
 			add(location);
 			changeLocationAlarm = new MyAlarm(CHANGE_LOCATION_TIME, changeLocationChance);
 			addTween(changeLocationAlarm);
@@ -94,7 +93,7 @@ package rooms
 			
 			
 			// Player
-			add(new Player);
+			add(new Player); //DONE
 			
 			// Starting text
 			add(new textPress);
@@ -126,6 +125,7 @@ package rooms
 			// Update entities
 			super.update();
 			
+			// BLOCK DONE ===============
 			// Flip oddFrame every frame
 			oddFrame *= -1;
 			
@@ -148,7 +148,7 @@ package rooms
 			{
 				fourthFrame += 1;
 			}
-			
+			//======================
 		}		
 		
 		/**
