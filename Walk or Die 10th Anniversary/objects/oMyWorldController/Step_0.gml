@@ -1,3 +1,10 @@
+if(keyboard_check_pressed("C")){
+	changeLocation();
+}
+if(keyboard_check_pressed("N")){
+	advanceTime();
+}
+
 oddFrame *= -1;
 
 if(thirdFrame == 3)

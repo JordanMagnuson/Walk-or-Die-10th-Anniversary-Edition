@@ -31,7 +31,8 @@ instance_create_depth(0, 0, 0, oSky);
 
 //Player
 player = instance_create_depth(0, 0, 0, oPlayer);
-
+player.x = 50;
+player.y = 100; //should be Ground.y but ground is not made yet
 //Starting Text
 //instance_create_depth(0,0,0, otextPress);
 
@@ -49,17 +50,16 @@ cloud.y = oCloud.MIN_HEIGHT + random(1) * (oCloud.MAX_HEIGHT - oCloud.MIN_HEIGHT
 
 
 function changeLocation(){
-	//trace('Changing location');
 	var newLocation;
 	do{
-		newLocation = FP.choose(new Forest, new Desert, new Plains, new Snow, new Beach);
-		//newLocation = FP.choose(new Forest, new Beach);
+		//newLocation = choose(oForest, oDesert, oPlains, oSnow, oBeach);
+		newLocation = oBeach;//TEMP
 	} 
-	while (newLocation.type == this.location.type);
-	soundController.changeLocation(newLocation);
-	remove(location);
-	add(location = newLocation);
-	oldGround = ground;
-	add(ground = new Ground(location));			
-	//trace('new location: ' + location);
+	until (newLocation != currentLocation);
+	//oSoundController.changeLocation(newLocation);
+	instance_destroy(currentLocation);
+	currentLocation = newLocation;
+	instance_create_depth(0, 0, 0, currentLocation);
+	//oldGround = oGround;
+	//instance_create_depth(0, 0, 0, oGround(currentLocation);		
 }
