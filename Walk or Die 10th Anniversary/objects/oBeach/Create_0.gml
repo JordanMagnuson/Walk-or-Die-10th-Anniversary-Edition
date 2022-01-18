@@ -71,3 +71,7 @@ function createItem(){
 function removed(){
 	oWaves.fadeOut();
 }
+
+function gameStart(){
+	oLocation.gameStartItem(rmMyWorld, oSandDune);	
+}

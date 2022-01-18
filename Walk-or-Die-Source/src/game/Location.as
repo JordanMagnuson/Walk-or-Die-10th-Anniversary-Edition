@@ -1,3 +1,4 @@
+//FILE DONE
 package game 
 {
 	import game.Item;
@@ -38,8 +39,8 @@ package game
 		 * 0 = steady
 		 * 1 = increasing
 		 */
-		public var creationTimeSlope:int = 1;
-		
+		public var creationTimeSlope:int = 1; //DONE
+		//FUNCTION DONE
 		public function Location(DAY_SOUND:Class, NIGHT_SOUND:Class, maxCreationTime:Number = 4, minCreationTime:Number = 0.5, creationTimeIncreaseRate:Number = 0.4, creationTimeDecreaseRate:Number = 0.4) 
 		{
 			daySound = new Sfx(DAY_SOUND);
@@ -61,7 +62,7 @@ package game
 			super.update();
 		}
 		
-		public function createItem():void
+		public function createItem():void	//FUNCTION DONE
 		{		
 			// Change the creation time, depending on whether items are
 			// becoming more or less dense.
@@ -102,7 +103,7 @@ package game
 		 * this function in each location.
 		 * @param	world	Current world.
 		 */
-		public function gameStart(world:World):void
+		public function gameStart(world:World):void//FUNCTION UNNECESSARY
 		{
 			
 		}
@@ -112,7 +113,7 @@ package game
 		 * Called via super() from each location.
 		 * @param	item	Item to place in the starting scene.
 		 */
-		public function gameStartItem(world:World, item:Item):void
+		public function gameStartItem(world:World, item:Item):void//FUNCTION DONE
 		{
 			var myItem:Item = item;	
 			myItem.x = 150;				
