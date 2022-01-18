@@ -1,7 +1,7 @@
 SND_GULLS01 = sndGulls01;
 SND_GULLS02 = sndGulls02;
 SND_GULLS03 = sndGulls03;
-
+creationTimeSlope = 1;
 sndGullsRandom = choose(SND_GULLS01, SND_GULLS02, SND_GULLS03);
 
 function added(){
