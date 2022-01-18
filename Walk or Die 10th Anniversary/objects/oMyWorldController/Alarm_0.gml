@@ -1,1 +1,1 @@
-changeLocationChance();
+//changeLocationChance();   

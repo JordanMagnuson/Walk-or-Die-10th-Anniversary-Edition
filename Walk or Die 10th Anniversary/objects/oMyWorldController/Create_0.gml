@@ -37,7 +37,7 @@ player.y = 100; //should be Ground.y but ground is not made yet
 //instance_create_depth(0,0,0, otextPress);
 
 //start of game changes
-currentLocation.gameStart();
+//currentLocation.gameStart();
 currentLocation.creationTime = 2;
 currentLocation.alarm[0] = 0.1;
 

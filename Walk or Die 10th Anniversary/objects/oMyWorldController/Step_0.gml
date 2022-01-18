@@ -1,7 +1,7 @@
-if(keyboard_check_pressed("C")){
+if(keyboard_check_pressed(ord("C"))){
 	changeLocation();
 }
-if(keyboard_check_pressed("N")){
+if(keyboard_check_pressed(ord("N"))){
 	advanceTime();
 }
 
