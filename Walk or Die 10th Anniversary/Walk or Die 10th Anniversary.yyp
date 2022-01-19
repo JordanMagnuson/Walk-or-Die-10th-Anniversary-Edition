@@ -42,6 +42,7 @@
     {"id":{"name":"oGravestone","path":"objects/oGravestone/oGravestone.yy",},"order":3,},
     {"id":{"name":"sprBeachGrass1","path":"sprites/sprBeachGrass1/sprBeachGrass1.yy",},"order":5,},
     {"id":{"name":"sprCloud05","path":"sprites/sprCloud05/sprCloud05.yy",},"order":4,},
+    {"id":{"name":"Object14","path":"objects/Object14/Object14.yy",},"order":9,},
     {"id":{"name":"sprCloud07","path":"sprites/sprCloud07/sprCloud07.yy",},"order":6,},
     {"id":{"name":"sprCloud04","path":"sprites/sprCloud04/sprCloud04.yy",},"order":3,},
     {"id":{"name":"rmMyWorld","path":"rooms/rmMyWorld/rmMyWorld.yy",},"order":0,},
