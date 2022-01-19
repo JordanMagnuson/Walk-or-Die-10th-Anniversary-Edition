@@ -2,7 +2,7 @@
 // You can write your code in this editor
 seen = false;
 
-image_index = sprCastle;
-oItem.Item(sprCastle, "far", false);
-type = "sand_castle";
-depth = 99;
+image_index = sprFlowerTree;
+oItem.Item(sprFlowerTree, "mid", false);
+type = "flower_tree";
+depth = 9;

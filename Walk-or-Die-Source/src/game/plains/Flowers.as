@@ -21,9 +21,9 @@ package game.plains
 		public function Flowers() 
 		{
 			// Random image
-			rawSprite = chooseSprite(mySpriteCollection);			
-			super(rawSprite, 'mid', true);
-			type = 'flowers';
+			rawSprite = chooseSprite(mySpriteCollection);	//done		
+			super(rawSprite, 'mid', true); // done
+			type = 'flowers'; // done
 		}
 		
 		override public function update():void 
