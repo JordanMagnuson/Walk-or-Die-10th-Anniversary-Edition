@@ -40,7 +40,7 @@ function Item(sprite, distance = "mid", overlap = true){
 */
 function added(){
 	if(overlap == false){
-		if(place_meeting(x,y, all)){
+		if(place_meeting(x,y, self.type)){
 			instance_destroy(self);
 		}
 	}

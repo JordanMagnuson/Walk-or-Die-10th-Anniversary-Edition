@@ -30,7 +30,6 @@ package rooms
 		public static var fourthFrame:int = 1;	//DONE
 		public static var forceClouds:Boolean = false;	//DONE
 		
-		//VARIABLES DON'T NEED TO BE DEFINED LIKE THIS IN GAMEMAKER, SKIPPING
 		/**
 		 * Location
 		 */
@@ -62,17 +61,17 @@ package rooms
 		 */
 		public var width:uint;
 		public var height:uint;
-		//DONE SKIPPING 
 		
-		public function MyWorld()      
+		
+		public function MyWorld()      //FUNCTION DONE, MOST OF IT IS COMMENTED OUT UNTIL THOSE FUNCTIONS ARE COMPLETE
 		{
 			// World size
 			width = 300;	//DONE
 			height = 200;	//DONE
 		
 			// Set location
-			location = FP.choose(new Desert, new Forest, new Snow, new Plains, new Beach);	
-			add(location);
+			location = FP.choose(new Desert, new Forest, new Snow, new Plains, new Beach);	//TEMPORARILY ON THE BEACH OPTION BECAUSE THAT IS COMPLETE
+			add(location);//DONE
 			changeLocationAlarm = new MyAlarm(CHANGE_LOCATION_TIME, changeLocationChance);
 			addTween(changeLocationAlarm);
 			changeLocationAlarm.start();
@@ -107,7 +106,7 @@ package rooms
 		/**
 		 * Update the room.
 		 */
-		override public function update():void 
+		override public function update():void 	//FUNCTION DONE
 		{
 
 			// Testing
@@ -154,7 +153,7 @@ package rooms
 		/**
 		 * Change location now.
 		 */
-		public function changeLocation():void
+		public function changeLocation():void	//FUNCTION DONE
 		{
 			//trace('Changing location');
 			var newLocation:Location;
@@ -175,7 +174,7 @@ package rooms
 		/**
 		 * Chance of changing location, or changing the location slope.
 		 */
-		public function changeLocationChance():void
+		public function changeLocationChance():void //FUNCTION DONE
 		{
 			//trace('change location chance');
 			//trace('Slope: ' + location.creationTimeSlope);
@@ -211,7 +210,7 @@ package rooms
 			}
 		}
 		
-		public function advanceTime():void
+		public function advanceTime():void	//FUNCTION DONE, COMMENTED OUT IN GAMEMAKER FOR NOW
 		{
 			switch (time)
 			{
@@ -227,7 +226,7 @@ package rooms
 			}
 		}
 		
-		public function showTitle():void
+		public function showTitle():void	//FUNCTION DONE, COMMENTED OUT IN GAMEMAKER FOR NOW
 		{
 			add(new textJordan);
 		}

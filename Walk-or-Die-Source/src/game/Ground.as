@@ -9,7 +9,7 @@ package game
 	
 	public class Ground extends Entity
 	{	
-		public static const y:Number = 175;
+		public static const y:Number = 175; //DONE
 		
 		/**
 		 * Ground graphic
@@ -25,7 +25,7 @@ package game
 		 * 
 		 * @param	location	The location for this ground, which determines its image.
 		 */
-		public function Ground(location:Location) 
+		public function Ground(location:Location) //FUNCTION DONE
 		{
 			// Choose image based on location
 			switch (location.type)

@@ -19,9 +19,9 @@ package game
 		 * per frame, which keeps slow-moving items in sync. 
 		 * See http://flashpunk.net/forums/index.php?topic=672.0
 		 */
-		public var moveDist:Number = 0;
-		public var moveCounter:Number = 0;		
-		public var offScreen:Boolean = false;
+		public var moveDist:Number = 0;	//DONE
+		public var moveCounter:Number = 0;		//DONE
+		public var offScreen:Boolean = false;	//DONE
 		
 		/**
 		 * Graphics
@@ -33,7 +33,7 @@ package game
 		 * Whether this item can overlap others of its type.
 		 * If not, it is removed from the world if overlapping.
 		 */
-		public var overlap:Boolean;
+		public var overlap:Boolean;	//DONE
 		
 		/**
 		 * 
@@ -41,7 +41,7 @@ package game
 		 * @param	distance		'close', 'mid', or 'far'.
 		 * @param	overlap			Whether it's okay for this item to overlap itself. 
 		 */
-		public function Item(imageSource:* = null, distance:String = 'mid', overlap:Boolean = true) 
+		public function Item(imageSource:* = null, distance:String = 'mid', overlap:Boolean = true) //FUNCTION DONE
 		{
 			this.distance = distance;			
 			this.overlap = overlap;
@@ -83,7 +83,7 @@ package game
 		 * When an item is added to the world, check to see if it can overlap 
 		 * others of its type. If not, and it is overlapping, remove it.
 		 */
-		override public function added():void
+		override public function added():void	//FUNCTION DONE
 		{
 			super.added();
 			if (overlap == false)
@@ -95,7 +95,7 @@ package game
 			}			
 		}
 		
-		override public function update():void 
+		override public function update():void //FUNCTION DONE
 		{
 			super.update();
 			
@@ -133,13 +133,13 @@ package game
 			}
 		}		
 		
-		public function offScreenAction():void
+		public function offScreenAction():void		//FUNCTION DONE
 		{
 			destroy();
 		}
 		
 		
-		public function destroy():void
+		public function destroy():void		//FUNCTION DONE
 		{
 			FP.world.remove(this);
 		}

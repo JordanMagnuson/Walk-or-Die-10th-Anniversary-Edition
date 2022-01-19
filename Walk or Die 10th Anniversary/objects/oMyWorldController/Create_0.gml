@@ -25,11 +25,12 @@ cloud.y = oCloud.MIN_HEIGHT + random(1) * (oCloud.MAX_HEIGHT - oCloud.MIN_HEIGHT
 	//instance_create_depth(0,0,0, oSoundController(currentLocation); 
 
 	//Ground and Sky
-	/*
-	instance_create_depth(0,0,0, oGround(currentLocation));
-	oGround.x = -oGround.image_width/2;
-	instance_create_depth(0, 0, 0, oSky);
-	*/
+	//ground = instance_create_depth(0,0,0, oGround(/*currentLocation*/oBeach));
+	//instance_create_depth(0, 0, 0, oGround);
+	//ground = Ground(currentLocation);
+	//ground.x = -oGround.sprite_width/2;
+	//instance_create_depth(0, 0, 0, oSky);
+	
 	//Mountain controller
 	//instance_create_depth(0,0,0, oMountainController);
 
@@ -59,7 +60,7 @@ function changeLocation(){
 	instance_destroy(currentLocation);
 	currentLocation = newLocation;
 	instance_create_depth(0, 0, 0, currentLocation);
-	//oldGround = oGround;
+	oldGround = ground;
 	//instance_create_depth(0, 0, 0, oGround(currentLocation));		
 }
 
