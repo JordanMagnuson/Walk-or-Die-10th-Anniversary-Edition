@@ -23,6 +23,11 @@ if(oPlayer.walking){
 			break;
 	}
 }
+/*
+else{
+	show_debug_message("OPLAYER ELSE STATEMENT");
+}
+*/
 
 function offScreenAction(){
 	destroy();	

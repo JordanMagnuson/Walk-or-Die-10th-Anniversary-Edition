@@ -1,13 +1,13 @@
 {
-  "spriteId": {
-    "name": "sprCactus01",
-    "path": "sprites/sprCactus01/sprCactus01.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "oLocation",
+    "path": "objects/oLocation/oLocation.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -26,11 +26,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Desert",
-    "path": "folders/Objects/Desert.yy",
+    "name": "Plains",
+    "path": "folders/Objects/Plains.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oCactus",
+  "name": "oPlains",
   "tags": [],
   "resourceType": "GMObject",
 }

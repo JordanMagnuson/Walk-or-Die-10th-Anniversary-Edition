@@ -5,6 +5,8 @@ thirdFrame = 1;
 fourthFrame = 1;
 forceClouds = false;
 
+item = instance_create_depth(350, 0, 0, oItem);
+
 //THIS IS NOT THE FINAL LOCATION FOR THIS SECTION OF CODE, DELETE LATER
 randomise();
 cloud = instance_create_depth(350, 0, 0, oCloud);
