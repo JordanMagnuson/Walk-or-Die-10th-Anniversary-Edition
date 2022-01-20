@@ -8,14 +8,14 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 94,
+  "bbox_right": 26,
   "bbox_top": 0,
-  "bbox_bottom": 65,
+  "bbox_bottom": 51,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 95,
-  "height": 66,
+  "width": 27,
+  "height": 52,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e1e904b3-442d-4533-b1dc-35b4ca662f2f","path":"sprites/oButte02/oButte02.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e1e904b3-442d-4533-b1dc-35b4ca662f2f","path":"sprites/oButte02/oButte02.yy",},"LayerId":{"name":"5f353655-5003-4466-ad7f-87766f328e9d","path":"sprites/oButte02/oButte02.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"oButte02","path":"sprites/oButte02/oButte02.yy",},"resourceVersion":"1.0","name":"e1e904b3-442d-4533-b1dc-35b4ca662f2f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"cf0d551c-5781-48c3-be78-af20549f6b7a","path":"sprites/sprGiantCactus/sprGiantCactus.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"cf0d551c-5781-48c3-be78-af20549f6b7a","path":"sprites/sprGiantCactus/sprGiantCactus.yy",},"LayerId":{"name":"d25c373c-9703-4759-84c5-9cb85ef5bbe4","path":"sprites/sprGiantCactus/sprGiantCactus.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sprGiantCactus","path":"sprites/sprGiantCactus/sprGiantCactus.yy",},"resourceVersion":"1.0","name":"cf0d551c-5781-48c3-be78-af20549f6b7a","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"oButte02","path":"sprites/oButte02/oButte02.yy",},
+    "spriteId": {"name":"sprGiantCactus","path":"sprites/sprGiantCactus/sprGiantCactus.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f280613b-f08d-4926-805a-196d77469887","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e1e904b3-442d-4533-b1dc-35b4ca662f2f","path":"sprites/oButte02/oButte02.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1ae55b47-2c03-4084-9cee-1ec88e5b1e46","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cf0d551c-5781-48c3-be78-af20549f6b7a","path":"sprites/sprGiantCactus/sprGiantCactus.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"oButte02","path":"sprites/oButte02/oButte02.yy",},
+    "parent": {"name":"sprGiantCactus","path":"sprites/sprGiantCactus/sprGiantCactus.yy",},
     "resourceVersion": "1.3",
-    "name": "oButte02",
+    "name": "sprGiantCactus",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5f353655-5003-4466-ad7f-87766f328e9d","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d25c373c-9703-4759-84c5-9cb85ef5bbe4","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oButte02",
+  "name": "sprGiantCactus",
   "tags": [],
   "resourceType": "GMSprite",
 }
