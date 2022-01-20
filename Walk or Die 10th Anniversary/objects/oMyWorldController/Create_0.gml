@@ -25,10 +25,9 @@ cloud.y = oCloud.MIN_HEIGHT + random(1) * (oCloud.MAX_HEIGHT - oCloud.MIN_HEIGHT
 	//instance_create_depth(0,0,0, oSoundController(currentLocation); 
 
 	//Ground and Sky
-	//ground = instance_create_depth(0,0,0, oGround(/*currentLocation*/oBeach));
-	//instance_create_depth(0, 0, 0, oGround);
-	//ground = Ground(currentLocation);
-	//ground.x = -oGround.sprite_width/2;
+	ground = instance_create_depth(0,0,0, oGround);
+	oGround.Ground(currentLocation);
+	ground.x = -oGround.sprite_width/2;
 	//instance_create_depth(0, 0, 0, oSky);
 	
 	//Mountain controller

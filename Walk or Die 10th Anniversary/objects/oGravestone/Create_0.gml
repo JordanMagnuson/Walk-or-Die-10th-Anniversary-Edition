@@ -1,5 +1,5 @@
 x = 57;
-y = 100; //should ground.y
+y = oGround.y;
 
 //hit box
 sprite_set_offset(sprite_index, 0,sprite_height);

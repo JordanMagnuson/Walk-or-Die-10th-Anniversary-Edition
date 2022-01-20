@@ -12,4 +12,4 @@ sprite_collision_mask(sprite_index, true, 1, sprite_width, sprite_height, 0, spr
 
 //Location
 x= 50;
-y = 100; //y should equal ground.y when ground is implemented
+y = oGround.y;
