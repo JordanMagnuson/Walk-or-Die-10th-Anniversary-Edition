@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sprCactus01",
-    "path": "sprites/sprCactus01/sprCactus01.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -26,11 +23,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Desert",
-    "path": "folders/Objects/Desert.yy",
+    "name": "Plains",
+    "path": "folders/Objects/Plains.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oCactus",
+  "name": "oFlowers",
   "tags": [],
   "resourceType": "GMObject",
 }

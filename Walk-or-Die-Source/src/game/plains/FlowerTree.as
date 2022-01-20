@@ -11,7 +11,7 @@ package game.plains
 		 * Tracks whether this item has yet appeared in the game. 
 		 * Most wonders can only be seen once.
 		 */
-		public static var seen:Boolean = false;
+		public static var seen:Boolean = false; //DONE
 		
 		/**
 		 * Graphics
@@ -20,10 +20,10 @@ package game.plains
 		
 		public function FlowerTree() 
 		{	
-			super(SPRITE01, 'mid', false);
-			type = 'flower_tree';
+			super(SPRITE01, 'mid', false); //DONE
+			type = 'flower_tree'; // DONE
 			
-			layer = 9;
+			layer = 9; // DONE
 		}
 		
 		override public function update():void 

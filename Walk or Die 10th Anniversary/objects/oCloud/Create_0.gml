@@ -10,10 +10,10 @@ MIN_SPEED = 0.1;
 
 cloud_speed = MIN_SPEED * random(0.1) * (MAX_SPEED - MIN_SPEED);
 
-//just for testing have to look into making an array for the rest of the clouds
+//fix this later
 mySpriteCollection = [sprCloud01, sprCloud02, sprCloud03, sprCloud04, sprCloud05, sprCloud06, sprCloud07, sprCloud08];
-mySpriteCollection_Random = random(8);
+//rawSprite = choose(mySpriteCollection);
 
-sprite_index = mySpriteCollection_Random;
+sprite_index = mySpriteCollection[1];
 
-//depth = 105;
+depth = 105;

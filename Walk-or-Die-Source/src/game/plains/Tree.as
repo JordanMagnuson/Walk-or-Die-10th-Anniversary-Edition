@@ -10,6 +10,7 @@ package game.plains
 		/**
 		 * Graphics
 		 */
+		// SECTION DONE
 		[Embed(source = '../../../assets/plains/tree01.png')] private const SPRITE01:Class;	
 		[Embed(source = '../../../assets/plains/tree02.png')] private const SPRITE02:Class;	
 		[Embed(source = '../../../assets/plains/tree03.png')] private const SPRITE03:Class;			
@@ -19,9 +20,9 @@ package game.plains
 		public function Tree() 
 		{
 			// Random image
-			rawSprite = chooseSprite(mySpriteCollection);			
-			super(rawSprite, 'mid', true);
-			type = 'tree';
+			rawSprite = chooseSprite(mySpriteCollection);			//DONE
+			super(rawSprite, 'mid', true);		// DONE
+			type = 'tree';		// DONE
 		}
 		
 		override public function update():void 
