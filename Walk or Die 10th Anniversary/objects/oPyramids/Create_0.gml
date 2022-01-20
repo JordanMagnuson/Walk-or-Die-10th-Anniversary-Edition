@@ -1,2 +1,8 @@
-/// @description Insert description here
-// You can write your code in this editor
+seen = false;
+
+image_index = sprPyramids;
+
+oItem.added(image_index, "far", true);
+type = "pyramids";
+	
+depth = 99;

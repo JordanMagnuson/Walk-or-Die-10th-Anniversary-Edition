@@ -1,15 +1,12 @@
 {
-  "spriteId": {
-    "name": "sprPyramids",
-    "path": "sprites/sprPyramids/sprPyramids.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oItem",
-    "path": "objects/oItem/oItem.yy",
+    "name": "oLocation",
+    "path": "objects/oLocation/oLocation.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -33,7 +30,7 @@
     "path": "folders/Objects/Desert.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPyramids",
+  "name": "oDesert",
   "tags": [],
   "resourceType": "GMObject",
 }

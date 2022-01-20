@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "sprPyramids",
-    "path": "sprites/sprPyramids/sprPyramids.yy",
+    "name": "sprTumbleweed",
+    "path": "sprites/sprTumbleweed/sprTumbleweed.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "oItem",
-    "path": "objects/oItem/oItem.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -33,7 +30,7 @@
     "path": "folders/Objects/Desert.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPyramids",
+  "name": "oTumbleweed",
   "tags": [],
   "resourceType": "GMObject",
 }
