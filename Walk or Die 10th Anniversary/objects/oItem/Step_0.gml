@@ -3,7 +3,7 @@ if(x < (0 - sprite_width) && !offScreen){
 	offScreenAction();
 }
 
-if(oPlayer.walking){
+if(instance_exists(oPlayer) && oPlayer.walking){
 	switch(distance){
 		case "mid": 
 			//move mid distance objects exactly 1 pixel every other frame.

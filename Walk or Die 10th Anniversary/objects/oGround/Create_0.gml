@@ -1,7 +1,7 @@
 y = 175;
 
 function Ground(location){
-	switch (location.type){
+	switch (location){
 		case "forest":
 			image_index = sprGroundForest;
 			break;

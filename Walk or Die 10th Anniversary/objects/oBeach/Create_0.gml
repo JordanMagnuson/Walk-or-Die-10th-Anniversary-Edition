@@ -4,7 +4,7 @@ SND_GULLS03 = sndGulls03;
 creationTimeSlope = 1;
 sndGullsRandom = choose(SND_GULLS01, SND_GULLS02, SND_GULLS03);
 
-type = "beach";
+locationType = "beach";
 instance_create_depth(0,0,0,oWaves);
 
 function added(){

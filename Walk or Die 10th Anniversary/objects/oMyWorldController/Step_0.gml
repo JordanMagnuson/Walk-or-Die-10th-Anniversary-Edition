@@ -1,6 +1,7 @@
 if(keyboard_check_pressed(ord("C"))){
 	changeLocation();
 }
+
 if(keyboard_check_pressed(ord("N"))){
 	advanceTime();
 }

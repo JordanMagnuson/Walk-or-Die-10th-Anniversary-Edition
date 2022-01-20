@@ -1,6 +1,6 @@
 //super(sndSilence, sndSilence, 5, 2); I'M NOT SURE WHAT THIS IS REFERENCING 
-type = "desert";
-
+locationType = "desert";
+creationTimeSlope = 1;
 function createItem(){
 	oItem.createItem();
 	
@@ -49,13 +49,13 @@ function createItem(){
 		}
 		// Day sounds
 		else{
-			if (creationNumber < 0.1 && !audio_is_playing(sndWind)){
+			if (creationNumber < 0.5 && !audio_is_playing(sndWind)){
 				sEmit2 = audio_emitter_create();
 				audio_emitter_gain(sEmit0, vol);
 				audio_emitter_position(sEmit2, pan,0,0);
 				audio_play_sound_on(sEmit2, sndWind, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
 			}						
-			else if (creationNumber < 0.6 && !audio_is_playing(sndGullsRandom)){
+			else if (creationNumber < 0.5 && !audio_is_playing(sndGullsRandom)){
 				sndGullsRandom = choose(sndGulls01, sndGulls02, sndGulls03);
 				sEmit3 = audio_emitter_create();
 				audio_emitter_gain(sEmit0, vol);
@@ -64,4 +64,8 @@ function createItem(){
 			}					
 		}
 	}
+}
+
+function gameStart(){
+	oLocation.gameStart(rmMyWorld, oCactus);	
 }

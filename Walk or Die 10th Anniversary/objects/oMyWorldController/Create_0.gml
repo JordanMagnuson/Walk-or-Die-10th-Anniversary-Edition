@@ -5,64 +5,98 @@ thirdFrame = 1;
 fourthFrame = 1;
 forceClouds = false;
 
-item = instance_create_depth(350, 0, 0, oItem);
-
+//item = instance_create_depth(350, 0, 0, oItem);
+/*
 //THIS IS NOT THE FINAL LOCATION FOR THIS SECTION OF CODE, DELETE LATER
 randomise();
 cloud = instance_create_depth(350, 0, 0, oCloud);
 cloud.y = oCloud.MIN_HEIGHT + random(1) * (oCloud.MAX_HEIGHT - oCloud.MIN_HEIGHT); //need to correct MIN and MAX height
 //show_debug_message(cloud.y);
+*/
 
-//function myWorld(){ //temporarily comment this out so the game runs
-	room_width = 300;
-	room_height = 200;
+room_width = 300;
+room_height = 200;
 
-	//currentLocation = choose(oDesert, oForest, oSnow, oPlains, oBeach);//this is what is should be once those are created
+locationName = choose(/*"desert"*/, /*"forest", oSnow, *//*"plains"*/, "beach");
+
+if(locationName == "desert"){
+	currentLocation = instance_create_depth(0, 0, 0, oDesert); //at this point currentLocation is just an id number
+}
+else if(locationName == "beach"){
 	currentLocation = instance_create_depth(0, 0, 0, oBeach);
+}/*
+else if(locationName == "forest"){
+	currentLocation = instance_create_depth(0, 0, 0, oForest);
+}
+else if(locationName == "snow"){
+	currentLocation = instance_create_depth(0, 0, 0, oSnow);
+}
+*/
+else if(locationName == "plains"){
+	currentLocation = instance_create_depth(0, 0, 0, oPlains);
+}
 
-	alarm[0] = CHANGE_LOCATION_TIME;//changeLocationAlarm
+//alarm[0] = CHANGE_LOCATION_TIME;//changeLocationAlarm
 
-	//UNCOMMENT THE BELOW ITEMS AS THEY ARE ADDED INTO THE GAME
-	//Sound Controller
-	//instance_create_depth(0,0,0, oSoundController(currentLocation); 
+//UNCOMMENT THE BELOW ITEMS AS THEY ARE ADDED INTO THE GAME
+//Sound Controller
+//instance_create_depth(0,0,0, oSoundController(currentLocation); 
 
-	//Ground and Sky
-	ground = instance_create_depth(0,0,0, oGround);
-	oGround.Ground(currentLocation);
-	ground.x = -oGround.sprite_width/2;
-	//instance_create_depth(0, 0, 0, oSky);
+//Ground and Sky
+ground = instance_create_depth(0,0,0, oGround);
+oGround.Ground(locationName);
+oGround.x = -oGround.sprite_width/2;
+
+//instance_create_depth(0, 0, 0, oSky);
 	
-	//Mountain controller
-	//instance_create_depth(0,0,0, oMountainController);
+//Mountain controller
+//instance_create_depth(0,0,0, oMountainController);
 
-	//Night-Day cycle
-	//instance_create_depth(0,0,0, oDay(this, false);
+//Night-Day cycle
+//instance_create_depth(0,0,0, oDay(this, false);
 
-	//Player
-	player = instance_create_depth(0, 0, -1, oPlayer);
+//Player
+player = instance_create_depth(0, 0, -1, oPlayer);
 
-	//Starting Text
-	//instance_create_depth(0,0,0, otextPress);
+//Starting Text
+//instance_create_depth(0,0,0, otextPress);
 
-	//start of game changes
-	//currentLocation.gameStart();
-	currentLocation.creationTime = 2;
-	currentLocation.alarm[0] = 0.1;
-//}
+//start of game changes
+//currentLocation.gameStart();
+if(locationName = "beach"){
+	oBeach.creationTime = 2;
+	oBeach.alarm[0] = 0.1;
+}
+else if(locationName = "desert"){
+	oDesert.creationTime = 2;
+	oDesert.alarm[0] = 0.1;
+}/*
+else if(locationName = "snow"){
+	oSnow.creationTime = 2;
+	oSnow.alarm[0] = 0.1;
+}
+else if(locationName = "forest"){
+	oForest.creationTime = 2;
+	oForest.alarm[0] = 0.1;
+}*/
+else if(locationName = "plains"){
+	oPlains.creationTime = 2;
+	oPlains.alarm[0] = 0.1;
+}
 
 function changeLocation(){
 	var newLocation;
 	do{
-		//newLocation = choose(oForest, oDesert, oPlains, oSnow, oBeach);
-		newLocation = instance_create_depth(0, 0, 0, oBeach);//TEMP
+		newLocation = choose(/*"forest", */"desert", /*"plains",*//* "snow", */"beach");
 	} 
-	until (newLocation != currentLocation);
+	until (newLocation != locationName);
 	//oSoundController.changeLocation(newLocation);
 	instance_destroy(currentLocation);
-	currentLocation = newLocation;
-	instance_create_depth(0, 0, 0, currentLocation);
+	locationName = newLocation;
+	currentLocation = instance_create_depth(0, 0, 0, currentLocation);
 	oldGround = ground;
-	//instance_create_depth(0, 0, 0, oGround(currentLocation));		
+	instance_create_depth(0, 0, 0, oGround);	
+	oGround.Ground(currentLocation);
 }
 
 function changeLocationChance(){
