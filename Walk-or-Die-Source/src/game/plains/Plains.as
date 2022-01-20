@@ -1,4 +1,4 @@
-spackage game.plains 
+package game.plains 
 {
 
 	import game.*;
