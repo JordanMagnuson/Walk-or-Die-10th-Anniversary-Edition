@@ -14,6 +14,6 @@ cloud_speed = MIN_SPEED * random(0.1) * (MAX_SPEED - MIN_SPEED);
 mySpriteCollection = [sprCloud01, sprCloud02, sprCloud03, sprCloud04, sprCloud05, sprCloud06, sprCloud07, sprCloud08];
 //rawSprite = choose(mySpriteCollection);
 
-sprite_index = mySpriteCollection[1];
+sprite_index = choose(sprCloud01, sprCloud02, sprCloud03, sprCloud04, sprCloud05, sprCloud06, sprCloud07, sprCloud08);
 
 depth = 105;

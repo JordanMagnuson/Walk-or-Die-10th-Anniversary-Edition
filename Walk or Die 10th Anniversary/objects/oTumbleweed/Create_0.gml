@@ -1,6 +1,7 @@
-image_index = sprTumbleweed;
+event_inherited();
+sprite_index = sprTumbleweed;
 
-oItem.added(image_index, "close", false);
+oItem.added(sprite_index, "close", false);
 image_speed = 5;
 type = "tumbleweed";
 	

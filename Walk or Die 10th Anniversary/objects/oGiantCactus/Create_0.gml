@@ -1,4 +1,5 @@
-image_index = sprGiantCactus;
+event_inherited()
+sprite_index = sprGiantCactus;
 
-oItem.added(image_index, "mid", true);
+oItem.added(sprite_index, "mid", true);
 type = "giant_cactus";

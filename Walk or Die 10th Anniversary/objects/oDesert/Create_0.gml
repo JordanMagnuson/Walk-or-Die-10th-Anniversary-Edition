@@ -1,4 +1,5 @@
 //super(sndSilence, sndSilence, 5, 2); I'M NOT SURE WHAT THIS IS REFERENCING 
+event_inherited();
 locationType = "desert";
 creationTimeSlope = 1;
 function createItem(){
@@ -67,5 +68,5 @@ function createItem(){
 }
 
 function gameStart(){
-	oLocation.gameStart(rmMyWorld, oCactus);	
+	instance_create_depth(150, 0, 0, oCactus);	
 }

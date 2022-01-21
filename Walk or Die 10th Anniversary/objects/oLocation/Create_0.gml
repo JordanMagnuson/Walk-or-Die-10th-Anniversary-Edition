@@ -1,5 +1,7 @@
 creationTimeSlope = 1;
-
+minCreationTime = 0.4;
+maxCreationTime = 4;
+creationTimeDecreaseRate = 0.4;
 function location(DAY_SOUND, NIGHT_SOUND, maxCreationtime = 4, minCreationTime = 0.4, creationTimeDecreaseRate = 0.4){
 	daySound = DAY_SOUND;
 	nightSound = NIGHT_SOUND;
@@ -39,9 +41,10 @@ function createItem(){
 	alarm[0] = creationTime;
 }
 
-
-function gameStartItem(rmTemp, oItemTemp){
+/* Gamemaker does not like this, items will instead be created within the specific location objects
+function gameStartItem(oItemTemp){
 	myItem = oItemTemp;
 	myItem.x = 150;
-	player = instance_create_depth(0, 0, 0, myItem);
+	instance_create_depth(0, 0, 0, myItem);
 }
+*/

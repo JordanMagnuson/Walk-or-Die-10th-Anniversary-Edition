@@ -3,19 +3,19 @@ y = 175;
 function Ground(location){
 	switch (location){
 		case "forest":
-			image_index = sprGroundForest;
+			sprite_index = sprGroundForest;
 			break;
 		case "desert":
-			image_index = sprGroundDesert
+			sprite_index = sprGroundDesert
 			break;
 		case "snow":
-			image_index = sprGroundSnow;
+			sprite_index = sprGroundSnow;
 			break;
 		case "plains":
-			image_index = sprGroundPlains;
+			sprite_index = sprGroundPlains;
 			break;		
 		case "beach":
-			image_index = sprGroundBeach;
+			sprite_index = sprGroundBeach;
 			break;							
 	}
 			

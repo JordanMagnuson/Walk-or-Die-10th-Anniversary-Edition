@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sprGroundBeach",
-    "path": "sprites/sprGroundBeach/sprGroundBeach.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

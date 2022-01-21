@@ -1,3 +1,4 @@
+event_inherited();
 SND_GULLS01 = sndGulls01;
 SND_GULLS02 = sndGulls02;
 SND_GULLS03 = sndGulls03;
@@ -6,10 +7,8 @@ sndGullsRandom = choose(SND_GULLS01, SND_GULLS02, SND_GULLS03);
 
 locationType = "beach";
 instance_create_depth(0,0,0,oWaves);
+oWaves.fadeIn();
 
-function added(){
-	instance_create_depth(0, 0, 0, oWaves);
-}
 
 //Controls item creation for this location
 function createItem(){
@@ -76,5 +75,5 @@ function removed(){
 }
 
 function gameStart(){
-	oLocation.gameStartItem(rmMyWorld, oSandDune);	
+	instance_create_depth(150, 0, 0, oSandDune); 
 }

@@ -1,8 +1,9 @@
+event_inherited();
 seen = false;
 
-image_index = sprPyramids;
+sprite_index = sprPyramids;
 
-oItem.added(image_index, "far", true);
+oItem.added(sprite_index, "far", true);
 type = "pyramids";
 	
 depth = 99;

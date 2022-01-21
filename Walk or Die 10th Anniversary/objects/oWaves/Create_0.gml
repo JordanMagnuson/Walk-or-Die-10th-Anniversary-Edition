@@ -12,7 +12,7 @@ fadeOutCalled = false;
 */
 waveDirection= 1; //direction changed to wave direction, direction means something in GML
 
-image_index = sprWaves;
+sprite_index = sprWaves;
 image_alpha = 0;
 
 //Hit box to bottom left

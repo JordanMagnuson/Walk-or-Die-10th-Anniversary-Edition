@@ -19,7 +19,7 @@ function Item(sprite, distance = "mid", overlap = true){
 	
 	// Create every item at the far right edge of the screen
 	x = room_width + 10;
-	y = 100; //temporarily set to 100, should be ground.y
+	y = oGround.y;
 			
 	// Layer
 	switch (distance){

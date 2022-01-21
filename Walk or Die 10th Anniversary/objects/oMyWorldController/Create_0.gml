@@ -4,8 +4,6 @@ oddFrame = 1;
 thirdFrame = 1;
 fourthFrame = 1;
 forceClouds = false;
-
-//item = instance_create_depth(350, 0, 0, oItem);
 /*
 //THIS IS NOT THE FINAL LOCATION FOR THIS SECTION OF CODE, DELETE LATER
 randomise();
@@ -17,26 +15,26 @@ cloud.y = oCloud.MIN_HEIGHT + random(1) * (oCloud.MAX_HEIGHT - oCloud.MIN_HEIGHT
 room_width = 300;
 room_height = 200;
 
-locationName = choose(/*"desert"*/, /*"forest", oSnow, *//*"plains"*/, "beach");
-
+//locationName = choose("desert", "forest", "snow", "plains", "beach");
+locationName = "beach";
 if(locationName == "desert"){
 	currentLocation = instance_create_depth(0, 0, 0, oDesert); //at this point currentLocation is just an id number
 }
 else if(locationName == "beach"){
 	currentLocation = instance_create_depth(0, 0, 0, oBeach);
-}/*
+}
 else if(locationName == "forest"){
 	currentLocation = instance_create_depth(0, 0, 0, oForest);
 }
 else if(locationName == "snow"){
 	currentLocation = instance_create_depth(0, 0, 0, oSnow);
 }
-*/
+
 else if(locationName == "plains"){
 	currentLocation = instance_create_depth(0, 0, 0, oPlains);
 }
 
-//alarm[0] = CHANGE_LOCATION_TIME;//changeLocationAlarm
+alarm[0] = CHANGE_LOCATION_TIME;//changeLocationAlarm
 
 //UNCOMMENT THE BELOW ITEMS AS THEY ARE ADDED INTO THE GAME
 //Sound Controller
@@ -57,31 +55,30 @@ oGround.x = -oGround.sprite_width/2;
 
 //Player
 player = instance_create_depth(0, 0, -1, oPlayer);
-
 //Starting Text
 //instance_create_depth(0,0,0, otextPress);
 
 //start of game changes
-//currentLocation.gameStart();
 if(locationName = "beach"){
 	oBeach.creationTime = 2;
 	oBeach.alarm[0] = 0.1;
-}
-else if(locationName = "desert"){
+	oBeach.gameStart();
+} else if(locationName = "desert"){
 	oDesert.creationTime = 2;
 	oDesert.alarm[0] = 0.1;
-}/*
-else if(locationName = "snow"){
+	oDesert.gameStart();
+} else if(locationName = "snow"){
 	oSnow.creationTime = 2;
 	oSnow.alarm[0] = 0.1;
-}
-else if(locationName = "forest"){
+	oSnow.gameStart();
+} else if(locationName = "forest"){
 	oForest.creationTime = 2;
 	oForest.alarm[0] = 0.1;
-}*/
-else if(locationName = "plains"){
+	oForest.gameStart();
+} else if(locationName = "plains"){
 	oPlains.creationTime = 2;
 	oPlains.alarm[0] = 0.1;
+	oPlains.gameStart();
 }
 
 function changeLocation(){
@@ -102,21 +99,21 @@ function changeLocation(){
 function changeLocationChance(){
 	alarm[0] = CHANGE_LOCATION_TIME;
 	if(instance_exists(oLocation)){
-		switch (currentLocation.creationTimeSlope){
+		switch (oLocation.creationTimeSlope){
 			case 1:
-				if (currentLocation.creationTime < (currentLocation.minCreationTime * 2)){
+				if (oLocation.creationTime < (oLocation.minCreationTime * 2)){
 					if (random(1) > 0.6){
-						currentLocation.creationTimeSlope = 0;
+						oLocation.creationTimeSlope = 0;
 					}
 				}
 				break;
 			case 0:
 				if (random(1) > 0.6){
-					currentLocation.creationTimeSlope = -1;
+					oLocation.creationTimeSlope = -1;
 				}
 				break;
 			case -1:
-				if (currentLocation.creationTime > (currentLocation.maxCreationTime * 0.75)){
+				if (oLocation.creationTime > (oLocation.maxCreationTime * 0.75)){
 					if (random(1) > 0.6){
 						changeLocation();
 					}		

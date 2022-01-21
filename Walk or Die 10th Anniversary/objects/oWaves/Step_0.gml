@@ -1,6 +1,10 @@
 if (fadeInCalled and image_alpha < 1){
 	image_alpha += (1/FADE_IN_DURATION)/room_speed;	
 }
+else if(image_alpha >= 1){
+	fadeInCalled = false;
+}
+
 if (fadeOutCalled and image_alpha > 0){
 	image_alpha -= (1/FADE_OUT_DURATION)/room_speed;
 	if(image_alpha == 0){
