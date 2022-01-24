@@ -4,6 +4,7 @@ oddFrame = 1;
 thirdFrame = 1;
 fourthFrame = 1;
 forceClouds = false;
+time = "day"; //TEMP TIME FOR TESTING
 /*
 //THIS IS NOT THE FINAL LOCATION FOR THIS SECTION OF CODE, DELETE LATER
 randomise();
@@ -59,27 +60,9 @@ player = instance_create_depth(0, 0, -1, oPlayer);
 //instance_create_depth(0,0,0, otextPress);
 
 //start of game changes
-if(locationName = "beach"){
-	oBeach.creationTime = 2;
-	oBeach.alarm[0] = 0.1;
-	oBeach.gameStart();
-} else if(locationName = "desert"){
-	oDesert.creationTime = 2;
-	oDesert.alarm[0] = 0.1;
-	oDesert.gameStart();
-} else if(locationName = "snow"){
-	oSnow.creationTime = 2;
-	oSnow.alarm[0] = 0.1;
-	oSnow.gameStart();
-} else if(locationName = "forest"){
-	oForest.creationTime = 2;
-	oForest.alarm[0] = 0.1;
-	oForest.gameStart();
-} else if(locationName = "plains"){
-	oPlains.creationTime = 2;
-	oPlains.alarm[0] = 0.1;
-	oPlains.gameStart();
-}
+oLocation.creationTime = 2;
+oLocation.gameStart();
+oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds 
 
 function changeLocation(){
 	var newLocation;
@@ -88,9 +71,37 @@ function changeLocation(){
 	} 
 	until (newLocation != locationName);
 	//oSoundController.changeLocation(newLocation);
+	
+	//as the location changes, free up the emitters to prevent a memory leak; Currently in Progress
+	//if(audio_emitter_exists(oLocation.sEmit0))
+	//	audio_emitter_free(oLocation.sEmit0);
+	//if(audio_emitter_exists(oLocation.sEmit1))
+	//	audio_emitter_free(oLocation.sEmit1);
+	//if(audio_emitter_exists(oLocation.sEmit2))
+	//	audio_emitter_free(oLocation.sEmit2);
+	//if(audio_emitter_exists(oLocation.sEmit3))
+	//	audio_emitter_free(oLocation.sEmit3);
+	
 	instance_destroy(currentLocation);
 	locationName = newLocation;
-	currentLocation = instance_create_depth(0, 0, 0, currentLocation);
+	if(locationName == "desert"){
+	currentLocation = instance_create_depth(0, 0, 0, oDesert); //at this point currentLocation is just an id number
+	}
+	else if(locationName == "beach"){
+		currentLocation = instance_create_depth(0, 0, 0, oBeach);
+	}
+	else if(locationName == "forest"){
+		currentLocation = instance_create_depth(0, 0, 0, oForest);
+	}
+	else if(locationName == "snow"){
+		currentLocation = instance_create_depth(0, 0, 0, oSnow);
+	}
+	else if(locationName == "plains"){
+		currentLocation = instance_create_depth(0, 0, 0, oPlains);
+	}
+	oLocation.creationTime = 2;
+	oLocation.gameStart();
+	
 	oldGround = ground;
 	instance_create_depth(0, 0, 0, oGround);	
 	oGround.Ground(currentLocation);

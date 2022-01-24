@@ -2,7 +2,7 @@
 event_inherited();
 locationType = "desert";
 creationTimeSlope = 1;
-function createItem(){
+function createItemHere(){
 	oItem.createItem();
 	
 	creationNumber = random(1);

@@ -2,9 +2,11 @@ creationTimeSlope = 1;
 minCreationTime = 0.4;
 maxCreationTime = 4;
 creationTimeDecreaseRate = 0.4;
-function location(DAY_SOUND, NIGHT_SOUND, maxCreationtime = 4, minCreationTime = 0.4, creationTimeDecreaseRate = 0.4){
+creationTimeIncreaseRate = 0.4;
+
+function Location(DAY_SOUND, NIGHT_SOUND, maxCreationtime = 4, minCreationTime = 0.4, creationTimeDecreaseRate = 0.4){
 	daySound = DAY_SOUND;
-	nightSound = NIGHT_SOUND;
+	nightSound = NIGHT_SOUND;//WE NEED TO CALL THIS LOCATION FUNCTION TO START THE ITEM CREATION ALARM
 		
 	maxCreationTime = (maxCreationTime / (oPlayer.SPEED / 100));
 	minCreationTime = (minCreationTime / (oPlayer.SPEED / 100));
@@ -12,7 +14,7 @@ function location(DAY_SOUND, NIGHT_SOUND, maxCreationtime = 4, minCreationTime =
 	creationTimeDecreaseRate = (creationTimeDecreaseRate * (oPlayer.SPEED / 100));
 		
 	creationTime = maxCreationTime;
-	alarm[0] = creationTime;
+	alarm[0] = creationTime;  
 }
 
 function createItem(){
@@ -38,9 +40,9 @@ function createItem(){
 				break;
 		}
 	}
-	alarm[0] = creationTime;
+	alarm[0] = creationTime * room_speed;
 }
-
+  
 /* Gamemaker does not like this, items will instead be created within the specific location objects
 function gameStartItem(oItemTemp){
 	myItem = oItemTemp;

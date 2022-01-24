@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"sprCactus03","path":"sprites/sprCactus03/sprCactus03.yy",},"order":3,},
     {"id":{"name":"sprWaves","path":"sprites/sprWaves/sprWaves.yy",},"order":11,},
+    {"id":{"name":"oMain","path":"objects/oMain/oMain.yy",},"order":15,},
     {"id":{"name":"sprYellowFlower","path":"sprites/sprYellowFlower/sprYellowFlower.yy",},"order":2,},
     {"id":{"name":"sprButte01","path":"sprites/sprButte01/sprButte01.yy",},"order":30,},
     {"id":{"name":"sprCactus04","path":"sprites/sprCactus04/sprCactus04.yy",},"order":4,},
@@ -53,7 +54,6 @@
     {"id":{"name":"sprCastle","path":"sprites/sprCastle/sprCastle.yy",},"order":6,},
     {"id":{"name":"oTumbleweed","path":"objects/oTumbleweed/oTumbleweed.yy",},"order":4,},
     {"id":{"name":"sprPurpleFlower","path":"sprites/sprPurpleFlower/sprPurpleFlower.yy",},"order":1,},
-    {"id":{"name":"Sprite11","path":"sprites/Sprite11/Sprite11.yy",},"order":14,},
     {"id":{"name":"oTree","path":"objects/oTree/oTree.yy",},"order":3,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"sndGulls02","path":"sounds/sndGulls02/sndGulls02.yy",},"order":4,},

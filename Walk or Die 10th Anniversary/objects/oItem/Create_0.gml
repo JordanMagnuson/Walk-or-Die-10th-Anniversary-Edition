@@ -8,7 +8,7 @@ overlap = false;
 function Item(sprite, distance = "mid", overlap = true){
 	self.distance = distance;			
 	self.overlap = overlap;
-	image_index = sprite;	
+	image_index = sprite;
 	if (random(1) > 0.5){
 		image_xscale = -1;
 	}			
