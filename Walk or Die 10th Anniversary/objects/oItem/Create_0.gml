@@ -19,7 +19,7 @@ function Item(sprite, distance = "mid", overlap = true){
 	
 	// Create every item at the far right edge of the screen
 	x = room_width + 10;
-	y = oGround.y;
+	y = 175; //hard coded, this should be oGround.y
 			
 	// Layer
 	switch (distance){
@@ -33,15 +33,14 @@ function Item(sprite, distance = "mid", overlap = true){
 			depth = choose(100, 101);
 			break;
 	}
-}	
 /**
 	* When an item is added to the world, check to see if it can overlap 
 	* others of its type. If not, and it is overlapping, remove it.
 */
-function added(){
-	if(overlap == false){
+if(overlap == false){
 		if(place_meeting(x,y, self.type)){
 			instance_destroy(self);
 		}
-	}
-}
+	} 
+}	
+

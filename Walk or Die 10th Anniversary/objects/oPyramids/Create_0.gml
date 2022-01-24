@@ -1,9 +1,10 @@
 event_inherited();
-seen = false;
+//seen = false; //moved to oDesert because this variable is unreadable unless and instance of this object exists
 
 sprite_index = sprPyramids;
 
-oItem.added(sprite_index, "far", true);
-type = "pyramids";
+type = oPyramids;
+oItem.Item(sprite_index, "far", true);
+
 	
 depth = 99;

@@ -1,5 +1,5 @@
 if(x > -sprite_width/2){
-	if(oPlayer.walking){
+	if(instance_exists(oPlayer) && oPlayer.walking){
 		x -= (oPlayer.SPEED/50);
 	}
 }

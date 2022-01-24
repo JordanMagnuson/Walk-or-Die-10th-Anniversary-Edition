@@ -5,9 +5,10 @@ thirdFrame = 1;
 fourthFrame = 1;
 forceClouds = false;
 time = "day"; //TEMP TIME FOR TESTING
-/*
+
 //THIS IS NOT THE FINAL LOCATION FOR THIS SECTION OF CODE, DELETE LATER
 randomise();
+/*    
 cloud = instance_create_depth(350, 0, 0, oCloud);
 cloud.y = oCloud.MIN_HEIGHT + random(1) * (oCloud.MAX_HEIGHT - oCloud.MIN_HEIGHT); //need to correct MIN and MAX height
 //show_debug_message(cloud.y);
@@ -34,7 +35,6 @@ else if(locationName == "snow"){
 else if(locationName == "plains"){
 	currentLocation = instance_create_depth(0, 0, 0, oPlains);
 }
-
 alarm[0] = CHANGE_LOCATION_TIME;//changeLocationAlarm
 
 //UNCOMMENT THE BELOW ITEMS AS THEY ARE ADDED INTO THE GAME
@@ -60,6 +60,7 @@ player = instance_create_depth(0, 0, -1, oPlayer);
 //instance_create_depth(0,0,0, otextPress);
 
 //start of game changes
+oLocation.Location();    
 oLocation.creationTime = 2;
 oLocation.gameStart();
 oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds 
@@ -73,15 +74,13 @@ function changeLocation(){
 	//oSoundController.changeLocation(newLocation);
 	
 	//as the location changes, free up the emitters to prevent a memory leak; Currently in Progress
-	//if(audio_emitter_exists(oLocation.sEmit0))
-	//	audio_emitter_free(oLocation.sEmit0);
-	//if(audio_emitter_exists(oLocation.sEmit1))
-	//	audio_emitter_free(oLocation.sEmit1);
-	//if(audio_emitter_exists(oLocation.sEmit2))
-	//	audio_emitter_free(oLocation.sEmit2);
-	//if(audio_emitter_exists(oLocation.sEmit3))
-	//	audio_emitter_free(oLocation.sEmit3);
+	audio_emitter_free(oLocation.sEmit0);
+	audio_emitter_free(oLocation.sEmit1);
+	audio_emitter_free(oLocation.sEmit2);
+	audio_emitter_free(oLocation.sEmit3);
 	
+	if(locationName == "beach")
+		oBeach.removed();
 	instance_destroy(currentLocation);
 	locationName = newLocation;
 	if(locationName == "desert"){
@@ -99,11 +98,13 @@ function changeLocation(){
 	else if(locationName == "plains"){
 		currentLocation = instance_create_depth(0, 0, 0, oPlains);
 	}
+	oLocation.Location();    
 	oLocation.creationTime = 2;
 	oLocation.gameStart();
+	oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds 
 	
 	oldGround = ground;
-	instance_create_depth(0, 0, 0, oGround);	
+	instance_create_depth(0,   0, 0, oGround);	
 	oGround.Ground(currentLocation);
 }
 

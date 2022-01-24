@@ -1,7 +1,7 @@
 event_inherited();
-seen = false;
+//seen = false; This cannot be read unless the object exists, so it was moved to oBeach
 
 sprite_index = sprCastle;
+type = oCastle;  
 oItem.Item(sprCastle, "far", false);
-type = "sand_castle";
 depth = 99;
