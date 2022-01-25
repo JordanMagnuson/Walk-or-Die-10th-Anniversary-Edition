@@ -98,14 +98,14 @@ function changeLocation(){
 	else if(locationName == "plains"){
 		currentLocation = instance_create_depth(0, 0, 0, oPlains);
 	}
-	oLocation.Location();    
+	show_debug_message("Current location: " + locationName);   
+	oLocation.Location();    //this is calling the old location I think 
 	oLocation.creationTime = 2;
-	oLocation.gameStart();
 	oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds 
 	
-	oldGround = ground;
-	instance_create_depth(0,   0, 0, oGround);	
-	oGround.Ground(currentLocation);
+	//oldGround = ground;
+	//instance_create_depth(0, 0, 0, oGround);	
+	oGround.Ground(locationName);
 }
 
 function changeLocationChance(){

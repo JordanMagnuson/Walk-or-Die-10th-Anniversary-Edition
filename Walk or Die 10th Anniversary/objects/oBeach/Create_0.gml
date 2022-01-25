@@ -21,21 +21,22 @@ function createItemHere(){
 	creationNumber = random_range(0,1);
 	if (random_range(0,1) > 0.25){		
 		if (creationNumber < 0.005 && oCastleSeen == false){
-			instance_create_depth(0, 0, 0, oCastle);
+			//adding the x and y values here stopped objects from spawning in the sky
+			instance_create_depth(room_width+10, 175, 0, oCastle);
 			oCastleSeen = true;
 		}
 		else if (creationNumber < 0.05){
-			instance_create_depth(0, 0, 0, oCactus);
+			instance_create_depth(room_width+10, 175, 0, oCactus);
 		}
 		else if (creationNumber < 0.4){
-			instance_create_depth(0, 0, 0, oBeachGrass);
+			instance_create_depth(room_width+10, 175, 0, oBeachGrass);
 		}
 		else if (creationNumber < 1){
-			instance_create_depth(0, 0, 0, oSandDune);
+			instance_create_depth(room_width+10, 175, 0, oSandDune);
 		}
 	}
-	show_debug_message("Creation Number (oBeach CreateItemHere): " + string(creationNumber));  
-    
+	//show_debug_message("Creation Number (oBeach CreateItemHere): " + string(creationNumber));  
+
 	//sounds
 	if (random_range(0,1) > 0.4){
 		pan = choose( -1, 1) * random_range(0,1);
@@ -62,7 +63,7 @@ function createItemHere(){
 				audio_emitter_gain(sEmit2, vol);
 				audio_emitter_position(sEmit2, pan,0,0);
 				audio_play_sound_on(sEmit2, sndWind, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
-			}						
+			}			
 			else if (creationNumber < 0.6 && !audio_is_playing(sndGullsRandom)){
 				sndGullsRandom = choose(sndGulls01, sndGulls02, sndGulls03);
 				audio_emitter_gain(sEmit3, vol);
@@ -70,7 +71,7 @@ function createItemHere(){
 				audio_play_sound_on(sEmit3, sndGullsRandom, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
 			}					
 		}
-	}	
+	}	  
 }
 
 function removed(){

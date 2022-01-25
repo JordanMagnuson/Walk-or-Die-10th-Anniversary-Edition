@@ -16,22 +16,22 @@ function createItemHere(){
 	//Mid distance
 	if(random(1) > 0.25){
 		if(creationNumber < 0.01 && oPyramidsSeen == false){
-			instance_create_depth(0,0,0, oPyramids);
+			instance_create_depth(room_width+10, 175,0, oPyramids);
 			oPyramidsSeen = true;
 		}
 		else if(creationNumber < 0.05){
-			instance_create_depth(0,0,0, oGiantCactus);	
+			instance_create_depth(room_width+10, 175,0, oGiantCactus);	
 		}
 		else if(creationNumber < 0.1){
-			instance_create_depth(0,0,0, oButte);
+			instance_create_depth(room_width+10, 175,0, oButte);
 		}
 		else if(creationNumber < 0.15){
-			instance_create_depth(0,0,0, oTumbleweed);	
+			instance_create_depth(room_width+10, 175,0, oTumbleweed);	
 		}
 		else if(creationNumber < 1){
-			instance_create_depth(0,0,0, oCactus);	
+			instance_create_depth(room_width+10, 175,0, oCactus);	
 		}
-		show_debug_message("Creation Number (oDesert CreateItemHere): " + string(creationNumber));  
+		//show_debug_message("Creation Number (oDesert CreateItemHere): " + string(creationNumber));  
 	}
 	//sounds
 	if (random_range(0,1) > 0.4){

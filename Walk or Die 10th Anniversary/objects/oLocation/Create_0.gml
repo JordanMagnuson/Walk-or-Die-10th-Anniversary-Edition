@@ -15,7 +15,7 @@ function Location(DAY_SOUND, NIGHT_SOUND, maxCreationTime = 4, minCreationTime =
 		
 	creationTime = maxCreationTime;
 	alarm[0] = creationTime * room_speed; 
-	show_debug_message("Show Alarm time (oLocation(Location)): " + string(alarm[0]));
+	//show_debug_message("Show Alarm time (oLocation(Location)): " + string(alarm[0]));
 }
 
 function createItem(){
@@ -42,7 +42,7 @@ function createItem(){
 		}
 	}
 	alarm[0] = creationTime * room_speed;
-	show_debug_message("Show Alarm time (oLocation(c reateItem)): " + string(alarm[0]));   
+	//show_debug_message("Show Alarm time (oLocation(createItem)): " + string(alarm[0]));   
 }
   
 /* Gamemaker does not like this, items will instead be created within the specific location objects
