@@ -24,15 +24,19 @@ function createItemHere(){
 			//adding the x and y values here stopped objects from spawning in the sky
 			instance_create_depth(room_width+10, 175, 0, oCastle);
 			oCastleSeen = true;
+			show_debug_message("SandCastle Created");
 		}
 		else if (creationNumber < 0.05){
 			instance_create_depth(room_width+10, 175, 0, oCactus);
+			show_debug_message("Cactus Created");
 		}
 		else if (creationNumber < 0.4){
 			instance_create_depth(room_width+10, 175, 0, oBeachGrass);
+			show_debug_message("BeachGrass Created");
 		}
 		else if (creationNumber < 1){
 			instance_create_depth(room_width+10, 175, 0, oSandDune);
+			show_debug_message("Sand Dune Created");
 		}
 	}
 	//show_debug_message("Creation Number (oBeach CreateItemHere): " + string(creationNumber));  

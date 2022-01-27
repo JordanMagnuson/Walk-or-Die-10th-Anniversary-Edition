@@ -19,6 +19,7 @@ function Location(DAY_SOUND, NIGHT_SOUND, maxCreationTime = 4, minCreationTime =
 }
 
 function createItem(){
+	
 	if(random(1) > 0.25){
 		switch(creationTimeSlope){
 			case -1:
@@ -41,6 +42,7 @@ function createItem(){
 				break;
 		}
 	}
+	
 	alarm[0] = creationTime * room_speed;
 	//show_debug_message("Show Alarm time (oLocation(createItem)): " + string(alarm[0]));   
 }

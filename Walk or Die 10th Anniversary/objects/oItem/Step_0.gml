@@ -1,5 +1,11 @@
-if(x < (0 - sprite_width) && !offScreen){
-	offScreen = true;
+if(image_xscale == -1){
+	if(x < (0 + sprite_width)){
+	show_debug_message("object destroyed, went offscreen, x = " + string(x));
+	offScreenAction();
+	}
+}
+else if(x < (0 - sprite_width)){
+	show_debug_message("object destroyed, went offscreen, x = " + string(x));
 	offScreenAction();
 }
 
@@ -14,7 +20,7 @@ if(instance_exists(oPlayer) && oPlayer.walking){
 		case "close":
 			//move close distance objects exatly 1 pixel every frame.
 			x -= oPlayer.SPEED/100;
-			break;
+			break; 
 		case "far":
 			//move far distance objects exactly 1 pixel every third frame
 			if(oMyWorldController.thirdFrame == 1){

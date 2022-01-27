@@ -2,13 +2,13 @@ distance = "";
 
 moveDist = 0;
 moveCounter = 0;
-offScreen = false;
+
 overlap = false;
 
 function Item(sprite, distance = "mid", overlap = true){
 	self.distance = distance;			
 	self.overlap = overlap;
-	image_index = sprite;
+	sprite_index = sprite; 
 	if (random(1) > 0.5){
 		image_xscale = -1;
 	}			
@@ -18,8 +18,8 @@ function Item(sprite, distance = "mid", overlap = true){
 	sprite_collision_mask(sprite_index, true, 1, sprite_width, sprite_height, 0, sprite_height, bboxkind_rectangular,0);
 	
 	// Create every item at the far right edge of the screen
-	x = room_width + 10;
-	y = 175; //hard coded, this should be oGround.y
+	//x = room_width + 10;
+	//y = 175; //hard coded, this should be oGround.y
 			
 	// Layer
 	switch (distance){
@@ -33,6 +33,7 @@ function Item(sprite, distance = "mid", overlap = true){
 			depth = choose(100, 101);
 			break;
 	}
+	
 /**
 	* When an item is added to the world, check to see if it can overlap 
 	* others of its type. If not, and it is overlapping, remove it.
@@ -40,6 +41,7 @@ function Item(sprite, distance = "mid", overlap = true){
 if(overlap == false){
 		if(place_meeting(x,y, self.type)){
 			instance_destroy(self);
+			show_debug_message("Destroyed self due to overlap");
 		}
 	} 
 }	
