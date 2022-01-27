@@ -22,6 +22,7 @@ package game
 		
 		public var starsReleased:int = 0;
 		
+		// SECTION DONE
 		public function MeteorShower() 
 		{
 			
@@ -30,14 +31,16 @@ package game
 			direction = FP.choose(-1, 1);
 		}
 		
+		// ALMOST DONE
 		override public function added():void
 		{
 			changeTimeBetween();
-			releaseAlarm = new Alarm(timeBetween, releaseStar);
+			releaseAlarm = new Alarm(timeBetween, releaseStar); //unsure
 			addTween(releaseAlarm);
 			releaseAlarm.start();
 		}
 		
+		// almost done working on shootingstar.as
 		public function releaseStar():void
 		{
 			starsReleased += 1;
@@ -54,6 +57,7 @@ package game
 			}
 		}
 		
+		//SECTION DONE
 		public function changeTimeBetween():void
 		{
 			timeBetween = MIN_TIME_BETWEEN + FP.random * (MAX_TIME_BETWEEN - MIN_TIME_BETWEEN);
