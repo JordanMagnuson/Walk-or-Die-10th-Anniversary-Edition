@@ -45,7 +45,8 @@ ground = instance_create_depth(0,0,0, oGround);
 oGround.Ground(locationName);
 oGround.x = -oGround.sprite_width/2;
 
-//instance_create_depth(0, 0, 0, oSky);
+//need to find the correct layer or depth for osky
+instance_create_depth(0, 0, 999, oSky);
 	
 //Mountain controller
 //instance_create_depth(0,0,0, oMountainController);
