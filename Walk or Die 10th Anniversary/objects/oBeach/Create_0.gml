@@ -52,16 +52,14 @@ function createItemHere(){
 		if (oMyWorldController.time == "night"){
 			if (creationNumber < 0.05 && !audio_is_playing(sndGullsRandom)){
 				sndGullsRandom = choose(sndGulls01, sndGulls02, sndGulls03);
-				//sndGullsRandom.play(vol, pan); Translated below, hopefully works
 				audio_emitter_gain(sEmit0, vol);
 				audio_emitter_position(sEmit0, pan,0,0);
-				audio_play_sound_on(sEmit0, sndGullsRandom, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends		
+				audio_play_sound_on(sEmit0, sndGullsRandom, false, 20);
 			}					
 			else if (creationNumber < 0.15 && !audio_is_playing(sndWind)){
-				//sndWind.play(vol, pan);
 				audio_emitter_gain(sEmit1, vol);
 				audio_emitter_position(sEmit1, pan,0,0);
-				audio_play_sound_on(sEmit1, sndWind, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
+				audio_play_sound_on(sEmit1, sndWind, false, 20);
 			}		
 		}
 		// Day sounds
@@ -69,13 +67,13 @@ function createItemHere(){
 			if (creationNumber < 0.1 && !audio_is_playing(sndWind)){
 				audio_emitter_gain(sEmit2, vol);
 				audio_emitter_position(sEmit2, pan,0,0);
-				audio_play_sound_on(sEmit2, sndWind, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
+				audio_play_sound_on(sEmit2, sndWind, false, 20);
 			}			
 			else if (creationNumber < 0.6 && !audio_is_playing(sndGullsRandom)){
 				sndGullsRandom = choose(sndGulls01, sndGulls02, sndGulls03);
 				audio_emitter_gain(sEmit3, vol);
 				audio_emitter_position(sEmit3, pan,0,0);
-				audio_play_sound_on(sEmit3, sndGullsRandom, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
+				audio_play_sound_on(sEmit3, sndGullsRandom, false, 20);
 			}					
 		}
 	}	  

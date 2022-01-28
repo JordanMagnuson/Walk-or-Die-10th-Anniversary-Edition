@@ -18,7 +18,7 @@ room_width = 300;
 room_height = 200;
 
 //locationName = choose("desert", "forest", "snow", "plains", "beach");
-locationName = "forest";
+locationName = "snow";
 if(locationName == "desert"){
 	currentLocation = instance_create_depth(0, 0, 0, oDesert); //at this point currentLocation is just an id number
 }
@@ -69,7 +69,7 @@ oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds
 function changeLocation(){
 	var newLocation;
 	do{
-		newLocation = choose(/*"forest", */"desert", /*"plains",*//* "snow", */"beach");
+		newLocation = choose("forest", "desert", "plains", "snow",  "beach");
 	} 
 	until (newLocation != locationName);
 	//oSoundController.changeLocation(newLocation);

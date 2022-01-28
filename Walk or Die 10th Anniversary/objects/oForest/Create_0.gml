@@ -48,25 +48,25 @@ function createItemHere(){
 			if (creationNumber < 0.1 && !audio_is_playing(sndOwl)){
 				audio_emitter_gain(sEmit0, vol);
 				audio_emitter_position(sEmit0, pan,0,0);
-				audio_play_sound_on(sEmit0, sndOwl, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends		
+				audio_play_sound_on(sEmit0, sndOwl, false, 20);
 			}					
 			else if (creationNumber < 0.2 && !audio_is_playing(sndWolf)){
 				//sndWind.play(vol, pan);
 				audio_emitter_gain(sEmit1, vol);
 				audio_emitter_position(sEmit1, pan,0,0);
-				audio_play_sound_on(sEmit1, sndWolf, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
+				audio_play_sound_on(sEmit1, sndWolf, false, 20);
 			}	
 			else if (creationNumber < 0.3 && !audio_is_playing(sndCreaking)){
 				//sndWind.play(vol, pan);
 				audio_emitter_gain(sEmit2, vol);
 				audio_emitter_position(sEmit2, pan,0,0);
-				audio_play_sound_on(sEmit2, sndCreaking, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
+				audio_play_sound_on(sEmit2, sndCreaking, false, 20);
 			}
 			else if (creationNumber < 0.4 && !audio_is_playing(sndCicadas)){
 				//sndWind.play(vol, pan);
 				audio_emitter_gain(sEmit3, vol);
 				audio_emitter_position(sEmit3, pan,0,0);
-				audio_play_sound_on(sEmit3, sndCicadas, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
+				audio_play_sound_on(sEmit3, sndCicadas, false, 20);
 			}
 		}
 		// Day sounds
@@ -74,22 +74,22 @@ function createItemHere(){
 			if (creationNumber < 0.01 && !audio_is_playing(sndCicadas)){
 				audio_emitter_gain(sEmit0, vol);
 				audio_emitter_position(sEmit0, pan,0,0);
-				audio_play_sound_on(sEmit0, sndCicadas, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
+				audio_play_sound_on(sEmit0, sndCicadas, false, 20);
 			}						
 			else if (creationNumber < 0.02 && !audio_is_playing(sndOwl)){
 				audio_emitter_gain(sEmit1, vol);
 				audio_emitter_position(sEmit1, pan,0,0);
-				audio_play_sound_on(sEmit1, sndOwl, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
+				audio_play_sound_on(sEmit1, sndOwl, false, 20);
 			}
 			else if (creationNumber < 0.03 && !audio_is_playing(sndWolf)){
 				audio_emitter_gain(sEmit2, vol);
 				audio_emitter_position(sEmit2, pan,0,0);
-				audio_play_sound_on(sEmit2, sndWolf, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
+				audio_play_sound_on(sEmit2, sndWolf, false, 20);
 			}
 			else if (creationNumber < 0.15 && !audio_is_playing(sndCreaking)){
 				audio_emitter_gain(sEmit3, vol);
 				audio_emitter_position(sEmit3, pan,0,0);
-				audio_play_sound_on(sEmit3, sndCreaking, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
+				audio_play_sound_on(sEmit3, sndCreaking, false, 20);
 			}
 		}
 	}
