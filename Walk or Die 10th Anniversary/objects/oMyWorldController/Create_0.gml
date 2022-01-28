@@ -18,7 +18,7 @@ room_width = 300;
 room_height = 200;
 
 //locationName = choose("desert", "forest", "snow", "plains", "beach");
-locationName = "plains";
+locationName = "forest";
 if(locationName == "desert"){
 	currentLocation = instance_create_depth(0, 0, 0, oDesert); //at this point currentLocation is just an id number
 }
@@ -47,6 +47,7 @@ oGround.x = -oGround.sprite_width/2;
 
 //need to find the correct layer or depth for osky
 instance_create_depth(0, 0, 999, oSky);
+oSky.Sky();
 	
 //Mountain controller
 //instance_create_depth(0,0,0, oMountainController);

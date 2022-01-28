@@ -15,7 +15,7 @@ cloudCoverSlope = 0;
 
 image = sprSky;
 
-function sky()
+function Sky()
 {
 	cloudReleaseTime = MIN_CLOUD_RELEASE_TIME + random(0.1) * (MAX_CLOUD_RELEASE_TIME - MIN_CLOUD_RELEASE_TIME);
 	cloudCoverSlope = choose(1,-1);
@@ -27,10 +27,12 @@ function sky()
 }
 
 function releaseCloud(){
+	alarm[0] = cloudReleaseTime * room_speed;
 	cloudBeingReleased = instance_create_depth(0, 0, 0, oCloud);
 }
 
 function changeCloudCover(){
+	alarm[1] = CLOUD_COVER_CHANGE_TIME * room_speed;
 	switch(cloudCoverSlope){
 		case 1:
 			if(cloudReleaseTime > MIN_CLOUD_RELEASE_TIME)

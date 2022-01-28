@@ -51,7 +51,7 @@ function createItemHere(){
 			}					
 			else if (creationNumber < 0.5 && !audio_is_playing(sndWind)){
 				//sndWind.play(vol, pan);
-				audio_emitter_gain(sEmit0, vol);
+				audio_emitter_gain(sEmit1, vol);
 				audio_emitter_position(sEmit1, pan,0,0);
 				audio_play_sound_on(sEmit1, sndWind, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
 			}		
@@ -59,12 +59,12 @@ function createItemHere(){
 		// Day sounds
 		else{
 			if (creationNumber < 0.5 && !audio_is_playing(sndWolf)){
-				audio_emitter_gain(sEmit0, vol);
+				audio_emitter_gain(sEmit2, vol);
 				audio_emitter_position(sEmit2, pan,0,0);
 				audio_play_sound_on(sEmit2, sndWolf, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
 			}						
 			else if (creationNumber < 0.5 && !audio_is_playing(sndWind)){
-				audio_emitter_gain(sEmit0, vol);
+				audio_emitter_gain(sEmit3, vol);
 				audio_emitter_position(sEmit3, pan,0,0);
 				audio_play_sound_on(sEmit3, sndWind, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
 			}					
@@ -73,5 +73,5 @@ function createItemHere(){
 }
 
 function gameStart(){
-	instance_create_depth(150, 0, 0, oCactus);	
+	instance_create_depth(150, 175, 0, oCactus);	
 }

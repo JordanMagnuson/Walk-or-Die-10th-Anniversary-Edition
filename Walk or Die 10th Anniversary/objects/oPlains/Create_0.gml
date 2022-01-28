@@ -77,5 +77,5 @@ function createItemHere()
 }
 
 function gameStart(){
-	instance_create_depth(150, 0, 0, oFlowers); 
+	instance_create_depth(150, 175, 0, oFlowers); 
 }

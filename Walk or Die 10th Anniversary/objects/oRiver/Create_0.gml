@@ -16,4 +16,4 @@ sprite_collision_mask(sprite_index, true, 1, sprite_width, sprite_height, 0, spr
 sEmit5 = audio_emitter_create();
 audio_emitter_gain(sEmit5, 0);
 audio_emitter_position(sEmit5, 1,0,0);
-//audio_play_sound_on(sEmit5, sndGullsRandom, false, 20);//need to add audio_emitter_free(sEmit) once the sound ends
+

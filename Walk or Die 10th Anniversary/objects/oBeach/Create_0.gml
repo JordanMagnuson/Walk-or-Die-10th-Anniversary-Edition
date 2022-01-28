@@ -86,5 +86,5 @@ function removed(){
 }
 
 function gameStart(){
-	instance_create_depth(150, 0, 0, oSandDune); 
+	instance_create_depth(150, 175, 0, oSandDune); 
 }
