@@ -3,4 +3,4 @@ mySpriteCollection = [sprBlueFlower, sprOrangeFlower, sprPurpleFlower, sprRedFlo
 
 sprite_index = choose(sprBlueFlower, sprOrangeFlower, sprPurpleFlower, sprRedFlower, sprYellowFlower);
 oItem.Item(sprite_index, "mid", true);
-type = "flowers";
+type = oFlowers;

@@ -3,5 +3,5 @@ seen = false;
 
 sprite_index = sprFlowerTree;
 oItem.Item(sprFlowerTree, "mid", false);
-type = "flower_tree";
+type = oFlowerTree;
 depth = 9;

@@ -3,9 +3,9 @@ fadeOut = false;
 fadeStarted = false;
 
 sprite_index = sprRiver;
+type = oRiver;
 oItem.Item(sprRiver, "mid", false);
 image_speed = 10;
-type = oRiver;
 
 depth = 9;
 
