@@ -20,23 +20,26 @@ function createItemHere(){
 	
 	creationNumber = random_range(0,1);
 	if (random_range(0,1) > 0.25){		
-		if (creationNumber < 0.005 && oCastleSeen == false){
+		if (creationNumber < 0.005 && oCastleSeen == false){ //CREATION NUMBER < 0.005 IS PROPER, THIS IS FOR TESTING
+			//CASTLE CAN BE SEEN IF IT SPAWNED ON THE SCREEN. 
+			//CASTLE DOES NOT MOVE
+			//WHEN CASTLE STARTS MOVING, IT DISAPPEARS; LIKELY ITEM CREATION OVERWRITE
 			//adding the x and y values here stopped objects from spawning in the sky
 			instance_create_depth(room_width+10, 175, 0, oCastle);
 			oCastleSeen = true;
-			show_debug_message("SandCastle Created");
+			show_debug_message(string(creationNumber) + ": Castle Created");
 		}
 		else if (creationNumber < 0.05){
 			instance_create_depth(room_width+10, 175, 0, oCactus);
-			show_debug_message("Cactus Created");
+			show_debug_message(string(creationNumber) + ": Cactus Created");
 		}
 		else if (creationNumber < 0.4){
 			instance_create_depth(room_width+10, 175, 0, oBeachGrass);
-			show_debug_message("BeachGrass Created");
+			show_debug_message(string(creationNumber) + ": BeachGrass Created");
 		}
 		else if (creationNumber < 1){
 			instance_create_depth(room_width+10, 175, 0, oSandDune);
-			show_debug_message("Sand Dune Created");
+			show_debug_message(string(creationNumber) + ": Sand Dune Created");
 		}
 	}
 	//show_debug_message("Creation Number (oBeach CreateItemHere): " + string(creationNumber));  

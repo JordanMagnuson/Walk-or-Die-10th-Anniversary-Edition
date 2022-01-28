@@ -18,7 +18,7 @@ room_width = 300;
 room_height = 200;
 
 //locationName = choose("desert", "forest", "snow", "plains", "beach");
-locationName = "beach";
+locationName = "plains";
 if(locationName == "desert"){
 	currentLocation = instance_create_depth(0, 0, 0, oDesert); //at this point currentLocation is just an id number
 }
@@ -31,7 +31,6 @@ else if(locationName == "forest"){
 else if(locationName == "snow"){
 	currentLocation = instance_create_depth(0, 0, 0, oSnow);
 }
-
 else if(locationName == "plains"){
 	currentLocation = instance_create_depth(0, 0, 0, oPlains);
 }
@@ -99,12 +98,12 @@ function changeLocation(){
 		currentLocation = instance_create_depth(0, 0, 0, oPlains);
 	}
 	show_debug_message("Current location: " + locationName);   
-	oLocation.Location();    //this is calling the old location I think 
+	oLocation.Location();    
 	oLocation.creationTime = 2;
 	oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds 
 	
-	//oldGround = ground;
-	//instance_create_depth(0, 0, 0, oGround);	
+	oldGround = ground;
+	ground = instance_create_depth(0, 0, 0, oGround);	
 	oGround.Ground(locationName);
 }
 

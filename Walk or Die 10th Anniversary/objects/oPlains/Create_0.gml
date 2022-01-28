@@ -1,25 +1,40 @@
-/// @description Insert description here
-// You can write your code in this editor
+event_inherited();
+DAY_SOUND = sndForestAmbient;
+NIGHT_SOUND = sndForestNightAmbient;
 SND_BEE = sndBee;
 SND_CICADAS = sndCicadas;
 
-function createItem()
+sEmit0 = audio_emitter_create();
+sEmit1 = audio_emitter_create();
+sEmit2 = audio_emitter_create();
+sEmit3 = audio_emitter_create();
+
+oFlowerTreeSeen = false;
+oLocation.Location(DAY_SOUND, NIGHT_SOUND, 3, 0.3);
+locationType = "plains";
+
+function createItemHere()
 {
+	oLocation.createItem();
 	creationNumber = random_range(0,1);
 		
 	if (random_range(0,1) > 0.25) {		
-		if (creationNumber < 0.005 && oFlowerTree.seen == false){
-			instance_create_depth(0, 0, 0, oFlowerTree);
+		if (creationNumber < 0.005 && oFlowerTreeSeen == false){
+			instance_create_depth(room_width+10, 175, 0, oFlowerTree);
 			oFlowerTree.seen = true;
+			show_debug_message(string(creationNumber) + ": Flower Tree Created");
 		}
 		else if (creationNumber < 0.03){
-			instance_create_depth(0, 0, 0, oRiver);
+			instance_create_depth(room_width+10, 175, 0, oRiver);
+			show_debug_message(string(creationNumber) + ": River Created");
 		}
 		else if (creationNumber < 0.1){
-			instance_create_depth(0, 0, 0, oTree);
+			instance_create_depth(room_width+10, 175, 0, oTree);
+			show_debug_message(string(creationNumber) + ": Tree Created");
 		}
 		else if (creationNumber < 1){
-			instance_create_depth(0, 0, 0, oFlowers);
+			instance_create_depth(room_width+10, 175, 0, oFlowers);
+			show_debug_message(string(creationNumber) + ": oFlower Created");
 		}
 	}	
 		
@@ -62,5 +77,5 @@ function createItem()
 }
 
 function gameStart(){
-	oLocation.gameStartItem(rmMyWorld, oFlowers);	
+	instance_create_depth(150, 0, 0, oFlowers); 
 }

@@ -1,5 +1,5 @@
-//super(sndSilence, sndSilence, 5, 2); I'M NOT SURE WHAT THIS IS REFERENCING 
 event_inherited();
+oLocation.Location(sndSilence, sndSilence, 5 ,2);
 locationType = "desert";
 creationTimeSlope = 1;
 sEmit0 = audio_emitter_create();
@@ -19,7 +19,7 @@ function createItemHere(){
 			instance_create_depth(room_width+10, 175,0, oPyramids);
 			show_debug_message("Pyramid Created");
 			oPyramidsSeen = true;
-		}
+	 	}
 		else if(creationNumber < 0.05){
 			instance_create_depth(room_width+10, 175,0, oGiantCactus);
 			show_debug_message("Giant Cactus Created");
@@ -33,7 +33,7 @@ function createItemHere(){
 			show_debug_message("TumbleWeed Created");
 		}
 		else if(creationNumber < 1){
-			instance_create_depth(room_width+10, 175,0, oCactus);
+			instance_create_depth(room_width+10, 175, 0, oCactus);
 			show_debug_message("Cactus Created");
 		}
 		//show_debug_message("Creation Number (oDesert CreateItemHere): " + string(creationNumber));  

@@ -1,14 +1,14 @@
 if(image_xscale == -1){
 	if(x < (0 + sprite_width)){
-	show_debug_message("object destroyed, went offscreen, x = " + string(x));
+	//show_debug_message("object destroyed, went offscreen, x = " + string(x));
 	offScreenAction();
 	}
 }
 else if(x < (0 - sprite_width)){
-	show_debug_message("object destroyed, went offscreen, x = " + string(x));
+	//show_debug_message("object destroyed, went offscreen, x = " + string(x));
 	offScreenAction();
 }
-
+				
 if(instance_exists(oPlayer) && oPlayer.walking){
 	switch(distance){
 		case "mid": 

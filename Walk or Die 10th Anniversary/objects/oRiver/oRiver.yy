@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprBlueFlower",
-    "path": "sprites/sprBlueFlower/sprBlueFlower.yy",
+    "name": "sprRiver",
+    "path": "sprites/sprRiver/sprRiver.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,15 +25,17 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Plains",
-    "path": "folders/Objects/Plains.yy",
+    "name": "Forest",
+    "path": "folders/Objects/Forest.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oFlowers",
+  "name": "oRiver",
   "tags": [],
   "resourceType": "GMObject",
 }
