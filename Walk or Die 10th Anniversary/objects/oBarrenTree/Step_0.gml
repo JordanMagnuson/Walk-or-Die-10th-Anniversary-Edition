@@ -1,7 +1,53 @@
-if (random(1) < 0.002 && !audio_is_playing(sndCreaking)){
-	pan = (((x-0)*(1-(-1)))/(room_width-0))+-1;
-	vol = 0.2 + 0.8 * random(1);
-	audio_emitter_gain(sEmit5, vol);
-	audio_emitter_position(sEmit5, pan, 0, 0);
-	audio_play_sound_on(sEmit5, sndCreaking, false, 20);
+if(image_xscale == -1){
+	if(x < (0 + sprite_width)){
+	//show_debug_message("object destroyed, went offscreen, x = " + string(x));
+	offScreenAction();
+	}
+}
+else if(x < (0 - sprite_width)){
+	//show_debug_message("object destroyed, went offscreen, x = " + string(x));
+	offScreenAction();
+}
+				
+if(instance_exists(oPlayer) && oPlayer.walking){
+	switch(distance){
+		case "mid": 
+			//move mid distance objects exactly 1 pixel every other frame.
+			if(oMyWorldController.oddFrame ==1){
+				x -= oPlayer.SPEED/ 100;
+			}
+			break;
+		case "close":
+			//move close distance objects exatly 1 pixel every frame.
+			x -= oPlayer.SPEED/100;
+			break; 
+		case "far":
+			//move far distance objects exactly 1 pixel every third frame
+			if(oMyWorldController.thirdFrame == 1){
+				x -= oPlayer.SPEED/100;
+			}
+			break;
+	}
+}
+/*
+else{
+	show_debug_message("OPLAYER ELSE STATEMENT");
+}
+*/
+
+function offScreenAction(){
+	destroy();	
+}
+
+function destroy(){
+	instance_destroy(self  );	
+}
+/**
+	* Choose an image randomly from an array of sprite references
+	* @param	collection	An array of raw sprite references like private const PLAYER:Class;
+	* @return	A sprite chosen at random.
+*/
+function chooseSprite(collection){
+	var rand = collection.length * random(1);	
+	return collection[rand];
 }
