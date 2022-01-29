@@ -1,3 +1,3 @@
 event_inherited();
-oItem.Item(sprIgloo, "mid", false);
+Item(sprIgloo, "mid", true);
 type= oIgloo;

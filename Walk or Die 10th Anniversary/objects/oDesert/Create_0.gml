@@ -10,7 +10,7 @@ oPyramidsSeen = false;
 
 function createItemHere(){
 	oLocation.createItem();
-	
+	//show_debug_message("AFTER DESERT CREATE ITEM");
 	creationNumber = random(1);
 	
 	//Mid distance
@@ -73,5 +73,6 @@ function createItemHere(){
 }
 
 function gameStart(){
-	instance_create_depth(150, 175, 0, oCactus);	
+	instance_create_depth(150, 175, 0, oCactus);
+	show_debug_message("testcactusgamestart");
 }

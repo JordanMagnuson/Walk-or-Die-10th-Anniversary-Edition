@@ -21,7 +21,7 @@ room_height = 200;
 locationName = "snow";
 if(locationName == "desert"){
 	currentLocation = instance_create_depth(0, 0, 0, oDesert); //at this point currentLocation is just an id number
-}
+}   
 else if(locationName == "beach"){
 	currentLocation = instance_create_depth(0, 0, 0, oBeach);
 }
@@ -46,7 +46,7 @@ oGround.Ground(locationName);
 oGround.x = -oGround.sprite_width/2;
 
 //need to find the correct layer or depth for osky
-instance_create_depth(0, 0, 999, oSky);
+instance_create_depth(0, 0, 0, oSky);
 oSky.Sky();
 	
 //Mountain controller

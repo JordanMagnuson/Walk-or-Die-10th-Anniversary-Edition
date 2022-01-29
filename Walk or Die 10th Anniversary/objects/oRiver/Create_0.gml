@@ -1,10 +1,11 @@
+event_inherited()
 fadeIn = false;
 fadeOut = false;
 fadeStarted = false;
 
 sprite_index = sprRiver;
 type = oRiver;
-oItem.Item(sprRiver, "mid", false);
+Item(sprRiver, "mid", false);
 image_speed = 10;
 
 depth = 9;

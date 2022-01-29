@@ -1,4 +1,14 @@
 event_inherited();
+
 sprite_index = choose(sprCactus_round, sprCactus01, sprCactus02, sprCactus03, sprCactus04);
 type = oCactus;     
-oItem.Item(sprite_index, "mid", false);
+Item(sprite_index, "mid", false);
+
+/*
+event_inherited();
+//mySpriteCollection = [sprDune01, sprDune02, sprDune03, sprDune04];
+
+sprite_index = choose(sprDune01, sprDune02, sprDune03, sprDune04);
+type = oSandDune;
+Item(sprite_index, "mid", true);
+*/

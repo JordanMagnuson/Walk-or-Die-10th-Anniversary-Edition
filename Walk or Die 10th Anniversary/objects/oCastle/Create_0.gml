@@ -3,5 +3,5 @@ event_inherited();
 
 sprite_index = sprCastle;
 type = oCastle;  
-oItem.Item(sprCastle, "far", false);
+Item(sprCastle, "far", false);
 depth = 99;

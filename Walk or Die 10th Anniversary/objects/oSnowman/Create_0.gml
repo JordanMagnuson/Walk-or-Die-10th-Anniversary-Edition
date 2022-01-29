@@ -1,5 +1,5 @@
 event_inherited();
 
 sprite_index = sprSnowman;
-oItem.Item(sprSnowman, "mid", false);
+Item(sprSnowman, "mid", true);
 type = oSnowman;

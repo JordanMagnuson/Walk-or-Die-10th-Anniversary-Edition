@@ -1,6 +1,6 @@
 event_inherited();
 
-oItem.Item(sprFrozenRiver, "mid", false);
+Item(sprFrozenRiver, "mid", true);
 type = oFrozenRiver;
 depth = 9;
 
