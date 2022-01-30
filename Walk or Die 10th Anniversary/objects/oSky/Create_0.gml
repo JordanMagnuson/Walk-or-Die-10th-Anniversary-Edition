@@ -28,7 +28,7 @@ function Sky()
 
 function releaseCloud(){
 	alarm[0] = cloudReleaseTime * room_speed;
-	cloudBeingReleased = instance_create_depth(0, 0, 0, oCloud);
+	cloudBeingReleased = instance_create_depth(room_width+10 , 0, 0, oCloud);
 }
 
 function changeCloudCover(){

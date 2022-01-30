@@ -1,4 +1,4 @@
-CHANGE_LOCATION_TIME = 4;
+CHANGE_LOCATION_TIME = 4 * room_speed ;
 
 oddFrame = 1;
 thirdFrame = 1;
@@ -6,19 +6,13 @@ fourthFrame = 1;
 forceClouds = false;
 time = "day"; //TEMP TIME FOR TESTING
 
-//THIS IS NOT THE FINAL LOCATION FOR THIS SECTION OF CODE, DELETE LATER
 randomise();
-/*    
-cloud = instance_create_depth(350, 0, 0, oCloud);
-cloud.y = oCloud.MIN_HEIGHT + random(1) * (oCloud.MAX_HEIGHT - oCloud.MIN_HEIGHT); //need to correct MIN and MAX height
-//show_debug_message(cloud.y);
-*/
 
 room_width = 300;
 room_height = 200;
 
 //locationName = choose("desert", "forest", "snow", "plains", "beach");
-locationName = "snow";
+locationName = "beach";
 if(locationName == "desert"){
 	currentLocation = instance_create_depth(0, 0, 0, oDesert); //at this point currentLocation is just an id number
 }   

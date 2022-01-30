@@ -2,6 +2,7 @@ event_inherited();
 seen = false;
 
 sprite_index = sprFlowerTree;
-Item(sprFlowerTree, "mid", false);
 type = oFlowerTree;
+Item(sprFlowerTree, "mid", false);
+
 depth = 9;

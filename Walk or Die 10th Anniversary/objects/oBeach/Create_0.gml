@@ -5,6 +5,10 @@ SND_GULLS03 = sndGulls03;
 creationTimeSlope = 1;
 sndGullsRandom = choose(SND_GULLS01, SND_GULLS02, SND_GULLS03);
 
+DAY_SOUND = sndWavesAmbient;
+NIGHT_SOUND = sndWavesAmbient;
+Location(DAY_SOUND,NIGHT_SOUND);
+
 locationType = "beach";
 instance_create_depth(0,0,0,oWaves);
 oWaves.fadeIn();
@@ -20,29 +24,25 @@ function createItemHere(){
 	
 	creationNumber = random_range(0,1);
 	if (random_range(0,1) > 0.25){		
-		if (creationNumber < 0.005 && oCastleSeen == false){ //CREATION NUMBER < 0.005 IS PROPER, THIS IS FOR TESTING
-			//CASTLE CAN BE SEEN IF IT SPAWNED ON THE SCREEN. 
-			//CASTLE DOES NOT MOVE
-			//WHEN CASTLE STARTS MOVING, IT DISAPPEARS; LIKELY ITEM CREATION OVERWRITE
-			//adding the x and y values here stopped objects from spawning in the sky
+		if (creationNumber < 0.005 && oCastleSeen == false){ 
 			instance_create_depth(room_width+10, 175, 0, oCastle);
 			oCastleSeen = true;
-			show_debug_message(string(creationNumber) + ": Castle Created");
+			//show_debug_message(string(creationNumber) + ": Castle Created");
 		}
 		
 		else if (creationNumber < 0.05){
 			instance_create_depth(room_width+10, 175, 0, oCactus);
-			show_debug_message(string(creationNumber) + ": Cactus Created");
+			//show_debug_message(string(creationNumber) + ": Cactus Created");
 		}
 	
 		else if (creationNumber < 0.4){
 			instance_create_depth(room_width+10, 175, 0, oBeachGrass);
-			show_debug_message(string(creationNumber) + ": BeachGrass Created");
+			//show_debug_message(string(creationNumber) + ": BeachGrass Created");
 		}
 
 		else if (creationNumber < 1){
 			instance_create_depth(room_width+10, 175, 0, oSandDune);
-			show_debug_message(string(creationNumber) + ": Sand Dune Created");
+			//show_debug_message(string(creationNumber) + ": Sand Dune Created");
 		}
 	
 	}

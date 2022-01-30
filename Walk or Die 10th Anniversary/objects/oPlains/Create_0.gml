@@ -10,7 +10,7 @@ sEmit2 = audio_emitter_create();
 sEmit3 = audio_emitter_create();
 
 oFlowerTreeSeen = false;
-oLocation.Location(DAY_SOUND, NIGHT_SOUND, 3, 0.3);
+Location(DAY_SOUND, NIGHT_SOUND, 3, 0.3);
 locationType = "plains";
 
 function createItemHere()
@@ -21,20 +21,20 @@ function createItemHere()
 	if (random_range(0,1) > 0.25) {		
 		if (creationNumber < 0.005 && oFlowerTreeSeen == false){
 			instance_create_depth(room_width+10, 175, 0, oFlowerTree);
-			oFlowerTree.seen = true;
-			show_debug_message(string(creationNumber) + ": Flower Tree Created");
+			oFlowerTreeSeen = true;
+			//show_debug_message(string(creationNumber) + ": Flower Tree Created");
 		}
 		else if (creationNumber < 0.03){
 			instance_create_depth(room_width+10, 175, 0, oRiver);
-			show_debug_message(string(creationNumber) + ": River Created");
+			//show_debug_message(string(creationNumber) + ": River Created");
 		}
 		else if (creationNumber < 0.1){
 			instance_create_depth(room_width+10, 175, 0, oTree);
-			show_debug_message(string(creationNumber) + ": Tree Created");
+			//show_debug_message(string(creationNumber) + ": Tree Created");
 		}
 		else if (creationNumber < 1){
 			instance_create_depth(room_width+10, 175, 0, oFlowers);
-			show_debug_message(string(creationNumber) + ": oFlower Created");
+			//show_debug_message(string(creationNumber) + ": oFlower Created");
 		}
 	}	
 		

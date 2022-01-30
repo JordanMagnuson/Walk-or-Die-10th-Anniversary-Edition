@@ -1,5 +1,5 @@
 event_inherited();
-oLocation.Location(sndSilence, sndSilence, 5 ,2);
+Location(sndSilence, sndSilence, 5 ,2);
 locationType = "desert";
 creationTimeSlope = 1;
 sEmit0 = audio_emitter_create();
@@ -17,24 +17,24 @@ function createItemHere(){
 	if(random(1) > 0.25){
 		if(creationNumber < 0.01 && oPyramidsSeen == false){
 			instance_create_depth(room_width+10, 175,0, oPyramids);
-			show_debug_message("Pyramid Created");
+			//show_debug_message("Pyramid Created");
 			oPyramidsSeen = true;
 	 	}
 		else if(creationNumber < 0.05){
 			instance_create_depth(room_width+10, 175,0, oGiantCactus);
-			show_debug_message("Giant Cactus Created");
+			//show_debug_message("Giant Cactus Created");
 		}
 		else if(creationNumber < 0.1){
 			instance_create_depth(room_width+10, 175,0, oButte);
-			show_debug_message("Butte Created");
+			//show_debug_message("Butte Created");
 		}
 		else if(creationNumber < 0.15){
 			instance_create_depth(room_width+10, 175,0, oTumbleweed);	
-			show_debug_message("TumbleWeed Created");
+			//show_debug_message("TumbleWeed Created");
 		}
 		else if(creationNumber < 1){
 			instance_create_depth(room_width+10, 175, 0, oCactus);
-			show_debug_message("Cactus Created");
+			//show_debug_message("Cactus Created");
 		}
 		//show_debug_message("Creation Number (oDesert CreateItemHere): " + string(creationNumber));  
 	}
