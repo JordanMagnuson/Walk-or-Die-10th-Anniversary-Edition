@@ -40,7 +40,7 @@ function offScreenAction(){
 }
 
 function destroy(){
-	instance_destroy(self  );	
+	instance_destroy(self);	
 }
 /**
 	* Choose an image randomly from an array of sprite references

@@ -38,7 +38,7 @@ function Item(sprite, distance = "mid", overlap = true){
 	* When an item is added to the world, check to see if it can overlap 
 	* others of its type. If not, and it is overlapping, remove it.
 */
-if(overlap == false){
+	 if(overlap == false){
 		if(place_meeting(x,y, self.type)){
 			instance_destroy(self);
 			show_debug_message("Destroyed self due to overlap");

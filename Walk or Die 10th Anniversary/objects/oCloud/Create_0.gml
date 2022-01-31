@@ -18,5 +18,5 @@ mySpriteCollection = [sprCloud01, sprCloud02, sprCloud03, sprCloud04, sprCloud05
 
 sprite_index = choose(sprCloud01, sprCloud02, sprCloud03, sprCloud04, sprCloud05, sprCloud06, sprCloud07, sprCloud08);
 type = oCloud;
-Item(sprite_index, "mid", true);
+Item(sprite_index, "mid", false);
 depth = 105;
