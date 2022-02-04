@@ -11,8 +11,8 @@ randomise();
 room_width = 300;
 room_height = 200;
 
-//locationName = choose("desert", "forest", "snow", "plains", "beach");
-locationName = "forest";
+locationName = choose("desert", "forest", "snow", "plains", "beach");
+
 if(locationName == "desert"){
 	currentLocation = instance_create_depth(0, 0, 0, oDesert); //at this point currentLocation is just an id number
 }   
