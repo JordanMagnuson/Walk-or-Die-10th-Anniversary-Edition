@@ -18,6 +18,7 @@ package game
 		public static const FADE_IN_DURATION:Number = 6;
 		public static const FADE_OUT_DURATION:Number = 10;
 		public static const MAX_ALPHA:Number = 0.7;
+		//=======================================
 		
 		public var fadeTween:ColorTween;
 		public var durationAlarm:Alarm = new Alarm(DURATION, complete);	
@@ -27,6 +28,7 @@ package game
 		/**
 		 * Image
 		 */
+		//DONE
 		[Embed(source = '../../assets/night_cover.png')] private const SPRITE:Class;	
 		public var image:Image = new Image(SPRITE);		
 		
