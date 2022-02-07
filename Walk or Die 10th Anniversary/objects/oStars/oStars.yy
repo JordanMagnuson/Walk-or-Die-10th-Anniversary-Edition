@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sprNightCover",
-    "path": "sprites/sprNightCover/sprNightCover.yy",
+    "name": "sprStars",
+    "path": "sprites/sprStars/sprStars.yy",
   },
   "solid": false,
   "visible": true,
@@ -30,7 +30,7 @@
     "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oNight",
+  "name": "oStars",
   "tags": [],
   "resourceType": "GMObject",
 }

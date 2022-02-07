@@ -13,6 +13,7 @@ package game
 		/**
 		 * Note that DURATION does not include fade out time.
 		 */		
+		//SECTION DONE
 		public static const DURATION:int = 30;
 		public static const FADE_IN_DURATION:Number = 6;
 		public static const FADE_OUT_DURATION:Number = 10;
