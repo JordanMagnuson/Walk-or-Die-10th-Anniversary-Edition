@@ -52,7 +52,7 @@ oSky.Sky();
 //Player
 player = instance_create_depth(0, 0, -1, oPlayer);
 //Starting Text
-//instance_create_depth(0,0,0, otextPress);
+instance_create_depth(0,0,0, oTextPress);
 
 //start of game changes
 oLocation.Location();    
@@ -147,5 +147,5 @@ function advanceTime(){
 }
 
 function showTitle(){
-	//instance_create_depth(0,0,0, otextJordan);	
+	instance_create_depth(0,0,0, oTextJordan);	
 }
