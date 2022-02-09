@@ -44,7 +44,7 @@ instance_create_depth(0, 0, 0, oSky);
 oSky.Sky();
 	
 //Mountain controller
-//instance_create_depth(0,0,0, oMountainController);
+instance_create_depth(0,0,0, oMountainController);
 
 //Night-Day cycle
 //instance_create_depth(0,0,0, oDay(this, false);
