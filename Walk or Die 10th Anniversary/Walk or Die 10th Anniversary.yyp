@@ -126,6 +126,7 @@
     {"id":{"name":"sprSnowPile02","path":"sprites/sprSnowPile02/sprSnowPile02.yy",},"order":1,},
     {"id":{"name":"sprTree02","path":"sprites/sprTree02/sprTree02.yy",},"order":14,},
     {"id":{"name":"sprPineSideways01","path":"sprites/sprPineSideways01/sprPineSideways01.yy",},"order":25,},
+    {"id":{"name":"oDay","path":"objects/oDay/oDay.yy",},"order":28,},
     {"id":{"name":"sprCloud05","path":"sprites/sprCloud05/sprCloud05.yy",},"order":4,},
     {"id":{"name":"sprCloud07","path":"sprites/sprCloud07/sprCloud07.yy",},"order":6,},
     {"id":{"name":"sprPlainsMountain02","path":"sprites/sprPlainsMountain02/sprPlainsMountain02.yy",},"order":7,},
