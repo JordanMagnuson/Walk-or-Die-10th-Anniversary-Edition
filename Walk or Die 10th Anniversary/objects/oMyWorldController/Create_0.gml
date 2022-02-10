@@ -12,7 +12,7 @@ room_width = 300;
 room_height = 200;
 
 locationName = choose("desert", "forest", "snow", "plains", "beach");
-
+locationName = "desert";
 if(locationName == "desert"){
 	currentLocation = instance_create_depth(0, 0, 0, oDesert); //at this point currentLocation is just an id number
 }   
@@ -74,8 +74,6 @@ function changeLocation(){
 	audio_emitter_free(oLocation.sEmit2);
 	audio_emitter_free(oLocation.sEmit3);
 	
-	if(locationName == "beach")
-		oBeach.removed();
 	instance_destroy(currentLocation);
 	locationName = newLocation;
 	if(locationName == "desert"){

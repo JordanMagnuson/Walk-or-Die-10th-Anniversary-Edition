@@ -4,7 +4,7 @@ event_inherited();
 sprite_index = sprPyramids;
 
 type = oPyramids;
-oItem.Item(sprite_index, "far", true);
+Item(sprite_index, "far", true);
 
 	
 depth = 99;

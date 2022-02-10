@@ -1,3 +1,4 @@
+event_inherited();
 //thank you stackoverflow: https://stackoverflow.com/questions/929103/convert-a-number-range-to-another-range-maintaining-ratio
 pan = (((x-0)*(1-(-1)))/(room_width-0))+-1; //NewValue = (((OldValue - OldMin) * (NewMax - NewMin)) / (OldMax - OldMin)) + NewMin
 

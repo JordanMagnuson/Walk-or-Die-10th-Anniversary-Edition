@@ -19,16 +19,15 @@ image_alpha = 0;
 sprite_set_offset(sprite_index, 0,sprite_height);
 sprite_collision_mask(sprite_index, true, 1, sprite_width, sprite_height, 0, sprite_height, bboxkind_rectangular,0);
 
-x = X_INIT;
-y = room_height;
-
-function added(){
-	fadeIn();	
-}
+//x = X_INIT;
+//y = room_height;
 
 function fadeIn(){
 	fadeInCalled = true;
 }
+
+fadeIn();	
+
 function fadeOut(){
 	fadeOutCalled = true;	
 }

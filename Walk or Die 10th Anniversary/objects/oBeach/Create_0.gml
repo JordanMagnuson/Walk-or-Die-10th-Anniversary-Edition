@@ -10,8 +10,8 @@ NIGHT_SOUND = sndWavesAmbient;
 Location(DAY_SOUND,NIGHT_SOUND);
 
 locationType = "beach";
-instance_create_depth(0,0,0,oWaves);
-oWaves.fadeIn();
+instance_create_depth(-10,room_height,0,oWaves);
+
 sEmit0 = audio_emitter_create();
 sEmit1 = audio_emitter_create();
 sEmit2 = audio_emitter_create();
@@ -81,10 +81,6 @@ function createItemHere(){
 			}					
 		}
 	}	  
-}
-
-function removed(){
-	oWaves.fadeOut();
 }
 
 function gameStart(){

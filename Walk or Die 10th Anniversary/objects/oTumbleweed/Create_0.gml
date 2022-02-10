@@ -2,7 +2,7 @@ event_inherited();
 sprite_index = sprTumbleweed;
 
 type = oTumbleweed;
-oItem.Item(sprite_index, "close", false);
+Item(sprite_index, "close", false);
 image_speed = 5;
 
 	
