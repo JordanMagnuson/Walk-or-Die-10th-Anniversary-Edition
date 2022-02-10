@@ -8,8 +8,30 @@ MAX_ALPHA = 0.7;
 
 sprite_index = sprNightCover;
 
-image_alpha = 0;
+alpha = 0;
+fadein = false;
+fadeout = false;
 
-if(image_alpha == 0){
-		instance_destroy(oPlayerDying);
+alarm[0] = 2*room_speed;
+
+function fadeIn(){
+	fadein = true;	
+	instance_create_depth(0,0,0, oStars);
 }
+
+fadeIn();
+
+function fadeOut(){
+	fadeout = true;
+}
+
+function complete(){
+	instance_create_depth(0,0,0, oDay);
+	fadeOut();
+}
+
+function destroy(){
+	instance_destory(self);	
+}
+
+

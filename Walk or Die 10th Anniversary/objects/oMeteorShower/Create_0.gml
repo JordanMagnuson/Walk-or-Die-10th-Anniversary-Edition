@@ -22,6 +22,13 @@ function releaseStar()
 {
 	starsReleased += 1;
 	show_debug_message("stars released: " + starsReleased); 
+	instance_create_depth(0,0,0, oShootingStar);
+	if(starsReleased < numOfStars){
+		changeTimeBetween()
+	}
+	else{
+		instance_destory(self);	
+	}
 	
 }
 function changeTimeBetween()

@@ -31,7 +31,7 @@ package game
 			direction = FP.choose(-1, 1);
 		}
 		
-		// ALMOST DONE
+		//  DONE
 		override public function added():void
 		{
 			changeTimeBetween();
@@ -40,7 +40,7 @@ package game
 			releaseAlarm.start();
 		}
 		
-		// almost done working on shootingstar.as
+		// DONE
 		public function releaseStar():void
 		{
 			starsReleased += 1;
