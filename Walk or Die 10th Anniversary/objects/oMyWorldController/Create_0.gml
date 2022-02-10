@@ -4,8 +4,7 @@ oddFrame = 1;
 thirdFrame = 1;
 fourthFrame = 1;
 forceClouds = false;
-time = "day"; //TEMP TIME FOR TESTING
-
+time = "";
 randomise();
 
 room_width = 300;
@@ -48,7 +47,8 @@ oSky.Sky();
 instance_create_depth(0,0,0, oMountainController);
 
 //Night-Day cycle
-//instance_create_depth(0,0,0, oDay(this, false);
+instance_create_depth(0,0,0, oDay);
+oDay.Day(self, false);
 
 //Player
 player = instance_create_depth(0, 0, -1, oPlayer);
@@ -131,19 +131,20 @@ function changeLocationChance(){
 }
 
 function advanceTime(){
-	/* UNCOMMENT WHEN SUNSET, NIGHT, AND DAY ARE CREATED
 	switch (time){
 		case "day":
-			instance_create_depth(0, 0, 1, oSunset)
+			instance_create_depth(0, 0, 999, oSunset)
+			oSunset.Sunset();
 			break;
 		case "sunset":
-			instance_create_depth(0, 0, 1, oNight)
+			instance_create_depth(0, 0, 999, oNight)
+			oNight.Night();
 			break;
 		case "night":
-			instance_create_depth(0, 0, 1, oDay(this)
+			instance_create_depth(0, 0, 999 , oDay);
+			oDay.Day(self);
 			break;
-			}
-			*/
+	}
 }
 
 function showTitle(){

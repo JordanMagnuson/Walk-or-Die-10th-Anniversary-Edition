@@ -2,7 +2,6 @@
 // You can write your code in this editor
 randomise();
 
-SEEN = false;
 MAX_SHOOTING_STARS = 55;
 MIN_SHOOTING_STARS = 30
 
@@ -14,7 +13,7 @@ starsReleased = 0;
 function MeteorShower()
 {
 	numOfStars = MIN_SHOOTING_STARS + (random(0.1)*(MAX_SHOOTING_STARS - MIN_SHOOTING_STARS));
-	show_debug_message("stars to release: " + numOfStars);   
+	show_debug_message("stars to release: " + string(numOfStars));   
 	direction = choose(-1,1);
 }
 
@@ -25,9 +24,10 @@ function releaseStar()
 	instance_create_depth(0,0,0, oShootingStar);
 	if(starsReleased < numOfStars){
 		changeTimeBetween()
+		alarm[1] = timeBetween * room_speed;
 	}
 	else{
-		instance_destory(self);	
+		instance_destroy(self);	
 	}
 	
 }

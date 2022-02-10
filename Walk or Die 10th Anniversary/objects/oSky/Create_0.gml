@@ -20,7 +20,7 @@ function Sky()
 	cloudReleaseTime = MIN_CLOUD_RELEASE_TIME + random(0.1) * (MAX_CLOUD_RELEASE_TIME - MIN_CLOUD_RELEASE_TIME);
 	cloudCoverSlope = choose(1,-1);
 	
-	graphic = image;
+	sprite_index = image;
 	depth = 999;
 	alarm[0] = cloudReleaseTime * room_speed;
 	alarm[1] = CLOUD_COVER_CHANGE_TIME * room_speed;
