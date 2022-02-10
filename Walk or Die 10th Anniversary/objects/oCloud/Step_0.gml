@@ -1,4 +1,4 @@
-event_inherited();
+//event_inherited();
 if(oMyWorldController.fourthFrame == 4)
 {
 	x -= 1;	

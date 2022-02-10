@@ -1,8 +1,6 @@
 event_inherited();
 randomise();
 
-
-
 //NEED TO FIND OUT APPROPRIATE HEIGHT
 MAX_HEIGHT = 130;
 MIN_HEIGHT = 20;
@@ -18,5 +16,5 @@ mySpriteCollection = [sprCloud01, sprCloud02, sprCloud03, sprCloud04, sprCloud05
 
 sprite_index = choose(sprCloud01, sprCloud02, sprCloud03, sprCloud04, sprCloud05, sprCloud06, sprCloud07, sprCloud08);
 type = oCloud;
-Item(sprite_index, "mid", false);
+Item(sprite_index, "mid", true );
 depth = 105;
