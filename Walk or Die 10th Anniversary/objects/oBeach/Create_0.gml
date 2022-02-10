@@ -10,7 +10,7 @@ NIGHT_SOUND = sndWavesAmbient;
 Location(DAY_SOUND,NIGHT_SOUND);
 
 locationType = "beach";
-instance_create_depth(-10,room_height,0,oWaves);
+instance_create_depth(-10, room_height, 0, oWaves);
 
 sEmit0 = audio_emitter_create();
 sEmit1 = audio_emitter_create();

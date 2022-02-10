@@ -12,7 +12,7 @@ room_width = 300;
 room_height = 200;
 
 locationName = choose("desert", "forest", "snow", "plains", "beach");
-locationName = "desert";
+
 if(locationName == "desert"){
 	currentLocation = instance_create_depth(0, 0, 0, oDesert); //at this point currentLocation is just an id number
 }   
@@ -32,7 +32,8 @@ alarm[0] = CHANGE_LOCATION_TIME;//changeLocationAlarm
 
 //UNCOMMENT THE BELOW ITEMS AS THEY ARE ADDED INTO THE GAME
 //Sound Controller
-//instance_create_depth(0,0,0, oSoundController(currentLocation); 
+instance_create_depth(0,0,0, oSoundController);
+oSoundController.soundController(locationName);
 
 //Ground and Sky
 ground = instance_create_depth(0,0,0, oGround);
@@ -54,51 +55,52 @@ player = instance_create_depth(0, 0, -1, oPlayer);
 //Starting Text
 instance_create_depth(0,0,0, oTextPress);
 
-//start of game changes
-oLocation.Location();    
+//start of game changes  
 oLocation.creationTime = 2;
 oLocation.gameStart();
 oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds 
 
 function changeLocation(){
-	var newLocation;
-	do{
-		newLocation = choose("forest", "desert", "plains", "snow",  "beach");
-	} 
-	until (newLocation != locationName);
-	//oSoundController.changeLocation(newLocation);
+	if(instance_exists(oPlayer)){
+		var newLocation;
+		do{
+			newLocation = choose("forest", "desert", "plains", "snow",  "beach");
+		} 
+		until (newLocation != locationName);
+		oSoundController.changeLocation(newLocation);
 	
-	//as the location changes, free up the emitters to prevent a memory leak; Currently in Progress
-	audio_emitter_free(oLocation.sEmit0);
-	audio_emitter_free(oLocation.sEmit1);
-	audio_emitter_free(oLocation.sEmit2);
-	audio_emitter_free(oLocation.sEmit3);
+		//as the location changes, free up the emitters to prevent a memory leak; Currently in Progress
+		audio_emitter_free(oLocation.sEmit0);
+		audio_emitter_free(oLocation.sEmit1);
+		audio_emitter_free(oLocation.sEmit2);
+		audio_emitter_free(oLocation.sEmit3);
 	
-	instance_destroy(currentLocation);
-	locationName = newLocation;
-	if(locationName == "desert"){
-	currentLocation = instance_create_depth(0, 0, 0, oDesert); //at this point currentLocation is just an id number
-	}
-	else if(locationName == "beach"){
-		currentLocation = instance_create_depth(0, 0, 0, oBeach);
-	}
-	else if(locationName == "forest"){
-		currentLocation = instance_create_depth(0, 0, 0, oForest);
-	}
-	else if(locationName == "snow"){
-		currentLocation = instance_create_depth(0, 0, 0, oSnow);
-	}
-	else if(locationName == "plains"){
-		currentLocation = instance_create_depth(0, 0, 0, oPlains);
-	}
-	show_debug_message("Current location: " + locationName);   
-	oLocation.Location();    
-	oLocation.creationTime = 2;
-	oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds 
+		instance_destroy(currentLocation);
+		locationName = newLocation;
+		if(locationName == "desert"){
+		currentLocation = instance_create_depth(0, 0, 0, oDesert); //at this point currentLocation is just an id number
+		}
+		else if(locationName == "beach"){
+			currentLocation = instance_create_depth(0, 0, 0, oBeach);
+		}
+		else if(locationName == "forest"){
+			currentLocation = instance_create_depth(0, 0, 0, oForest);
+		}
+		else if(locationName == "snow"){
+			currentLocation = instance_create_depth(0, 0, 0, oSnow);
+		}
+		else if(locationName == "plains"){
+			currentLocation = instance_create_depth(0, 0, 0, oPlains);
+		}
+		show_debug_message("Current location: " + locationName);   
+		oLocation.Location();    
+		oLocation.creationTime = 2;
+		oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds 
 	
-	oldGround = ground;
-	ground = instance_create_depth(0, 0, 0, oGround);	
-	oGround.Ground(locationName);
+		oldGround = ground;
+		ground = instance_create_depth(0, 0, 0, oGround);	
+		oGround.Ground(locationName);
+	}
 }
 
 function changeLocationChance(){

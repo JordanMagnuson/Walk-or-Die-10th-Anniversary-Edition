@@ -66,6 +66,7 @@
     {"id":{"name":"oTextWalkOrDie","path":"objects/oTextWalkOrDie/oTextWalkOrDie.yy",},"order":20,},
     {"id":{"name":"sprFlowerTree","path":"sprites/sprFlowerTree/sprFlowerTree.yy",},"order":12,},
     {"id":{"name":"sndWalking","path":"sounds/sndWalking/sndWalking.yy",},"order":0,},
+    {"id":{"name":"oSoundController","path":"objects/oSoundController/oSoundController.yy",},"order":29,},
     {"id":{"name":"sprNightCover","path":"sprites/sprNightCover/sprNightCover.yy",},"order":32,},
     {"id":{"name":"sndGulls01","path":"sounds/sndGulls01/sndGulls01.yy",},"order":3,},
     {"id":{"name":"oMyWorldController","path":"objects/oMyWorldController/oMyWorldController.yy",},"order":1,},
@@ -201,7 +202,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.6.595",
+    "IDEVersion": "2.3.7.606",
   },
   "resourceVersion": "1.4",
   "name": "Walk or Die 10th Anniversary",
