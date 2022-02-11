@@ -1,7 +1,8 @@
 FADE_DURATION = 10;
 inProcess = false;
 newSound = oLocation.daySound; //set to base value
-
+soundEmitter = audio_emitter_create();
+currentGain = 1;
 function soundController(location){
 	currentSound = oLocation.daySound;
 	audio_play_sound(currentSound, 100, true)
@@ -22,7 +23,6 @@ function changeLocation(location){
 			newSound = oLocation.nightSound;
 		}
 		//fader line
-		audio_stop_all();
 		audio_play_sound(newSound, 100, true);
 		currentSound = newSound;
 		inProcess = true;
@@ -54,8 +54,7 @@ function startNight(){
 	}
 	else{
 		newSound = oLocation.nightSound;
-		audio_stop_sound(currentSound);
-		audio_play_sound(newSound, 100, true);
+		audio_play_sound_on(soundEmitter, newSound, true, 100);
 		currentSound = newSound;
 		inProcess = true;
 	}	
@@ -70,8 +69,7 @@ function startDay(){
 	}
 	else{
 		newSound = oLocation.daySound;
-		audio_stop_sound(currentSound);
-		audio_play_sound(newSound, 100, true);
+		audio_play_sound_on(soundEmitter, newSound, true, 100);
 		currentSound = newSound;
 		inProcess = true;
 	}	

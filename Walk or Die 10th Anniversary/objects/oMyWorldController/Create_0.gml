@@ -135,14 +135,17 @@ function advanceTime(){
 		case "day":
 			instance_create_depth(0, 0, 999, oSunset)
 			oSunset.Sunset();
+			//oDay.complete();
 			break;
 		case "sunset":
 			instance_create_depth(0, 0, 999, oNight)
 			oNight.Night();
+			//oSunset.complete();
 			break;
 		case "night":
 			instance_create_depth(0, 0, 999 , oDay);
 			oDay.Day(self);
+			//oNight.complete();
 			break;
 	}
 }
