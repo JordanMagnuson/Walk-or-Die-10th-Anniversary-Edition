@@ -5,7 +5,8 @@ fadeStarted = false;
 
 sEmit5 = audio_emitter_create();
 audio_emitter_gain(sEmit5, 0);
-audio_emitter_position(sEmit5, 1,0,0);
+audio_emitter_position(sEmit5, x,y,0);
+audio_play_sound_on(sEmit5, sndRiver, 1, 100);
 
 sprite_index = sprRiver;
 type = oRiver;

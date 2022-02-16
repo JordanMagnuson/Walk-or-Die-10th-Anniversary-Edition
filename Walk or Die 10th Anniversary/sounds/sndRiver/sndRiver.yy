@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndRiver.wav",
-  "duration": 3.552653,
+  "duration": 3.334512,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",

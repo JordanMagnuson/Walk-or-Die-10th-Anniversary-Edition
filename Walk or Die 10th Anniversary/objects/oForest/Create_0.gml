@@ -22,22 +22,17 @@ function createItemHere(){
 	if(random(1) > 0.2){
 		if(creationNumber < 0.005 && oGiantPineSeen == false){
 			instance_create_depth(room_width+10, 175,0, oGiantPine);
-			//show_debug_message("Giant Pine Created");
 			oGiantPineSeen = true;
 	 	}
 		else if(creationNumber < 0.01){
 			instance_create_depth(room_width+10, 175,0, oRiver);
-			//show_debug_message("River Created");
 		}
 		else if(creationNumber < 0.05){
 			instance_create_depth(room_width+10, 175,0, oPineTreeSideways);
-			//show_debug_message("Pine Tree Sideways Created");
 		}
 		else if(creationNumber < 1){
 			instance_create_depth(room_width+10, 175,0, oPineTree);	
-			//show_debug_message("Pine Tree Created");
 		}
-		//show_debug_message("Creation Number (oDesert CreateItemHere): " + string(creationNumber));  
 	}
 	//sounds
 	if (random_range(0,1) > 0.4){
