@@ -95,7 +95,7 @@ function changeLocation(){
 		oLocation.Location();    
 		oLocation.creationTime = 2;
 		oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds 
-		if(variable_instance_exists(oMyWorldController, "oldGround")){
+		if(variable_instance_exists(oMyWorldController, "oldGround")){ //destroys old ground when c is spammed
 			if(instance_exists(oldGround)){
 				instance_destroy(oldGround);
 			}
