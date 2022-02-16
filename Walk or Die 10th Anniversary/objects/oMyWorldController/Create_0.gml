@@ -35,9 +35,8 @@ instance_create_depth(0,0,0, oSoundController);
 oSoundController.soundController(locationName);
 
 //Ground and Sky
-ground = instance_create_depth(0,0,0, oGround);
-oGround.Ground(locationName);
-oGround.x = -oGround.sprite_width/2;
+ground = instance_create_depth(0,175,12, oGround);
+oGround.x = -sprite_get_width(sprGroundBeach)/2;
 
 //need to find the correct layer or depth for osky
 instance_create_depth(0, 0, 0, oSky);
@@ -96,10 +95,13 @@ function changeLocation(){
 		oLocation.Location();    
 		oLocation.creationTime = 2;
 		oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds 
-	
+		if(variable_instance_exists(oMyWorldController, "oldGround")){
+			if(instance_exists(oldGround)){
+				instance_destroy(oldGround);
+			}
+		}
 		oldGround = ground;
-		ground = instance_create_depth(0, 0, 0, oGround);	
-		oGround.Ground(locationName);
+		ground = instance_create_depth(room_width, oGround.y, 12, oGround);	
 	}
 }
 

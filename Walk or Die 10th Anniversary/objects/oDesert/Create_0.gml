@@ -74,5 +74,4 @@ function createItemHere(){
 
 function gameStart(){
 	instance_create_depth(150, 175, 0, oCactus);
-	show_debug_message("testcactusgamestart");
 }
