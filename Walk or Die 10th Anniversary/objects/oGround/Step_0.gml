@@ -7,6 +7,9 @@ if(x > -sprite_width/2){
 }
 else if(variable_instance_exists(oMyWorldController, "oldGround")){
 	if(self == oMyWorldController.ground){
-		instance_destroy(oMyWorldController.oldGround);
+		if(x < -sprite_width){
+			show_debug_message("x: " + string(x) + " -SpriteWidth: " + string(-sprite_width));
+			instance_destroy(oMyWorldController.oldGround)
+		}
 	}
 }

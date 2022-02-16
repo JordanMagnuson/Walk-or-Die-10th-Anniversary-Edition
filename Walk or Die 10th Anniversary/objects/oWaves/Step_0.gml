@@ -13,12 +13,13 @@ if (fadeOutCalled and image_alpha > 0){
 }
 
 // Move waves
-x += waveDirection * SPEED * delta_time/1000000; //delta_time/1000000 is from google doc, may be wrong(FP.elasped equivalent)
+x += waveDirection * SPEED * delta_time/1000000; //delta_time/1000000 is from google doc (FP.elasped equivalent)
 			
 // Change direction
-if (waveDirection == -1 && x < X_INIT){
-	waveDirection = 1;
-}
-else if (waveDirection == 1 && x > X_INIT + 8){
-	waveDirection = -1;
-}
+if (waveDirection == -1 && x < X_INIT)
+	{
+		waveDirection = 1;
+	}
+	else if (waveDirection == 1 && x > X_INIT + 8){
+		waveDirection = -1;
+	}

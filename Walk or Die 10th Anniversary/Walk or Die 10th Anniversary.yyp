@@ -7,7 +7,6 @@
     {"id":{"name":"oForest","path":"objects/oForest/oForest.yy",},"order":2,},
     {"id":{"name":"sprCactus03","path":"sprites/sprCactus03/sprCactus03.yy",},"order":3,},
     {"id":{"name":"sprWaves","path":"sprites/sprWaves/sprWaves.yy",},"order":7,},
-    {"id":{"name":"oMain","path":"objects/oMain/oMain.yy",},"order":15,},
     {"id":{"name":"sprGiantPine","path":"sprites/sprGiantPine/sprGiantPine.yy",},"order":23,},
     {"id":{"name":"oIgloo","path":"objects/oIgloo/oIgloo.yy",},"order":3,},
     {"id":{"name":"sprFrozenRiver","path":"sprites/sprFrozenRiver/sprFrozenRiver.yy",},"order":28,},
@@ -158,7 +157,6 @@
   ],
   "isDnDProject": false,
   "isEcma": false,
-  "tutorialPath": "",
   "configs": {
     "name": "Default",
     "children": [],
@@ -204,7 +202,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2.3.7.606",
+    "IDEVersion": "2022.1.1.610",
   },
   "resourceVersion": "1.4",
   "name": "Walk or Die 10th Anniversary",
