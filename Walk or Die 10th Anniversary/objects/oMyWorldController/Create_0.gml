@@ -66,8 +66,6 @@ function changeLocation(){
 			newLocation = choose("forest", "desert", "plains", "snow",  "beach");
 		} 
 		until (newLocation != locationName);
-		
-		oSoundController.changeLocation(newLocation);
 	
 		//as the location changes, free up the emitters to prevent a memory leak; Currently in Progress
 		audio_emitter_free(oLocation.sEmit0);
@@ -95,7 +93,9 @@ function changeLocation(){
 		show_debug_message("Current location: " + locationName);   
 		oLocation.Location();    
 		oLocation.creationTime = 2;
-		oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds 
+		oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds
+		
+		oSoundController.changeLocation(newLocation);
 		
 		//destroys old ground when change location is spammed
 		if(variable_instance_exists(oMyWorldController, "oldGround")){ 

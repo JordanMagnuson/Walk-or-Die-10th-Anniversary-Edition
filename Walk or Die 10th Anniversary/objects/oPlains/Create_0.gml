@@ -1,6 +1,6 @@
 event_inherited();
-DAY_SOUND = sndForestAmbient;
-NIGHT_SOUND = sndForestNightAmbient;
+DAY_SOUND = "sndForestAmbient";
+NIGHT_SOUND = "sndForestNightAmbient";
 SND_BEE = sndBee;
 SND_CICADAS = sndCicadas;
 

@@ -7,8 +7,8 @@ sEmit3 = audio_emitter_create();
 oGiantPineSeen = false;
 creationNumber = 0;
 
-DAY_SOUND = sndForestAmbient;
-NIGHT_SOUND = sndForestNightAmbient;
+DAY_SOUND = "sndForestAmbient";
+NIGHT_SOUND = "sndForestNightAmbient";
 
 Location(DAY_SOUND, NIGHT_SOUND);
 locationType = "forest";

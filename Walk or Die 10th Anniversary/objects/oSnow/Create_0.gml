@@ -9,8 +9,8 @@ sEmit3 = audio_emitter_create();
 
 oSnowmanSeen = false;
 
-DAY_SOUND = sndWindAmbient;
-NIGHT_SOUND = sndWindAmbient;
+DAY_SOUND = "sndWindAmbient";
+NIGHT_SOUND = "sndWindAmbient";
 Location(DAY_SOUND,NIGHT_SOUND, 5, 0.5);
 
 //Controls item creation for this location

@@ -5,8 +5,8 @@ SND_GULLS03 = sndGulls03;
 creationTimeSlope = 1;
 sndGullsRandom = choose(SND_GULLS01, SND_GULLS02, SND_GULLS03);
 
-DAY_SOUND = sndWavesAmbient;
-NIGHT_SOUND = sndWavesAmbient;
+DAY_SOUND = "sndWavesAmbient";
+NIGHT_SOUND = "sndWavesAmbient";
 Location(DAY_SOUND,NIGHT_SOUND);
 
 locationType = "beach";

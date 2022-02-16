@@ -1,5 +1,5 @@
 event_inherited();
-Location(sndSilence, sndSilence, 5 ,2);
+Location("sndSilence", "sndSilence", 5 ,2);
 locationType = "desert";
 creationTimeSlope = 1;
 sEmit0 = audio_emitter_create();
