@@ -5,13 +5,13 @@ soundEmitter = audio_emitter_create();
 currentGain = 1;
 function soundController(location){
 	currentSound = oLocation.daySound;
-	audio_play_sound(currentSound, 100, true)
+	audio_play_sound_on(soundEmitter, currentSound, 1, 100);
 }
 
 function changeLocation(location){
-	show_debug_message("change location");
+	//show_debug_message("change location");
 	if(inProcess == true){
-		show_debug_message("in process");
+		//show_debug_message("in process");
 		//show_debug_message("current sound vol: " + currentSound.volume);
 		//show_debug_message("new sound vol: " + newSound.volume);
 	}
@@ -23,7 +23,7 @@ function changeLocation(location){
 			newSound = oLocation.nightSound;
 		}
 		//fader line
-		audio_play_sound(newSound, 100, true);
+		audio_play_sound_on(soundEmitter, newSound, 1, 100);
 		currentSound = newSound;
 		inProcess = true;
 	}
@@ -31,6 +31,9 @@ function changeLocation(location){
 
 function fadeComplete(){
 	inProcess = false;
+	audio_emitter_free(soundEmitter);//stop the previous sound
+	soundEmitter = audio_emitter_create(); //recreate the emitter
+	audio_play_sound_on(soundEmitter, newSound, 1, 100); //play the new sound
 	
 	if(oMyWorldController.time == "day" && currentSound != oLocation.daySound){
 		show_debug_message("catching up with day");

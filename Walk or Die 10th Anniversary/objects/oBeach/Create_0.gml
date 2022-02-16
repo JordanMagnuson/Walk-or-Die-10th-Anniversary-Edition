@@ -27,26 +27,21 @@ function createItemHere(){
 		if (creationNumber < 0.005 && oCastleSeen == false){ 
 			instance_create_depth(room_width+10, 175, 0, oCastle);
 			oCastleSeen = true;
-			//show_debug_message(string(creationNumber) + ": Castle Created");
 		}
 		
 		else if (creationNumber < 0.05){
 			instance_create_depth(room_width+10, 175, 0, oCactus);
-			//show_debug_message(string(creationNumber) + ": Cactus Created");
 		}
 	
 		else if (creationNumber < 0.4){
 			instance_create_depth(room_width+10, 175, 0, oBeachGrass);
-			//show_debug_message(string(creationNumber) + ": BeachGrass Created");
 		}
 
 		else if (creationNumber < 1){
 			instance_create_depth(room_width+10, 175, 0, oSandDune);
-			//show_debug_message(string(creationNumber) + ": Sand Dune Created");
 		}
 	
 	}
-	//show_debug_message("Creation Number (oBeach CreateItemHere): " + string(creationNumber));  
 
 	//sounds
 	if (random_range(0,1) > 0.4){
