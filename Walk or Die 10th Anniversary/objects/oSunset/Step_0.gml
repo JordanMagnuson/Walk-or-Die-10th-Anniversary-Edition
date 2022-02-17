@@ -1,3 +1,4 @@
+/*
 if(oMyWorldController.fourthFrame == 1){
 	TEMPCOUNTER++;
 	if(TEMPCOUNTER == 15){
@@ -5,16 +6,21 @@ if(oMyWorldController.fourthFrame == 1){
 		TEMPCOUNTER = 0;
 	}
 }
-/*
-if(fadein == true)
-	image_alpha += 1/(FADE_IN_DURATION*room_speed);
+*/
+
+
+if(fadein == true){
+	image_alpha += (1/FADE_IN_DURATION)/room_speed;
+	//show_debug_message("Sunset FADEIN: " + string(image_alpha));
+}
 	
-if(image_alpha >=MAX_ALPHA){
+if(image_alpha >= MAX_ALPHA){
 	fadein = false;
 }
+
 if(fadeout == true){
-	if(image_alpha <= 0)
+	if(image_alpha == 0)
 		destroy();
 	image_alpha -= (1/FADE_OUT_DURATION)/room_speed;
+	//show_debug_message("Sunset FADEOUT: " + string(image_alpha));
 }
-*/

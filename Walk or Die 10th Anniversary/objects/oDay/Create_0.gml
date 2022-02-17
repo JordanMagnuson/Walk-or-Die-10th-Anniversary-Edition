@@ -12,6 +12,7 @@ function Day(world, changeSound = true){
 
 function complete(){
 	instance_create_depth(0, 0, 0, oSunset);
+	//show_debug_message("CREATED SUNSET IN DAY: "+ string(oSunset.image_alpha));
 	oSunset.Sunset();
 	instance_destroy(self);
 }
