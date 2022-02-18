@@ -54,6 +54,9 @@ player = instance_create_depth(0, 0, -1, oPlayer);
 //Starting Text
 instance_create_depth(0,0,0, oTextPress);
 
+// Camera
+instance_create_depth(0,0, -1, oCamera);
+
 //start of game changes  
 oLocation.creationTime = 2;
 oLocation.gameStart();

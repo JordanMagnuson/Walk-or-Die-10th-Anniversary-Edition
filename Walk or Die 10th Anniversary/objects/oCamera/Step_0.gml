@@ -1,16 +1,15 @@
-// Live coding with GMLive extension. See https://yal.cc/r/17/gmlive/
-//if (global.debug && live_call()) {
-//	return live_result;
-//}	
-
-
-// Provide automatic fullscreen scaling for HTML5 target. 
+// Provide automatic responsive fullscreen scaling for HTML5 target. 
 // See https://www.yoyogames.com/blog/67/scaling-for-html5
 if (last_browser_width != browser_width || last_browser_height != browser_height) {
 	show_debug_message("window size change");
 	last_browser_width = browser_width;
 	last_browser_height = browser_height;	
 	canvas_fullscreen(browser_width, browser_height);
+}
+
+// Unfollow, if follow object is destroyed.
+if (!instance_exists(follow)) {
+	follow = noone;
 }
 
 // Follow the follow object.
