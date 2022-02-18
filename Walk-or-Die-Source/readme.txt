@@ -17,6 +17,9 @@ in whatever way you'd like. If you find it helpful, or make anything
 particular with it, I'd love to hear about it! Send an email to
 jordan@necessarygames.com.
 
+Original AS3 repo with full commit history:
+https://github.com/JordanMagnuson/Walk-or-Die
+
 For help building and running this game from source, post-2020, see:
 https://github.com/JordanMagnuson/Resources-for-Building-AS3-Games
 
