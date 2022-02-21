@@ -20,10 +20,14 @@
     {"id":{"name":"sprForestMountain01","path":"sprites/sprForestMountain01/sprForestMountain01.yy",},"order":0,},
     {"id":{"name":"oStars","path":"objects/oStars/oStars.yy",},"order":19,},
     {"id":{"name":"sprCactus04","path":"sprites/sprCactus04/sprCactus04.yy",},"order":4,},
+    {"id":{"name":"rmTitleScreen","path":"rooms/rmTitleScreen/rmTitleScreen.yy",},"order":1,},
+    {"id":{"name":"oTitleScreen","path":"objects/oTitleScreen/oTitleScreen.yy",},"order":32,},
     {"id":{"name":"oBeach","path":"objects/oBeach/oBeach.yy",},"order":0,},
     {"id":{"name":"sprPine03","path":"sprites/sprPine03/sprPine03.yy",},"order":2,},
     {"id":{"name":"sprTumbleweed","path":"sprites/sprTumbleweed/sprTumbleweed.yy",},"order":20,},
+    {"id":{"name":"gmcallback_start_game","path":"scripts/gmcallback_start_game/gmcallback_start_game.yy",},"order":0,},
     {"id":{"name":"sprCactus01","path":"sprites/sprCactus01/sprCactus01.yy",},"order":1,},
+    {"id":{"name":"sprDebug","path":"sprites/sprDebug/sprDebug.yy",},"order":38,},
     {"id":{"name":"sprPineSideways04","path":"sprites/sprPineSideways04/sprPineSideways04.yy",},"order":26,},
     {"id":{"name":"oSandDune","path":"objects/oSandDune/oSandDune.yy",},"order":3,},
     {"id":{"name":"sprDune02","path":"sprites/sprDune02/sprDune02.yy",},"order":1,},
@@ -34,6 +38,7 @@
     {"id":{"name":"sprGravestonePlains","path":"sprites/sprGravestonePlains/sprGravestonePlains.yy",},"order":3,},
     {"id":{"name":"oFlowerTree","path":"objects/oFlowerTree/oFlowerTree.yy",},"order":2,},
     {"id":{"name":"sprDesertMountain01","path":"sprites/sprDesertMountain01/sprDesertMountain01.yy",},"order":2,},
+    {"id":{"name":"oGlobals","path":"objects/oGlobals/oGlobals.yy",},"order":33,},
     {"id":{"name":"sprSnowMountain02","path":"sprites/sprSnowMountain02/sprSnowMountain02.yy",},"order":5,},
     {"id":{"name":"oCactus","path":"objects/oCactus/oCactus.yy",},"order":0,},
     {"id":{"name":"oWaves","path":"objects/oWaves/oWaves.yy",},"order":4,},
@@ -51,6 +56,7 @@
     {"id":{"name":"sprGroundSnow","path":"sprites/sprGroundSnow/sprGroundSnow.yy",},"order":4,},
     {"id":{"name":"sndBee","path":"sounds/sndBee/sndBee.yy",},"order":7,},
     {"id":{"name":"sprSnowPile01","path":"sprites/sprSnowPile01/sprSnowPile01.yy",},"order":0,},
+    {"id":{"name":"fntCasualEncounter","path":"fonts/fntCasualEncounter/fntCasualEncounter.yy",},"order":1,},
     {"id":{"name":"sprCloud03","path":"sprites/sprCloud03/sprCloud03.yy",},"order":2,},
     {"id":{"name":"oLocation","path":"objects/oLocation/oLocation.yy",},"order":8,},
     {"id":{"name":"oSnowman","path":"objects/oSnowman/oSnowman.yy",},"order":5,},
@@ -100,6 +106,7 @@
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":31,},
     {"id":{"name":"oTextLetGo","path":"objects/oTextLetGo/oTextLetGo.yy",},"order":23,},
     {"id":{"name":"sprPine01","path":"sprites/sprPine01/sprPine01.yy",},"order":0,},
+    {"id":{"name":"ToggleFullscreen","path":"extensions/ToggleFullscreen/ToggleFullscreen.yy",},"order":1,},
     {"id":{"name":"sprSnowman","path":"sprites/sprSnowman/sprSnowman.yy",},"order":31,},
     {"id":{"name":"sprGroundForest","path":"sprites/sprGroundForest/sprGroundForest.yy",},"order":2,},
     {"id":{"name":"oMeteorShower","path":"objects/oMeteorShower/oMeteorShower.yy",},"order":16,},
@@ -170,6 +177,7 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"rmTitleScreen","path":"rooms/rmTitleScreen/rmTitleScreen.yy",},},
     {"roomId":{"name":"rmMyWorld","path":"rooms/rmMyWorld/rmMyWorld.yy",},},
   ],
   "Folders": [
@@ -209,7 +217,9 @@
   "TextureGroups": [
     {"isScaled":true,"autocrop":true,"border":2,"mipsToGenerate":0,"groupParent":null,"targets":-1,"resourceVersion":"1.3","name":"Default","resourceType":"GMTextureGroup",},
   ],
-  "IncludedFiles": [],
+  "IncludedFiles": [
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"custom index.html","resourceType":"GMIncludedFile",},
+  ],
   "MetaData": {
     "IDEVersion": "2022.1.1.610",
   },
