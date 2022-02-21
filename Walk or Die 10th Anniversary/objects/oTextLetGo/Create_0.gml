@@ -5,7 +5,7 @@ started = false;
 text = "Don't let go.";
 //font is already set
 alpha = 0;
-x = 190; //THIS WAS 145 BUT IT OVERALPPED WITH oTextPress
+x = 145;
 y = 100;
 fade = false;
 fadein = true;

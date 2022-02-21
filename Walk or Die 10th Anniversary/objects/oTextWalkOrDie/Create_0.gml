@@ -5,7 +5,7 @@ started = false;
 
 text = "Walk or Die";
 //font is already set
-x = 190;//this was supposed to be 145 but it overlapped with oTextJordan
+x = 145;
 y = 100;
 alpha = 0;
 fadein = false;
