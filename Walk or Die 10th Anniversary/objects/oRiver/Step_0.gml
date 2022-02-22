@@ -2,8 +2,8 @@ event_inherited();
 //thank you stackoverflow: https://stackoverflow.com/questions/929103/convert-a-number-range-to-another-range-maintaining-ratio
 
 if(instance_exists(oPlayer)){
-	pan = x+(room_width/2)-oPlayer.x;
-	//show_debug_message("x: " + string(x) + " pan: " + string(pan) + " room_width/2: " + string(room_width/2));
+	pan = x+oPlayer.x;
+	show_debug_message("x: " + string(x) + " pan: " + string(pan) + " room_width/2: ");
 	audio_emitter_position(sEmit5, pan, 0, 0);
 }
 if(x <= 52 && !fadeStarted){

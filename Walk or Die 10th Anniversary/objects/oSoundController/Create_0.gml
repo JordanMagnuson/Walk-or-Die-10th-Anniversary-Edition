@@ -1,11 +1,15 @@
 FADE_DURATION = 10;
 inProcess = false;
 newSound = asset_get_index(oLocation.daySound); //set to base value
-soundEmitter = audio_emitter_create();
-currentGain = 1;
+soundEmitter00 = audio_emitter_create();
+soundEmitter01 = audio_emitter_create();
+currentGain00 = 1; //gain for soundEmitter00
+currentGain01 = 0; //gain for soundEmitter01
+
 function soundController(location){
 	currentSound =  asset_get_index(oLocation.daySound);
-	audio_play_sound_on(soundEmitter, currentSound, 1, 100);
+	audio_emitter_gain(soundEmitter00, currentGain00);
+	audio_play_sound_on(soundEmitter00, currentSound, 1, 100);
 }
 
 function changeLocation(location){
@@ -22,7 +26,8 @@ function changeLocation(location){
 		else{
 			newSound = asset_get_index(oLocation.nightSound);
 		}
-
+		audio_emitter_gain(soundEmitter01, currentGain01);
+		audio_play_sound_on(soundEmitter01, newSound, 1, 100); //play the new sound
 		currentSound = newSound;
 		inProcess = true;
 	}
@@ -30,9 +35,22 @@ function changeLocation(location){
 
 function fadeComplete(){
 	inProcess = false;
-	audio_emitter_free(soundEmitter);//stop the previous sound
-	soundEmitter = audio_emitter_create(); //recreate the emitter
-	audio_play_sound_on(soundEmitter, newSound, 1, 100); //play the new sound
+	audio_emitter_free(soundEmitter00);//stop the previous sound after it has finished fading
+	soundEmitter00 = audio_emitter_create(); //recreate the emitter
+	
+	//reset the currentGain
+	currentGain00 = 1;
+	currentGain01 = 0;
+	
+	//change the sound to play on soundEmitter00 rather than soundEmitter01
+	var tempSound = soundEmitter00;
+	soundEmitter00 = soundEmitter01;
+	soundEmitter01 = tempSound;
+	
+	//reset soundEmitter01
+	audio_emitter_free(soundEmitter01);
+	soundEmitter01 = audio_emitter_create();
+	audio_emitter_gain(soundEmitter01, currentGain01);
 	
 	if(oMyWorldController.time == "day" && currentSound != asset_get_index(oLocation.daySound)){
 		show_debug_message("catching up with day");
@@ -56,7 +74,8 @@ function startNight(){
 	}
 	else{
 		newSound =  asset_get_index(oLocation.nightSound);
-		audio_play_sound_on(soundEmitter, newSound, true, 100);
+		audio_emitter_gain(soundEmitter01, currentGain01);
+		audio_play_sound_on(soundEmitter01, newSound, 1, 100); //play the new sound
 		currentSound = newSound;
 		inProcess = true;
 	}	
@@ -71,8 +90,9 @@ function startDay(){
 	}
 	else{
 		newSound =  asset_get_index(oLocation.daySound);
+		audio_emitter_gain(soundEmitter01, currentGain01);
+		audio_play_sound_on(soundEmitter01, newSound, 1, 100); //play the new sound
 		currentSound = newSound;
-		audio_play_sound_on(soundEmitter, newSound, true, 100); //HTML5 doesn't like passing sounds through variables
 		inProcess = true;
 	}	
 }
