@@ -62,6 +62,9 @@ oLocation.creationTime = 2;
 oLocation.gameStart();
 oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds 
 
+// Hide cursor.
+window_set_cursor(cr_none);
+
 function changeLocation(){
 	if(instance_exists(oPlayer)){
 		var newLocation;
