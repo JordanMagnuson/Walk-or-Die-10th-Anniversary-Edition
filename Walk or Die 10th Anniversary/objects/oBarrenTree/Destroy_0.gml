@@ -1,1 +1,1 @@
-audio_emitter_free(sEmit5);
+audio_emitter_free(barrenTreeEmitter);

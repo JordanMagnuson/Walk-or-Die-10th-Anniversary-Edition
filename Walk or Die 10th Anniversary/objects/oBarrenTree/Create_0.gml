@@ -4,4 +4,5 @@ sprite_index = choose(sprBarrenTree01, sprBarrenTree02, sprBarrenTree03);
 type = oBarrenTree;
 Item(sprite_index, "mid", true);
 
-sEmit5 = audio_emitter_create();
+barrenTreeEmitter = audio_emitter_create();
+counter = 0;
