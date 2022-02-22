@@ -116,6 +116,7 @@
     {"id":{"name":"oTree","path":"objects/oTree/oTree.yy",},"order":3,},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":0,},
     {"id":{"name":"sprGravestoneSnow","path":"sprites/sprGravestoneSnow/sprGravestoneSnow.yy",},"order":1,},
+    {"id":{"name":"oCheater","path":"objects/oCheater/oCheater.yy",},"order":34,},
     {"id":{"name":"sndGulls02","path":"sounds/sndGulls02/sndGulls02.yy",},"order":4,},
     {"id":{"name":"oFlowers","path":"objects/oFlowers/oFlowers.yy",},"order":1,},
     {"id":{"name":"sprShootingStar","path":"sprites/sprShootingStar/sprShootingStar.yy",},"order":35,},
