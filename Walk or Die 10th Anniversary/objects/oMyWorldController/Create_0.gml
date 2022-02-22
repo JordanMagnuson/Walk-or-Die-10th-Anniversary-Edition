@@ -14,7 +14,7 @@ audio_listener_orientation(0,0,1,0,-1,0);
 //audio_listener_position(room_width/2,0, 0);
 
 locationName = choose("desert", "forest", "snow", "plains", "beach");
-locationName = "forest"; //TEMPORARY FOR RIVER NOISE, DELETE LATER
+
 if(locationName == "desert"){
 	currentLocation = instance_create_depth(0, 0, 0, oDesert); //at this point currentLocation is just an id number
 }   
