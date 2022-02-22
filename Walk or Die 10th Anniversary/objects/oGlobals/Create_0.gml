@@ -1,5 +1,5 @@
 // Debug?
-global.debug = true;
+global.debug = false;
 
 // Is this a touch device?
 switch (os_type) {
