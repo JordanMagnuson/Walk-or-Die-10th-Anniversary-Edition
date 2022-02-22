@@ -16,7 +16,7 @@ sEmit0 = audio_emitter_create();
 sEmit1 = audio_emitter_create();
 sEmit2 = audio_emitter_create();
 sEmit3 = audio_emitter_create();
-oCastleSeen = false;
+
 
 //Controls item creation for this location
 function createItemHere(){
@@ -24,9 +24,9 @@ function createItemHere(){
 	
 	creationNumber = random_range(0,1);
 	if (random_range(0,1) > 0.25){		
-		if (creationNumber < 0.005 && oCastleSeen == false){ 
+		if (creationNumber < 0.005 && oGlobals.oCastleSeen == false){ 
 			instance_create_depth(room_width+10, 175, 0, oCastle);
-			oCastleSeen = true;
+			oGlobals.oCastleSeen = true;
 		}
 		
 		else if (creationNumber < 0.05){

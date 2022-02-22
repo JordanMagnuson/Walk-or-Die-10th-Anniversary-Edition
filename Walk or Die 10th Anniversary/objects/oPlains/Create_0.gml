@@ -9,7 +9,6 @@ sEmit1 = audio_emitter_create();
 sEmit2 = audio_emitter_create();
 sEmit3 = audio_emitter_create();
 
-oFlowerTreeSeen = false;
 Location(DAY_SOUND, NIGHT_SOUND, 3, 0.3);
 locationType = "plains";
 
@@ -19,9 +18,9 @@ function createItemHere()
 	creationNumber = random_range(0,1);
 		
 	if (random_range(0,1) > 0.25) {		
-		if (creationNumber < 0.005 && oFlowerTreeSeen == false){
+		if (creationNumber < 0.005 && oGlobals.oFlowerTreeSeen == false){
 			instance_create_depth(room_width+10, 175, 0, oFlowerTree);
-			oFlowerTreeSeen = true;
+			oGlobals.oFlowerTreeSeen = true;
 			//show_debug_message(string(creationNumber) + ": Flower Tree Created");
 		}
 		else if (creationNumber < 0.03){

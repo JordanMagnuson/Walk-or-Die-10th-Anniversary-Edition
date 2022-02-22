@@ -4,7 +4,6 @@ sEmit1 = audio_emitter_create();
 sEmit2 = audio_emitter_create();
 sEmit3 = audio_emitter_create();
 
-oGiantPineSeen = false;
 creationNumber = 0;
 
 DAY_SOUND = "sndForestAmbient";
@@ -20,9 +19,9 @@ function createItemHere(){
 	
 	//Mid distance
 	if(random(1) > 0.2){
-		if(creationNumber < 0.005 && oGiantPineSeen == false){
+		if(creationNumber < 0.005 && oGlobals.oGiantPineSeen == false){
 			instance_create_depth(room_width+10, 175,0, oGiantPine);
-			oGiantPineSeen = true;
+			oGlobals.oGiantPineSeen = true;
 	 	}
 		else if(creationNumber < 0.01){
 			instance_create_depth(room_width+10, 175,0, oRiver);

@@ -7,8 +7,6 @@ sEmit1 = audio_emitter_create();
 sEmit2 = audio_emitter_create();
 sEmit3 = audio_emitter_create();
 
-oSnowmanSeen = false;
-
 DAY_SOUND = "sndWindAmbient";
 NIGHT_SOUND = "sndWindAmbient";
 Location(DAY_SOUND,NIGHT_SOUND, 5, 0.5);
@@ -19,9 +17,9 @@ function createItemHere(){
 	
 	creationNumber = random_range(0,1);
 	if (random_range(0,1) > 0.25){		
-		if (creationNumber < 0.01 && oSnowmanSeen == false){ 
+		if (creationNumber < 0.01 && oGlobals.oSnowmanSeen == false){ 
 			instance_create_depth(room_width+10, 175, 0, oSnowman);
-			oSnowmanSeen = true;
+			oGlobals.oSnowmanSeen = true;
 			//show_debug_message(string(creationNumber) + ": SnowMan Created");
 		}
 		else if (creationNumber < 0.05){

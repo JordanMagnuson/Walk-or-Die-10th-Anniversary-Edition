@@ -6,7 +6,6 @@ sEmit0 = audio_emitter_create();
 sEmit1 = audio_emitter_create();
 sEmit2 = audio_emitter_create();
 sEmit3 = audio_emitter_create();
-oPyramidsSeen = false;
 
 function createItemHere(){
 	oLocation.createItem();
@@ -15,10 +14,10 @@ function createItemHere(){
 	
 	//Mid distance
 	if(random(1) > 0.25){
-		if(creationNumber < 0.01 && oPyramidsSeen == false){
+		if(creationNumber < 0.01 && oGlobals.oPyramidsSeen == false){
 			instance_create_depth(room_width+10, 175,0, oPyramids);
 			//show_debug_message("Pyramid Created");
-			oPyramidsSeen = true;
+			oGlobals.oPyramidsSeen = true;
 	 	}
 		else if(creationNumber < 0.05){
 			instance_create_depth(room_width+10, 175,0, oGiantCactus);
