@@ -10,9 +10,6 @@ randomise();
 room_width = 300;
 room_height = 200;
 
-audio_listener_orientation(0,0,1,0,-1,0);
-//audio_listener_position(room_width/2,0, 0);
-
 locationName = choose("desert", "forest", "snow", "plains", "beach");
 
 if(locationName == "desert"){
@@ -56,6 +53,11 @@ oDay.Day(self, false);
 player = instance_create_depth(0, 0, -1, oPlayer);
 //Starting Text
 instance_create_depth(0,0,0, oTextPress);
+
+// Audio listener. See tutorial at https://www.youtube.com/watch?v=ZpPBlD9FyKw
+// Make sound from the right sound like they're coming from teh right, not the left, and vice versa.
+audio_listener_orientation(0,1,0,0,0,1);
+audio_listener_position(player.x,player.y,0);
 
 // Camera
 instance_create_depth(0,0, -1, oCamera);

@@ -1,21 +1,15 @@
 event_inherited();
-//thank you stackoverflow: https://stackoverflow.com/questions/929103/convert-a-number-range-to-another-range-maintaining-ratio
 
-if(instance_exists(oPlayer)){
-	pan = x+oPlayer.x-20;
-	//show_debug_message("x: " + string(x) + " pan: " + string(pan));
-	audio_emitter_position(sEmit5, pan, 0, 0);
+// Play sound on emitter.
+if (!sndPlaying) {
+	audio_play_sound_on(sndEmit, sndRiver, true, 1);
+	sndPlaying = true;
 }
-if(x <= 52 && !fadeStarted){
-	fadeStarted = true;
-	
+
+// Allow to be destroyed once sound is out of earshot.
+if (distance_to_object(oPlayer) > sndMaxDist) {
+	canDestroy = true;
 }
-if(!fadeStarted){
-	//NewValue = (((OldValue - OldMin) * (NewMax - NewMin)) / (OldMax - OldMin)) + NewMin
-	vol = (((x - 40) * (0.1 - 0.7)) / (room_width - 40)) + 0.7;
-	audio_emitter_gain(sEmit5, vol);
-}
-else{
-	vol -= (1/5)/room_speed;	//fade the volume to 0 after 5 seconds
-	audio_emitter_gain(sEmit5, vol);
-}
+
+// Move the emitter with the river.
+audio_emitter_position(sndEmit, x, y, 0);

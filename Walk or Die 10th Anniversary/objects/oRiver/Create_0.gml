@@ -1,12 +1,18 @@
-event_inherited()
+event_inherited();
 fadeIn = false;
 fadeOut = false;
 fadeStarted = false;
+canDestroy = false;
+behindPlayer = false;
 
-sEmit5 = audio_emitter_create();
-audio_emitter_gain(sEmit5, 0);
-audio_emitter_position(sEmit5, x,y,0);
-audio_play_sound_on(sEmit5, sndRiver, 1, 100);
+// Create audio emitter. See tutorial at https://www.youtube.com/watch?v=ZpPBlD9FyKw
+sndEmit = audio_emitter_create();
+sndMaxDist = room_width - sprite_width;
+sndDropoffDist = sndMaxDist/2;
+audio_falloff_set_model(audio_falloff_linear_distance);
+audio_emitter_position(sndEmit, x, y, 0);
+audio_emitter_falloff(sndEmit, sndDropoffDist, sndMaxDist, 1);
+sndPlaying = false;
 
 sprite_index = sprRiver;
 type = oRiver;

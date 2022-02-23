@@ -4,6 +4,7 @@ moveDist = 0;
 moveCounter = 0;
 
 overlap = false;
+canDestroy = true;
 
 function Item(sprite, distance = "mid", overlap = true){
 	self.distance = distance;			
@@ -47,8 +48,14 @@ function Item(sprite, distance = "mid", overlap = true){
 		}
 	} 
 }	
-function offScreenAction(){
-	destroy();	
+function offScreenAction() {
+	if (canDestroy) {
+		//show_debug_message(string(self.type) + ": CAN destroy");
+		destroy();	
+	}
+	else {
+		//show_debug_message(string(self.type) + ": CANNOT destroy");
+	}
 }
 
 function destroy(){
