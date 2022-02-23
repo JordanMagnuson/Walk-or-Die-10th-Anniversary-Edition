@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sndRiver.wav",
-  "duration": 3.334512,
+  "soundFile": "sndRiver.mp3",
+  "duration": 20.688,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
