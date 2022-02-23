@@ -2,11 +2,11 @@
 global.debug = true;
 
 //Globals for rare objects
-oCastleSeen = false;
-oPyramidsSeen = false;
-oGiantPineSeen = false;
-oFlowerTreeSeen = false;
-oSnowmanSeen = false;
+global.oCastleSeen = false;
+global.oPyramidsSeen = false;
+global.oGiantPineSeen = false;
+global.oFlowerTreeSeen = false;
+global.oSnowmanSeen = false;
 
 // Is this a touch device?
 switch (os_type) {

@@ -14,10 +14,10 @@ function createItemHere(){
 	
 	//Mid distance
 	if(random(1) > 0.25){
-		if(creationNumber < 0.01 && oGlobals.oPyramidsSeen == false){
+		if(creationNumber < 0.01 && global.oPyramidsSeen == false){
 			instance_create_depth(room_width+10, 175,0, oPyramids);
 			//show_debug_message("Pyramid Created");
-			oGlobals.oPyramidsSeen = true;
+			global.oPyramidsSeen = true;
 	 	}
 		else if(creationNumber < 0.05){
 			instance_create_depth(room_width+10, 175,0, oGiantCactus);

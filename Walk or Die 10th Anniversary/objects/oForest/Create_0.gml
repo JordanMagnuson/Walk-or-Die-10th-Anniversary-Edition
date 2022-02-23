@@ -19,9 +19,9 @@ function createItemHere(){
 	
 	//Mid distance
 	if(random(1) > 0.2){
-		if(creationNumber < 0.005 && oGlobals.oGiantPineSeen == false){
+		if(creationNumber < 0.005 && global.oGiantPineSeen == false){
 			instance_create_depth(room_width+10, 175,0, oGiantPine);
-			oGlobals.oGiantPineSeen = true;
+			global.oGiantPineSeen = true;
 	 	}
 		else if(creationNumber < 0.01){
 			instance_create_depth(room_width+10, 175,0, oRiver);
