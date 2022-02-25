@@ -1,6 +1,8 @@
 event_inherited();
 
+//---------------------------------------------------------------
 // Play sound on emitter.
+// This is different from original source.
 if (!sndPlaying) {
 	audio_play_sound_on(sndEmit, sndRiver, true, 1);
 	sndPlaying = true;
@@ -13,3 +15,4 @@ if (distance_to_object(oPlayer) > sndMaxDist) {
 
 // Move the emitter with the river.
 audio_emitter_position(sndEmit, x, y, 0);
+//---------------------------------------------------------------

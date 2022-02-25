@@ -1,3 +1,6 @@
+// Object used to initialize some global variables. 
+// This is new from original AS3 source code.
+
 // Debug?
 global.debug = true;
 

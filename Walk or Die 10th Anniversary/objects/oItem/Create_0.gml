@@ -4,7 +4,12 @@ moveDist = 0;
 moveCounter = 0;
 
 overlap = false;
+
+//---------------------------------------------------------------
+// New 'canDestroy' variable not in original AS3 source code. 
+// Used by objects like oRiver to prevent being desroyed while sound is still playing.
 canDestroy = true;
+//---------------------------------------------------------------
 
 function Item(sprite, distance = "mid", overlap = true){
 	self.distance = distance;			
@@ -49,6 +54,7 @@ function Item(sprite, distance = "mid", overlap = true){
 	} 
 }	
 function offScreenAction() {
+	// 'canDestroy' variable is new from original AS3 source code. See above.
 	if (canDestroy) {
 		//show_debug_message(string(self.type) + ": CAN destroy");
 		destroy();	
