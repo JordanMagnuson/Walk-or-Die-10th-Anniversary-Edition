@@ -13,8 +13,11 @@ if(instance_exists(oPlayer) && oPlayer.walking){
 	switch(distance){
 		case "mid": 
 			//move mid distance objects exactly 1 pixel every other frame.
-			if(oMyWorldController.oddFrame ==1){
-				x -= oPlayer.SPEED/ 100;
+			if (global.smooth_scrolling) {
+				x -= (oPlayer.SPEED/100)/2;
+			}
+			else if(oMyWorldController.oddFrame ==1){
+				x -= oPlayer.SPEED/100;
 			}
 			break;
 		case "close":
@@ -23,7 +26,10 @@ if(instance_exists(oPlayer) && oPlayer.walking){
 			break; 
 		case "far":
 			//move far distance objects exactly 1 pixel every third frame
-			if(oMyWorldController.thirdFrame == 1){
+			if (global.smooth_scrolling) {
+				x -= (oPlayer.SPEED/100)/3;
+			}			
+			else if(oMyWorldController.thirdFrame == 1){
 				x -= oPlayer.SPEED/100;
 			}
 			break;

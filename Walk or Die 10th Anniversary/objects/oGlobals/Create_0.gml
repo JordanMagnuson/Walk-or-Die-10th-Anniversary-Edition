@@ -11,6 +11,10 @@ global.oGiantPineSeen = false;
 global.oFlowerTreeSeen = false;
 global.oSnowmanSeen = false;
 
+// Use smooth (sub-pixel) scrolling, or retro-style integer pixel scrolling?
+// This option is new from original AS3 source (which used integer pixel scrolling).
+global.smooth_scrolling = true;
+
 // Is this a touch device?
 switch (os_type) {
 	case os_ios:
