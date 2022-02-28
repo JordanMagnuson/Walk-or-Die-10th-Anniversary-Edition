@@ -15,7 +15,7 @@ function Item(sprite, distance = "mid", overlap = true){
 	self.distance = distance;			
 	self.overlap = overlap;
 	sprite_index = sprite; 
-	if (random(1) > 0.1){
+	if (random(1) > 0.5){
 		self.image_xscale = -1;
 	}			
 	// Hit box to bottom left, so we can place all items at same starting location		
