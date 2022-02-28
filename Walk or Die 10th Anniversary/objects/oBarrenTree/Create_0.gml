@@ -11,6 +11,7 @@ canDestroy = false;		// New from AS3 source.
 // This is different from original source.
 // See tutorial at https://www.youtube.com/watch?v=ZpPBlD9FyKw
 mySound = false;
+behindPlayer = false;
 sndEmit = audio_emitter_create();
 sndMaxDist = room_width - sprite_width;
 sndDropoffDist = sndMaxDist/2;

@@ -3,12 +3,12 @@ fadeIn = false;
 fadeOut = false;
 fadeStarted = false;
 canDestroy = false;
-behindPlayer = false;
 
 //---------------------------------------------------------------
 // Create audio emitter to handle sound. 
 // This is different from original source.
 // See tutorial at https://www.youtube.com/watch?v=ZpPBlD9FyKw
+behindPlayer = false;
 sndEmit = audio_emitter_create();
 sndMaxDist = room_width - sprite_width;
 sndDropoffDist = sndMaxDist/2;
