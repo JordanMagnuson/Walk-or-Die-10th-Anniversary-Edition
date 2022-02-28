@@ -16,11 +16,16 @@ function Item(sprite, distance = "mid", overlap = true){
 	self.overlap = overlap;
 	sprite_index = sprite; 
 	if (random(1) > 0.1){
-		image_xscale = -1;
-		x -= sprite_width;
+		self.image_xscale = -1;
 	}			
 	// Hit box to bottom left, so we can place all items at same starting location		
-	sprite_set_offset(sprite_index, 0, sprite_height);
+	if (image_xscale == 1) {
+		sprite_set_offset(sprite_index, 0, sprite_height);
+	}
+	else {
+		// If the sprite is flipped, we need to set it's origin to -sprite_width instead of 0, to make up for the flip.
+		sprite_set_offset(sprite_index, image_xscale*sprite_width, sprite_height);
+	}
 	sprite_collision_mask(sprite_index, true, 1, sprite_width, sprite_height, 0, sprite_height, bboxkind_rectangular,0);
 
 	//to make up for the origin of items being flipped sometimes:
