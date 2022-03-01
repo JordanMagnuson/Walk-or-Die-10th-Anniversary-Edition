@@ -59,7 +59,7 @@ instance_create_depth(0,0,0, oTextPress);
 // This is different from original AS3 source code.
 // See tutorial at https://www.youtube.com/watch?v=ZpPBlD9FyKw
 audio_listener_orientation(0,1,0,0,0,1);			// Fix left-right orientation.
-audio_listener_position(player.x,player.y,0);	// Position listener at player location.
+audio_listener_position(player.x,player.y-10,0);	// Position listener at player location. (There seems to be a bug in HTML5 compiler, where y position of listener needs to be slightly different from emitter(s), or else sound jumps from left to right speaker.)
 //---------------------------------------------------------------
 
 //---------------------------------------------------------------
