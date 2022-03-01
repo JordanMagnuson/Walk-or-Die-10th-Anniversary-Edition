@@ -3,6 +3,7 @@
 
 // Debug?
 global.debug = true;
+global.show_bounding_boxes = false;
 
 //Globals for rare objects
 global.oCastleSeen = false;
