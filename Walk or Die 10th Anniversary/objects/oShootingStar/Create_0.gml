@@ -14,7 +14,7 @@ fadeout = false;
 
 function shootingStar(starDirection = 1){
 	self.starDirection = starDirection;
-	image_index = sprShootingStar;
+	sprite_index = sprShootingStar;
 	if(starDirection == 1){
 		image_xscale = -1;	
 	}
