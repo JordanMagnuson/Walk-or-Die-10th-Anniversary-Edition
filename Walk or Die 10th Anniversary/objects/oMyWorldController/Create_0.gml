@@ -54,13 +54,19 @@ player = instance_create_depth(0, 0, -1, oPlayer);
 //Starting Text
 instance_create_depth(0,0,0, oTextPress);
 
-// Audio listener. See tutorial at https://www.youtube.com/watch?v=ZpPBlD9FyKw
-// Make sound from the right sound like they're coming from teh right, not the left, and vice versa.
-audio_listener_orientation(0,1,0,0,0,1);
-audio_listener_position(player.x,player.y,0);
+//---------------------------------------------------------------
+// Use audio listener to handle pan and fade for positional sounds.
+// This is different from original AS3 source code.
+// See tutorial at https://www.youtube.com/watch?v=ZpPBlD9FyKw
+audio_listener_orientation(0,1,0,0,0,1);			// Fix left-right orientation.
+audio_listener_position(player.x,player.y-10,0);	// Position listener at player location. (There seems to be a bug in HTML5 compiler, where y position of listener needs to be slightly different from emitter(s), or else sound jumps from left to right speaker.)
+//---------------------------------------------------------------
 
-// Camera
+//---------------------------------------------------------------
+// Use camera object to handle window resizing, fullscreen, etc.
+// This is different from original AS3 source code.
 instance_create_depth(0,0, -1, oCamera);
+//---------------------------------------------------------------
 
 //start of game changes  
 oLocation.creationTime = 2;

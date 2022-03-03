@@ -1,5 +1,8 @@
 //event_inherited();
-if(oMyWorldController.fourthFrame == 4)
+if (global.smooth_scrolling) {
+	x -= 1/4;
+}
+else if(oMyWorldController.fourthFrame == 4)
 {
 	x -= 1;	
 }

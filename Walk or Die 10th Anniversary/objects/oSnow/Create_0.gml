@@ -39,7 +39,7 @@ function createItemHere(){
 			//show_debug_message(string(creationNumber) + ": Snow Drift Created");
 		}
 	}
-	//show_debug_message("Creation Number (oBeach CreateItemHere): " + string(creationNumber));    
+	//show_debug_message("Creation Number (oBeach CreateItemHere): " + string(creationNumber));      
 }
 
 

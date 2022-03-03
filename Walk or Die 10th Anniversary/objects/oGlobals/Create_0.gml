@@ -1,5 +1,9 @@
+// Object used to initialize some global variables. 
+// This is new from original AS3 source code.
+
 // Debug?
 global.debug = true;
+global.show_bounding_boxes = false;
 
 //Globals for rare objects
 global.oCastleSeen = false;
@@ -7,6 +11,10 @@ global.oPyramidsSeen = false;
 global.oGiantPineSeen = false;
 global.oFlowerTreeSeen = false;
 global.oSnowmanSeen = false;
+
+// Use smooth (sub-pixel) scrolling, or retro-style integer pixel scrolling?
+// This option is new from original AS3 source (which used integer pixel scrolling).
+global.smooth_scrolling = true;
 
 // Is this a touch device?
 switch (os_type) {
