@@ -24,7 +24,8 @@ function createItemHere(){
 			global.oGiantPineSeen = true;
 	 	}
 		else if(creationNumber < 0.01){
-			instance_create_depth(room_width+10, 175,0, oRiver);
+			if(!instance_exists(oRiver))
+				instance_create_depth(room_width+10, 175,0, oRiver);
 		}
 		else if(creationNumber < 0.05){
 			instance_create_depth(room_width+10, 175,0, oPineTreeSideways);
