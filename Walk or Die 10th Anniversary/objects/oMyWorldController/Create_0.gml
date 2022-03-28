@@ -10,6 +10,7 @@ randomise();
 room_width = 300;
 room_height = 200;
 
+currentLocation = 0;
 locationName = choose("desert", "forest", "snow", "plains", "beach");
 
 if(locationName == "desert"){
