@@ -23,11 +23,11 @@ function createItemHere(){
 			//show_debug_message(string(creationNumber) + ": SnowMan Created");
 		}
 		else if (creationNumber < 0.05){
-			instance_create_depth(room_width+10, 175, 0, oFrozenRiver);
+			instance_create_depth(room_width+10, 175, 0, oIgloo);
 			//show_debug_message(string(creationNumber) + ": Frozen River Created");
 		}
 		else if (creationNumber < 0.09){
-			instance_create_depth(room_width+10, 175, 0, oIgloo);
+			instance_create_depth(room_width+10, 175, 0, oFrozenRiver);
 			//show_debug_message(string(creationNumber) + ": Igloo Created");
 		}
 		else if (creationNumber < 0.3){
