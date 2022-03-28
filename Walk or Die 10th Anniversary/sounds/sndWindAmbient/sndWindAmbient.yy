@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sndWindAmbient.wav",
-  "duration": 31.45143,
+  "duration": 30.41687,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
