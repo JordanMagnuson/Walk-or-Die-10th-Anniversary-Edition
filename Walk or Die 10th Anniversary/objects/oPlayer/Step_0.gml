@@ -18,5 +18,5 @@ if(keyboard_check_released(vk_space) && !global.debug){
 	playerDying = instance_create_depth(0, 0, 0, oPlayerDying);
 	playerDying.x = x;
 	playerDying.y = y; 
-	instance_destroy(oPlayer);
+	instance_destroy();
 }

@@ -1,3 +1,5 @@
+event_inherited();
+
 animationSpeed = 0.05;
 FADE_IN_DURATION = 5;
 

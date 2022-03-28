@@ -9,5 +9,5 @@ if (fade and image_alpha > 0){
 	image_alpha -= (1/FADE_OUT_DURATION)/room_speed;	
 }
 if(image_alpha == 0){
-		instance_destroy(oPlayerDying);
+		instance_destroy();
 }

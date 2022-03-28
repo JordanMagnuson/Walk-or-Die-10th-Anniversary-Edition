@@ -81,7 +81,7 @@ function changeLocation(newLocation = ""){
 		// Don't change location if = currentLocation.
 		return;
 	}
-	if(instance_exists(oPlayer)){
+	if(instance_exists(oPlayer) && oPlayer.walking){
 		if (newLocation == "") {
 			// If newLocation not passed, choose location at random until new.
 			do{

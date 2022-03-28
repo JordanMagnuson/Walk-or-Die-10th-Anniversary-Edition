@@ -1,3 +1,5 @@
+event_inherited();
+
 FADE_OUT_DURATION = 5;
 fade = false;
 //graphic
