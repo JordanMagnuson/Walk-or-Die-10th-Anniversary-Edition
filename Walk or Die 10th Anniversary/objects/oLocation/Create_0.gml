@@ -4,6 +4,13 @@ maxCreationtime = 0;
 creationTimeDecreaseRate = 0;
 creationTimeIncreaseRate = 0;
 
+// Initialize possible sound emitters for location item sounds. These are set, if needed, by individual locations (e.g. oBeach, oForest.)
+sEmit0 = 0;
+sEmit1 = 0;
+sEmit2 = 0;
+sEmit3 = 0;
+sEmit4 = 0;
+
 function Location(DAY_SOUND, NIGHT_SOUND, maxCreationTime = 4, minCreationTime = 0.4, creationTimeIncreaseRate = 0.4, creationTimeDecreaseRate = 0.4){
 	daySound = DAY_SOUND;
 	nightSound = NIGHT_SOUND;

@@ -6,18 +6,18 @@ if (global.debug) {
 		advanceTime();
 	}
 	if(keyboard_check_pressed(ord("1"))){
-		changeLocationCheat("beach");
+		changeLocation("beach");
 	}
 	if(keyboard_check_pressed(ord("2"))){
-		changeLocationCheat("desert");
+		changeLocation("desert");
 	}if(keyboard_check_pressed(ord("3"))){
-		changeLocationCheat("forest");
+		changeLocation("forest");
 	}
 	if(keyboard_check_pressed(ord("4"))){
-		changeLocationCheat("plains");
+		changeLocation("plains");
 	}
 	if(keyboard_check_pressed(ord("5"))){
-		changeLocationCheat("snow");
+		changeLocation("snow");
 	}
 }
 
