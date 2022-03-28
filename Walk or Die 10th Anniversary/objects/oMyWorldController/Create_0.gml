@@ -108,7 +108,7 @@ function changeLocation(newLocation = ""){
 			currentLocation = instance_create_depth(0, 0, 0, oPlains);
 		}
 		show_debug_message("Current location: " + locationName);   
-		oLocation.Location();    
+		oLocation.Location(currentLocation.DAY_SOUND, currentLocation.NIGHT_SOUND);    
 		oLocation.creationTime = 2;
 		oLocation.alarm[0] = 6; // 6 frames = 0.1 seconds
 		
