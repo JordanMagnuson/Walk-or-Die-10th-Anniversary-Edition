@@ -2,8 +2,11 @@
 // This is new from original AS3 source code.
 
 // Debug?
-global.debug = true;
+global.debug = false;
 global.show_bounding_boxes = false;
+
+// Player globals.
+global.player_speed = 100;
 
 //Globals for rare objects
 global.oCastleSeen = false;
