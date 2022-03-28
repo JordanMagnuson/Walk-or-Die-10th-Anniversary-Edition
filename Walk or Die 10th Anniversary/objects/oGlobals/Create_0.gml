@@ -5,8 +5,15 @@
 global.debug = false;
 global.show_bounding_boxes = false;
 
-// Player globals.
+// Use smooth (sub-pixel) scrolling, or retro-style integer pixel scrolling?
+// This option is new from original AS3 source (which used integer pixel scrolling).
+global.smooth_scrolling = true;
+
+// Object globals.
 global.player_speed = 100;
+global.cloud_min_speed = 0.1;
+global.cloud_max_speed = 0.5;
+global.cloud_avg_speed = global.cloud_min_speed + (global.cloud_max_speed - global.cloud_min_speed) / 2;
 
 //Globals for rare objects
 global.oCastleSeen = false;
@@ -14,10 +21,6 @@ global.oPyramidsSeen = false;
 global.oGiantPineSeen = false;
 global.oFlowerTreeSeen = false;
 global.oSnowmanSeen = false;
-
-// Use smooth (sub-pixel) scrolling, or retro-style integer pixel scrolling?
-// This option is new from original AS3 source (which used integer pixel scrolling).
-global.smooth_scrolling = true;
 
 // Is this a touch device?
 switch (os_type) {

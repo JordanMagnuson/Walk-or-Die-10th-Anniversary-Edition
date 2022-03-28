@@ -2,13 +2,14 @@
 // You can write your code in this editor
 
 //HOW CLOUD RELEASE RATE CHANGES
-MAX_CLOUD_RELEASE_TIME = 10;
-MIN_CLOUD_RELEASE_TIME = 0.5;
-CLOUD_COVER_CHANGE_RATE = 0.5;
-CLOUD_COVER_CHANGE_TIME = 5;
+// Allow variable cloud speed is new from original AS3 source.
+MAX_CLOUD_RELEASE_TIME = 10/global.cloud_avg_speed;
+MIN_CLOUD_RELEASE_TIME = 0.5*global.cloud_avg_speed;
+CLOUD_COVER_CHANGE_RATE = 0.5*global.cloud_avg_speed;
+CLOUD_COVER_CHANGE_TIME = 5/global.cloud_avg_speed;
 
 //WHEN A CLOUD IS RELEASED
-cloudReleaseTimer = 1;
+cloudReleaseTime = 1 / global.cloud_avg_speed;
 
 //whether cloud cover is increasing or decreasing. 0, 1, or -1
 cloudCoverSlope = 0;
@@ -32,6 +33,9 @@ function releaseCloud(){
 }
 
 function changeCloudCover(){
+	show_debug_message("changeCloudCover()");
+	show_debug_message("cloudCoverSlope: " + string(cloudCoverSlope));
+	show_debug_message("cloudReleaseTime: " + string(cloudReleaseTime));
 	alarm[1] = CLOUD_COVER_CHANGE_TIME * room_speed;
 	switch(cloudCoverSlope){
 		case 1:
@@ -85,4 +89,7 @@ function changeCloudCover(){
 			cloudReleaseTime = MAX_CLOUD_RELEASE_TIME;	
 		}
 	}
+	
+	show_debug_message("New cloudCoverSlope: " + string(cloudCoverSlope));
+	show_debug_message("New cloudReleaseTime: " + string(cloudReleaseTime));	
 }
