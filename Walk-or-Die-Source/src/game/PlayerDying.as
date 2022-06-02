@@ -1,4 +1,3 @@
-//FILE DONE
 package game
 {
 	import net.flashpunk.Entity;
@@ -12,7 +11,7 @@ package game
 	
 	public class PlayerDying extends Entity
 	{
-		public const FADE_OUT_DURATION:Number = 5;		//DONE
+		public const FADE_OUT_DURATION:Number = 5;		
 		
 		public var graveStoneAlarm:Alarm;
 		public var fadeTween:ColorTween;
@@ -20,50 +19,46 @@ package game
 		/**
 		 * Player graphic
 		 */
-		[Embed(source='../../assets/player_dying.png')] private const PLAYER_DYING:Class; //DONE
+		[Embed(source='../../assets/player_dying.png')] private const PLAYER_DYING:Class;
 		public var sprPlayer:Spritemap = new Spritemap(PLAYER_DYING, 22, 17);		
 		
 		public function PlayerDying() 
 		{
 			// Graphic
-			sprPlayer.add("die", [0, 1, 2, 3, 4], 2, false);	//SECTION DONE
+			sprPlayer.add("die", [0, 1, 2, 3, 4], 2, false);
 			graphic = sprPlayer;
 			sprPlayer.play("die");
 			
-			// Hit box		//SECTION DONE
+			// Hit box
 			sprPlayer.originX = 0;
 			sprPlayer.originY = sprPlayer.height;
 			sprPlayer.x = 0;
 			sprPlayer.y = -sprPlayer.originY;	
 			
-			setHitbox(sprPlayer.width, sprPlayer.height, sprPlayer.originX, sprPlayer.originY); //DONE				
+			setHitbox(sprPlayer.width, sprPlayer.height, sprPlayer.originX, sprPlayer.originY);				
 			
-			// Gravestone alarm						//SUPER CONFUSED ON HOW THE CODE BELOW WORKS, EDITS WILL NEED TO BE DONE HERE
-			graveStoneAlarm = new Alarm(5, fadeOut); //CREATE AN ALARM THAT WILL GO OFF IN 5 SECONDS AND THEN RUN THE FADEOUT FUNCTION
-			addTween(graveStoneAlarm);	//ADDS THE GRAVESTONE ALARM AS A TWEEN	QUESTION: WHY IS THE ALARM ADDED AS A TWEEN?
-			graveStoneAlarm.start();	//STARTS THE TWEEN
+			// Gravestone alarm
+			graveStoneAlarm = new Alarm(5, fadeOut);
+			addTween(graveStoneAlarm);
+			graveStoneAlarm.start();
 			
-			fadeTween = new ColorTween;	//CREATES A NEW COLORTWEEN AND CALLS IT FADETWEEN
-			fadeTween.alpha = 1;	//SETS THE ALPHA VALUE OF FADETWEEN TO 1
+			fadeTween = new ColorTween;
+			fadeTween.alpha = 1;
 		}
 		
 		override public function update():void 
 		{
-			super.update(); //UPDATES THE ENTITY SUPER?
-			(graphic as Spritemap).alpha = fadeTween.alpha;	//UPDATES THE ALPHA VALUE OF WHATEVER THIS GRAPHIC IS
+			super.update();
+			(graphic as Spritemap).alpha = fadeTween.alpha;
 		}
 		
 		public function fadeOut():void
 		{
-			FP.world.add(new Gravestone); //CREATE NEW GRAVESTONE OBJECT
-			fadeTween = new ColorTween(destroy);//WHEN THE CHARACTER HAS FADED AWAY, DESTROY THE CHARACTER OBJECT??
-			addTween(fadeTween);	//ADDS THE FADETWEEN COLORTWEEN AS A TWEEN		
-			fadeTween.tween(FADE_OUT_DURATION, Colors.WHITE, Colors.WHITE, 1, 0);	//TWEENS THE ALPHA FROM 1 TO 0 OVER THE DURATION OF FADE_OUT_DURATION 
-				//(START COLOR IS WHITE, END COLOR IS WHITE)	THIS TWEEN FUNCTION IS PART OF COLORTWEEN
+			FP.world.add(new Gravestone);
+			fadeTween = new ColorTween(destroy);
+			addTween(fadeTween);		
+			fadeTween.tween(FADE_OUT_DURATION, Colors.WHITE, Colors.WHITE, 1, 0);			
 		}
-		//ORDER OF THE ABOVE FUNCTIONS: SET AN ALARM THAT WILL RUN THE FADEOUT FUNCTION AFTER 5 SECONDS
-		//
-		
 		
 		public function destroy():void
 		{

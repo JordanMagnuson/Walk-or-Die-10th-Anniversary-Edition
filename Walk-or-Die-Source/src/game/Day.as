@@ -27,7 +27,6 @@ package game
 			}
 		}
 		
-		//DONE
 		public function complete():void
 		{
 			FP.world.add(new Sunset);

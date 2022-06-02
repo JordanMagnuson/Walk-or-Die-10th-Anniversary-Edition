@@ -1,4 +1,3 @@
-//FILE DONE
 package game.beach
 {
 	import game.Item;
@@ -8,7 +7,7 @@ package game.beach
 	
 	public class Castle extends Item
 	{	
-		public static var seen:Boolean = false;	//DONE
+		public static var seen:Boolean = false;
 		
 		/**
 		 * Graphics
@@ -17,10 +16,10 @@ package game.beach
 		
 		public function Castle() 
 		{	
-			super(SPRITE01, 'far', false);	//DONE
+			super(SPRITE01, 'far', false);
 			type = 'sand_castle';	
 		
-			layer = 99;			//DONE
+			layer = 99;			
 		}
 		
 		override public function update():void 

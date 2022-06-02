@@ -9,8 +9,6 @@ package game.forest
 	import net.flashpunk.World;
 	import net.flashpunk.Sfx;
 	import rooms.MyWorld;
-	import net.flashpunk.utils.Input;
-	import net.flashpunk.utils.Key;
 	
 	public class Forest extends Location
 	{	
@@ -43,11 +41,6 @@ package game.forest
 		override public function update():void
 		{
 			super.update();
-			if (Input.pressed(Key.R))
- 			{
-				trace('r presesd');
-				FP.world.add(new River);
-			}
 		}
 		
 		/**

@@ -21,10 +21,10 @@ package game.plains
 		[Embed(source='../../../assets/sounds.swf', symbol='forest_night_ambient')] private const NIGHT_SOUND:Class;
 		
 		[Embed(source='../../../assets/sounds.swf', symbol='bee.wav')] private const SND_BEE:Class;
-		public var sndBee:Sfx = new Sfx(SND_BEE);	//DONE
+		public var sndBee:Sfx = new Sfx(SND_BEE);	
 		
 		[Embed(source='../../../assets/sounds.swf', symbol='cicadas.wav')] private const SND_CICADAS:Class;
-		public var sndCicadas:Sfx = new Sfx(SND_CICADAS);	//DONE		
+		public var sndCicadas:Sfx = new Sfx(SND_CICADAS);			
 		
 		public function Plains() 
 		{
@@ -44,9 +44,8 @@ package game.plains
 		{
 			super.createItem();
 			
-			creationNumber = FP.random;	//DONE
+			creationNumber = FP.random;	
 			
-			// SECTION DONE-----------------------------------
 			// Mid Distance
 			if (FP.random > 0.25)
 			{		
@@ -67,10 +66,7 @@ package game.plains
 				{
 					FP.world.add(new Flowers);
 				}
-			}
-			//----------------------------------------------------
-			
-			// SECTION DONE-----------------------------------
+			}		
 			// Sounds
 			if (FP.random > 0.4)
 			{
@@ -102,9 +98,7 @@ package game.plains
 				}
 			}				
 		}
-		//----------------------------------------------------
 
-		//SECTION DONE ---------------------------------------
 		/**
 		 * Stuff to set up at the beginning of the game.
 		 * @param	world	Current world.
@@ -113,8 +107,7 @@ package game.plains
 		{
 			super.gameStartItem(world, new Flowers);	
 		}
-		//----------------------------------------------------
-
-	}
 		
+	}
+
 }

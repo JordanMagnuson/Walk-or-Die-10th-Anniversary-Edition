@@ -20,15 +20,15 @@ package rooms
 		 * How often to consider changing locations, also determined by
 		 * how long we've been in a location.
 		 */
-		public const CHANGE_LOCATION_TIME:Number = 4;	//DONE
+		public const CHANGE_LOCATION_TIME:Number = 4;
 		
 		/**
 		 * Used to move objects slower than one pixel per frame
 		 */
-		public static var oddFrame:int = 1;	//DONE
-		public static var thirdFrame:int = 1;	//DONE
-		public static var fourthFrame:int = 1;	//DONE
-		public static var forceClouds:Boolean = false;	//DONE
+		public static var oddFrame:int = 1;
+		public static var thirdFrame:int = 1;
+		public static var fourthFrame:int = 1;
+		public static var forceClouds:Boolean = false;
 		
 		/**
 		 * Location
@@ -62,16 +62,16 @@ package rooms
 		public var width:uint;
 		public var height:uint;
 		
-		
-		public function MyWorld()      //FUNCTION DONE, MOST OF IT IS COMMENTED OUT UNTIL THOSE FUNCTIONS ARE COMPLETE
+		public function MyWorld()      
 		{
 			// World size
-			width = 300;	//DONE
-			height = 200;	//DONE
+			width = 300;
+			height = 200;		
 		
 			// Set location
-			location = FP.choose(new Desert, new Forest, new Snow, new Plains, new Beach);	//TEMPORARILY ON THE BEACH OPTION BECAUSE THAT IS COMPLETE
-			add(location);//DONE
+			location = FP.choose(new Desert, new Forest, new Snow, new Plains, new Beach);	
+			//location = new Desert;
+			add(location);
 			changeLocationAlarm = new MyAlarm(CHANGE_LOCATION_TIME, changeLocationChance);
 			addTween(changeLocationAlarm);
 			changeLocationAlarm.start();
@@ -92,7 +92,7 @@ package rooms
 			
 			
 			// Player
-			add(new Player); //DONE
+			add(new Player);
 			
 			// Starting text
 			add(new textPress);
@@ -106,7 +106,7 @@ package rooms
 		/**
 		 * Update the room.
 		 */
-		override public function update():void 	//FUNCTION DONE
+		override public function update():void 
 		{
 
 			// Testing
@@ -124,7 +124,6 @@ package rooms
 			// Update entities
 			super.update();
 			
-			// BLOCK DONE ===============
 			// Flip oddFrame every frame
 			oddFrame *= -1;
 			
@@ -147,13 +146,13 @@ package rooms
 			{
 				fourthFrame += 1;
 			}
-			//======================
+			
 		}		
 		
 		/**
 		 * Change location now.
 		 */
-		public function changeLocation():void	//FUNCTION DONE
+		public function changeLocation():void
 		{
 			//trace('Changing location');
 			var newLocation:Location;
@@ -174,7 +173,7 @@ package rooms
 		/**
 		 * Chance of changing location, or changing the location slope.
 		 */
-		public function changeLocationChance():void //FUNCTION DONE
+		public function changeLocationChance():void
 		{
 			//trace('change location chance');
 			//trace('Slope: ' + location.creationTimeSlope);
@@ -210,7 +209,7 @@ package rooms
 			}
 		}
 		
-		public function advanceTime():void	//FUNCTION DONE, COMMENTED OUT IN GAMEMAKER FOR NOW
+		public function advanceTime():void
 		{
 			switch (time)
 			{
@@ -226,7 +225,7 @@ package rooms
 			}
 		}
 		
-		public function showTitle():void	//FUNCTION DONE, COMMENTED OUT IN GAMEMAKER FOR NOW
+		public function showTitle():void
 		{
 			add(new textJordan);
 		}

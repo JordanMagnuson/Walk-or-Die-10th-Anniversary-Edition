@@ -9,8 +9,7 @@ package game
 	import net.flashpunk.utils.Key;
 
 	public class Stars extends Entity
-	{
-		//SECTION DONE
+	{	
 		public var fadeTween:ColorTween;
 		
 		public var startedFadeOut:Boolean = false;
@@ -21,14 +20,13 @@ package game
 		
 		public const METEOR_SHOWER_FREQ:Number = Night.FADE_IN_DURATION - 5;	// 1 time per night
 		public var meteorShowerAlarm:Alarm;
+		
 		/**
 		 * Graphic
 		 */
 		[Embed(source='../../assets/stars.png')] private const SPRITE:Class;
 		public var image:Image = new Image(SPRITE);	
-		//======================================================
-
-		//SECTION DONE
+		
 		public function Stars() 
 		{
 			image.alpha = 0;
@@ -36,7 +34,6 @@ package game
 			layer = 500;
 		}
 		
-		//DONE
 		override public function added():void
 		{
 			fadeIn();
@@ -52,7 +49,6 @@ package game
 			meteorShowerAlarm.start();
 		}		
 		
-		//DONE
 		override public function update():void
 		{
 			super.update();
@@ -66,7 +62,6 @@ package game
 			}			
 		}		
 		
-		// FUNCTION DONE
 		public function releaseShootingStar():void
 		{
 			shootingStarAlarm.reset(SHOOTING_STAR_FREQ);
@@ -81,7 +76,6 @@ package game
 			}
 		}
 		
-		//DONE
 		public function releaseMeteorShower():void
 		{
 			//meteorShowerAlarm.reset(METEOR_SHOWER_FREQ);			
@@ -97,7 +91,6 @@ package game
 			}
 		}
 		
-		//DONE
 		public function fadeIn():void
 		{
 			fadeTween = new ColorTween();
@@ -105,7 +98,6 @@ package game
 			fadeTween.tween(Night.FADE_IN_DURATION, Colors.WHITE, Colors.WHITE, 0, 1);
 		}				
 		
-		//DONE
 		public function fadeOut():void
 		{
 			startedFadeOut = true;
@@ -115,7 +107,6 @@ package game
 			fadeTween.tween(Night.FADE_OUT_DURATION, Colors.WHITE, Colors.WHITE, image.alpha, 0);			
 		}		
 		
-		//DONE
 		public function destroy():void
 		{
 			FP.world.remove(this);

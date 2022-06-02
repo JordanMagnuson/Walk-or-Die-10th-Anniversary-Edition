@@ -1,5 +1,4 @@
-﻿//FILE DOESN'T NEED TO BE PORTED
-package 
+﻿package 
 {
 	import flash.display.Bitmap;
 	import flash.display.DisplayObject;

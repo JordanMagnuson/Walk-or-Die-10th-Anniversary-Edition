@@ -9,7 +9,7 @@ package game
 	
 	public class Ground extends Entity
 	{	
-		public static const y:Number = 175; //DONE
+		public static const y:Number = 175;
 		
 		/**
 		 * Ground graphic
@@ -25,7 +25,7 @@ package game
 		 * 
 		 * @param	location	The location for this ground, which determines its image.
 		 */
-		public function Ground(location:Location) //FUNCTION DONE
+		public function Ground(location:Location) 
 		{
 			// Choose image based on location
 			switch (location.type)
@@ -51,8 +51,8 @@ package game
 			// Hit box
 			image.originX = 0;
 			image.originY = 0;
-			//image.x = -image.originX;
-			//image.y = -image.originY;	
+			image.x = -image.originX;
+			image.y = -image.originY;	
 			
 			setHitbox(image.width, image.height, image.originX, image.originY);					
 			

@@ -1,4 +1,3 @@
-//FILE DONE
 package game.beach 
 {
 	import flash.utils.Endian;
@@ -15,18 +14,18 @@ package game.beach
 	public class Waves extends Entity
 	{
 		
-		public static const FADE_IN_DURATION:Number = 12;	//DONE
-		public static const FADE_OUT_DURATION:Number = 8;	//DONE
+		public static const FADE_IN_DURATION:Number = 12;
+		public static const FADE_OUT_DURATION:Number = 8;
 		
-		public const SPEED:Number = 10;	//DONE
-		public const X_INIT:int = -10;	//DONE
+		public const SPEED:Number = 10;
+		public const X_INIT:int = -10;
 		
 		public var fadeTween:ColorTween;
 		
 		/**
 		 * Direction is 1 or -1, makes the wase move back and forth;
 		 */
-		public var direction:int = 1;	//DONE
+		public var direction:int = 1;
 		
 		/**
 		 * Graphics
@@ -34,7 +33,7 @@ package game.beach
 		[Embed(source = '../../../assets/beach/waves01.png')] private const SPRITE01:Class;	
 		public var image:Image = new Image(SPRITE01);
 		
-		public function Waves() //SECTION DONE
+		public function Waves() 
 		{
 			graphic = image;
 			image.alpha = 0;
@@ -52,7 +51,7 @@ package game.beach
 			y = FP.screen.height;
 		}
 		
-		override public function added():void	//SECTION DONE
+		override public function added():void
 		{
 			fadeIn();
 		}

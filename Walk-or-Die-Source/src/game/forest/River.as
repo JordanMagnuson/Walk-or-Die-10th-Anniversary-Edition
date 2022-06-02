@@ -62,7 +62,7 @@ package game.forest
 				trace('start river fade out');
 				fadeStarted = true;
 				addTween(fadeOut);
-				fadeOut.fadeTo(0, 5);	//FADE TO 0 AFTER 5 SECONDS
+				fadeOut.fadeTo(0, 5);
 			}
 			if (!fadeStarted)
 			{

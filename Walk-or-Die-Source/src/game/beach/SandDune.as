@@ -1,4 +1,3 @@
-//FILE DONE
 package game.beach
 {
 	import game.Item;

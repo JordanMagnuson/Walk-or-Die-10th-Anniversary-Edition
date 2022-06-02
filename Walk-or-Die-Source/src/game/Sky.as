@@ -6,8 +6,7 @@ package game
 	import net.flashpunk.tweens.misc.Alarm;
 	
 	public class Sky extends Entity
-	{
-		//SECTION DONE --------------------
+	{	
 		/**
 		 * How cloud release rate changes
 		 */
@@ -33,10 +32,7 @@ package game
 		 */
 		[Embed(source = '../../assets/sky.png')] private const SKY:Class;
 		public var image:Image = new Image(SKY);		
-		//----------------------------------------
 		
-		
-		//SECTION DONE
 		public function Sky() 
 		{
 			cloudReleaseTime = int(MIN_CLOUD_RELEASE_TIME + FP.random * (MAX_CLOUD_RELEASE_TIME - MIN_CLOUD_RELEASE_TIME));
@@ -58,7 +54,6 @@ package game
 			super.update();
 		}
 		
-		//SECTION DONE
 		public function releaseCloud():void
 		{
 			//trace('release cloud');
@@ -66,7 +61,6 @@ package game
 			FP.world.add(new Cloud);
 		}
 		
-		// SECTION DONE
 		public function changeCloudCover():void
 		{
 			//trace('Change cloud cover. Slope: ' + cloudCoverSlope);
