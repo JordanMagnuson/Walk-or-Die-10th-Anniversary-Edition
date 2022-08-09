@@ -15,8 +15,10 @@ switch(oLocation.locationType){
 		break;
 	case "beach":
 		sprite_index = choose(sprBeachMountain01, sprBeachMountain02);
+		break;
 	default:
 		sprite_index = choose(sprForestMountain01, sprForestMountain02);
+		break;
 }
 type = "mountain";
 Item(sprite_index, "far", true);
