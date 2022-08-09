@@ -1,4 +1,4 @@
-if (global.orientation_check_visible) {
+if (instance_exists(obj_orientation_check) && obj_orientation_check.visible) {
 	return;
 }
 	
