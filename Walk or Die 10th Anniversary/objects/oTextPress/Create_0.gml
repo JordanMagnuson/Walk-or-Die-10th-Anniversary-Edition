@@ -1,7 +1,12 @@
 FADE_OUT_DURATION = 3;
 started = false;
 fade = false;
-text = "Hold space to start walking.";
+if (global.is_touch_device) {
+	text = "Touch screen to start walking.";
+}
+else {
+	text = "Hold space to start walking.";
+}
 draw_set_font(fntFont);
 
 x = 20;

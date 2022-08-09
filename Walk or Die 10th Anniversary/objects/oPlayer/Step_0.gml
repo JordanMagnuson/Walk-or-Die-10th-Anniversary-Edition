@@ -1,4 +1,4 @@
-X = keyboard_check(vk_space);
+X = (keyboard_check(vk_space) || mouse_check_button(mb_any))
 
 if(walking && !audio_is_playing(sndWalking)){
 	audio_play_sound(sndWalking, 75, true);
@@ -13,7 +13,12 @@ else if (!global.debug) {
 	image_index = 0;
 	image_speed = 0;
 }
-if(keyboard_check_released(vk_space) && !global.debug){
+
+if (keyboard_check_released(vk_space) || mouse_check_button_released(mb_any)) {
+	stopped_walking = true;
+}
+
+if (stopped_walking && !global.debug){
 	audio_stop_sound(sndWalking);
 	playerDying = instance_create_depth(0, 0, 0, oPlayerDying);
 	playerDying.x = x;

@@ -1,5 +1,6 @@
 SPEED = global.player_speed;
 walking = false;
+stopped_walking = false;
 
 sprite_index = sprPlayer;
 image_index = 0;
