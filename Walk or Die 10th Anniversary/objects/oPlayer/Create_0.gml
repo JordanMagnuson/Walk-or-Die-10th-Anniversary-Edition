@@ -1,4 +1,5 @@
 SPEED = global.player_speed;
+X = false;
 walking = false;
 stopped_walking = false;
 

@@ -1,3 +1,7 @@
+if (global.orientation_check_visible) {
+	return;
+}
+	
 X = (keyboard_check(vk_space) || mouse_check_button(mb_any))
 
 if(walking && !audio_is_playing(sndWalking)){
